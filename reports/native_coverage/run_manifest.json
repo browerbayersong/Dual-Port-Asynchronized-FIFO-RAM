@@ -1,0 +1,60 @@
+{
+  "verilator": "rev vUNKNOWN-built20260516-4e853d8",
+  "zig": "0.14.1",
+  "sources_sha256_lf": {
+    "rtl/reset_sync.v": "8c3cc852ba0d247853f3af221ce1f7906e56b49ea65008b436ebd2dbb74e9821",
+    "rtl/gray_sync.v": "1955c6a6c7f4a8cbd358d3f96f3be511c4579600ac0d5d327946271192a2c291",
+    "rtl/fifo_ram.v": "65920c9c03f6627027c4143621b0c98afc517547fcd6d1b25e660038018973e3",
+    "rtl/async_fifo.v": "e025f54838e568febd786792b73a22b2e423d55cff36cb9fb49156a817081012",
+    "rtl/snapshot_mailbox.v": "05e07e15264c03b8b5922fc4e43c49a0525839f035269ccd9bef0a3b5199cec0",
+    "rtl/fifo_monitor.v": "e06a49b2f9da92c6f6feddc6ddfdae0662070bbfbc85658e4d574e560229c3d9",
+    "rtl/dual_async_fifo.v": "c940202153b905314d70c02d1dde0cdd941b85eea43e0736ddf2446ee8a9c246",
+    "tb/fifo_channel_checker.sv": "641b83e65636b44ed880c4d07eab7a8ee94bb549f9622ff3cbd20796f3c570e9",
+    "tb/snapshot_source_checker.sv": "c6ba7a6ba4db0d0e754d1eed0a51136cbc558945c5221a61a6412e62171b6710",
+    "tb/dual_fifo_tb.sv": "012205643e653505e77c90c6cca9584210b508b53a6ae5abc4173688cf1e0f72",
+    "tb/native_coverage_top.sv": "feec3fa885f5cebde37ba67b0ff81c58ff7782a3a39277cc0d76361d845f7d56",
+    "tools/native_replay.cpp": "d77e29f3b1f7f0790de94b0044710a1e89b0d35a8252d8989fd42924ca9aceac"
+  },
+  "configurations": [
+    {
+      "name": "s2_manual",
+      "stages": 2,
+      "count": 32,
+      "auto": 0,
+      "af": 224,
+      "ae": 32,
+      "seed": 1,
+      "ops_per_channel": 5000,
+      "a_rd_phase_ps": 1000,
+      "b_wr_phase_ps": 2500,
+      "b_rd_phase_ps": 500,
+      "a_write_period_ps": 20000,
+      "a_read_period_ps": 12000,
+      "b_write_period_ps": 35000,
+      "b_read_period_ps": 10000,
+      "monitor_period_ps": 10000,
+      "trace_sha256": "dd51c5985d1fe105071e5f319ca806510c63898daa0075d5fd94e04eb355779f",
+      "trace_bytes": 3634113
+    },
+    {
+      "name": "s3_auto_hysteresis_saturation",
+      "stages": 3,
+      "count": 4,
+      "auto": 8,
+      "af": 220,
+      "ae": 36,
+      "seed": 2026,
+      "ops_per_channel": 5000,
+      "a_rd_phase_ps": 1000,
+      "b_wr_phase_ps": 2500,
+      "b_rd_phase_ps": 500,
+      "a_write_period_ps": 20000,
+      "a_read_period_ps": 12000,
+      "b_write_period_ps": 35000,
+      "b_read_period_ps": 10000,
+      "monitor_period_ps": 10000,
+      "trace_sha256": "b339eceab73ca3e9015ac993a40ecfb66653f3d82be889b490cd2ce1cc2f9cf5",
+      "trace_bytes": 3648265
+    }
+  ]
+}

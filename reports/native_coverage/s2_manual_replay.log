@@ -1,0 +1,3 @@
+CHANNEL 0 writes=3488 reads=3475 reset_discarded=13
+CHANNEL 1 writes=3976 reads=3955 reset_discarded=21
+RESULT: PASS native replay checks=560228 timestamp_groups=161033

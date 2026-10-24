@@ -1,0 +1,10 @@
+read_verilog rtl/reset_sync.v rtl/gray_sync.v rtl/fifo_ram.v rtl/async_fifo.v rtl/snapshot_mailbox.v rtl/fifo_monitor.v rtl/dual_async_fifo.v
+chparam -set SYNC_STAGES 2 -set AUTO_REFRESH_CYCLES 32 dual_async_fifo
+synth -top dual_async_fifo -flatten -noabc -run begin:fine
+check -assert
+tee -o coarse_stat.json stat -json
+write_json coarse_netlist.json
+synth -top dual_async_fifo -noabc -run fine:check
+check -assert
+tee -o mapped_stat.json stat -json
+write_json mapped_netlist.json

@@ -5,5 +5,12 @@
 *.ps1 text eol=lf
 *.md text eol=lf
 *.sha256 text eol=lf
+*.py text eol=lf
+*.cpp text eol=lf
+*.json text eol=lf
+# Native coverage records include control characters; preserve the exact tool database bytes.
+reports/native_coverage/*.dat binary
 # Preserve simulator output formatting without treating its trailing spaces as code errors.
 *.log -whitespace
+# Preserve the trailing blank line emitted by Yosys stat.
+reports/synthesis/*_stat.json -whitespace

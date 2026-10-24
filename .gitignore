@@ -7,3 +7,5 @@ transcript
 *.ucdb
 *.bak
 *.tmp
+__pycache__/
+*.pyc

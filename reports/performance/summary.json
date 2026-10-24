@@ -1,0 +1,203 @@
+{
+  "scope": "RTL simulation, 200 us steady-state observation window",
+  "cases": [
+    {
+      "name": "perf_s2_block0_aw10000_ar6000_bw17500_br5000",
+      "sync_stages": 2,
+      "blocked_cycles_per_10": 0,
+      "half_periods_ps": [
+        10000,
+        6000,
+        17500,
+        5000
+      ],
+      "measurements": [
+        {
+          "channel": 0,
+          "first_read_ns": 44.0,
+          "full_release_ns": 48.0,
+          "window_ns": 200000.0,
+          "window_reads": 10000,
+          "words_per_s": 50000000.0,
+          "mbps": 1600.0,
+          "stall_cycles": 0
+        },
+        {
+          "channel": 1,
+          "first_read_ns": 32.5,
+          "full_release_ns": 77.5,
+          "window_ns": 200000.0,
+          "window_reads": 5714,
+          "words_per_s": 28570000.0,
+          "mbps": 914.24,
+          "stall_cycles": 0
+        }
+      ]
+    },
+    {
+      "name": "perf_s3_block0_aw10000_ar6000_bw17500_br5000",
+      "sync_stages": 3,
+      "blocked_cycles_per_10": 0,
+      "half_periods_ps": [
+        10000,
+        6000,
+        17500,
+        5000
+      ],
+      "measurements": [
+        {
+          "channel": 0,
+          "first_read_ns": 56.0,
+          "full_release_ns": 68.0,
+          "window_ns": 200000.0,
+          "window_reads": 10000,
+          "words_per_s": 50000000.0,
+          "mbps": 1600.0,
+          "stall_cycles": 0
+        },
+        {
+          "channel": 1,
+          "first_read_ns": 42.5,
+          "full_release_ns": 112.5,
+          "window_ns": 200000.0,
+          "window_reads": 5714,
+          "words_per_s": 28570000.0,
+          "mbps": 914.24,
+          "stall_cycles": 0
+        }
+      ]
+    },
+    {
+      "name": "perf_s2_block8_aw10000_ar6000_bw17500_br5000",
+      "sync_stages": 2,
+      "blocked_cycles_per_10": 8,
+      "half_periods_ps": [
+        10000,
+        6000,
+        17500,
+        5000
+      ],
+      "measurements": [
+        {
+          "channel": 0,
+          "first_read_ns": 44.0,
+          "full_release_ns": 48.0,
+          "window_ns": 200000.0,
+          "window_reads": 3332,
+          "words_per_s": 16660000.0,
+          "mbps": 533.12,
+          "stall_cycles": 13335
+        },
+        {
+          "channel": 1,
+          "first_read_ns": 32.5,
+          "full_release_ns": 77.5,
+          "window_ns": 200000.0,
+          "window_reads": 4000,
+          "words_per_s": 20000000.0,
+          "mbps": 640.0,
+          "stall_cycles": 16000
+        }
+      ]
+    },
+    {
+      "name": "perf_s3_block8_aw10000_ar6000_bw17500_br5000",
+      "sync_stages": 3,
+      "blocked_cycles_per_10": 8,
+      "half_periods_ps": [
+        10000,
+        6000,
+        17500,
+        5000
+      ],
+      "measurements": [
+        {
+          "channel": 0,
+          "first_read_ns": 56.0,
+          "full_release_ns": 68.0,
+          "window_ns": 200000.0,
+          "window_reads": 3332,
+          "words_per_s": 16660000.0,
+          "mbps": 533.12,
+          "stall_cycles": 13335
+        },
+        {
+          "channel": 1,
+          "first_read_ns": 42.5,
+          "full_release_ns": 112.5,
+          "window_ns": 200000.0,
+          "window_reads": 4000,
+          "words_per_s": 20000000.0,
+          "mbps": 640.0,
+          "stall_cycles": 16000
+        }
+      ]
+    },
+    {
+      "name": "perf_s2_block0_aw5000_ar23000_bw7000_br25000",
+      "sync_stages": 2,
+      "blocked_cycles_per_10": 0,
+      "half_periods_ps": [
+        5000,
+        23000,
+        7000,
+        25000
+      ],
+      "measurements": [
+        {
+          "channel": 0,
+          "first_read_ns": 148.0,
+          "full_release_ns": 26.0,
+          "window_ns": 200000.0,
+          "window_reads": 4347,
+          "words_per_s": 21735000.0,
+          "mbps": 695.52,
+          "stall_cycles": 0
+        },
+        {
+          "channel": 1,
+          "first_read_ns": 160.0,
+          "full_release_ns": 30.0,
+          "window_ns": 200000.0,
+          "window_reads": 4000,
+          "words_per_s": 20000000.0,
+          "mbps": 640.0,
+          "stall_cycles": 0
+        }
+      ]
+    },
+    {
+      "name": "perf_s3_block0_aw5000_ar23000_bw7000_br25000",
+      "sync_stages": 3,
+      "blocked_cycles_per_10": 0,
+      "half_periods_ps": [
+        5000,
+        23000,
+        7000,
+        25000
+      ],
+      "measurements": [
+        {
+          "channel": 0,
+          "first_read_ns": 194.0,
+          "full_release_ns": 36.0,
+          "window_ns": 200000.0,
+          "window_reads": 4347,
+          "words_per_s": 21735000.0,
+          "mbps": 695.52,
+          "stall_cycles": 0
+        },
+        {
+          "channel": 1,
+          "first_read_ns": 210.0,
+          "full_release_ns": 44.0,
+          "window_ns": 200000.0,
+          "window_reads": 4000,
+          "words_per_s": 20000000.0,
+          "mbps": 640.0,
+          "stall_cycles": 0
+        }
+      ]
+    }
+  ]
+}

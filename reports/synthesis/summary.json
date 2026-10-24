@@ -1,0 +1,150 @@
+{
+  "tool": "Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)",
+  "scope": "technology-independent, no liberty/device/PPA mapping",
+  "ram_policy": "preserved abstract RAM first; separate fully generic FF/mux mapping",
+  "source_sha256_lf": {
+    "rtl/reset_sync.v": "8c3cc852ba0d247853f3af221ce1f7906e56b49ea65008b436ebd2dbb74e9821",
+    "rtl/gray_sync.v": "1955c6a6c7f4a8cbd358d3f96f3be511c4579600ac0d5d327946271192a2c291",
+    "rtl/fifo_ram.v": "65920c9c03f6627027c4143621b0c98afc517547fcd6d1b25e660038018973e3",
+    "rtl/async_fifo.v": "e025f54838e568febd786792b73a22b2e423d55cff36cb9fb49156a817081012",
+    "rtl/snapshot_mailbox.v": "05e07e15264c03b8b5922fc4e43c49a0525839f035269ccd9bef0a3b5199cec0",
+    "rtl/fifo_monitor.v": "e06a49b2f9da92c6f6feddc6ddfdae0662070bbfbc85658e4d574e560229c3d9",
+    "rtl/dual_async_fifo.v": "c940202153b905314d70c02d1dde0cdd941b85eea43e0736ddf2446ee8a9c246"
+  },
+  "configurations": [
+    {
+      "sync_stages": 2,
+      "coarse": {
+        "cells": 283,
+        "cells_including_metadata": 309,
+        "metadata_cells": 26,
+        "cell_types": {
+          "$adff": 50,
+          "$adffe": 32,
+          "$alu": 26,
+          "$eq": 9,
+          "$logic_and": 24,
+          "$logic_not": 11,
+          "$logic_or": 1,
+          "$mem_v2": 2,
+          "$mux": 18,
+          "$ne": 6,
+          "$not": 23,
+          "$or": 4,
+          "$pmux": 1,
+          "$reduce_and": 30,
+          "$reduce_bool": 6,
+          "$reduce_or": 4,
+          "$scopeinfo": 26,
+          "$xor": 36
+        },
+        "register_bits": 1530,
+        "abstract_memories": [
+          {
+            "name": "fifo_a.u_ram.mem",
+            "width": 32,
+            "depth": 256,
+            "bits": 8192
+          },
+          {
+            "name": "fifo_b.u_ram.mem",
+            "width": 32,
+            "depth": 256,
+            "bits": 8192
+          }
+        ],
+        "memory_bits": 16384,
+        "inferred_latches": 0
+      },
+      "generic_mapped": {
+        "cells": 37382,
+        "cells_including_metadata": 37408,
+        "metadata_cells": 26,
+        "cell_types": {
+          "$_AND_": 2125,
+          "$_DFFE_PN0P_": 1377,
+          "$_DFFE_PN1P_": 2,
+          "$_DFFE_PP_": 16384,
+          "$_DFF_PN0_": 209,
+          "$_DFF_PN1_": 2,
+          "$_MUX_": 16354,
+          "$_NOT_": 141,
+          "$_OR_": 144,
+          "$_XOR_": 644,
+          "$scopeinfo": 26
+        },
+        "register_bits": 17974,
+        "abstract_memories": [],
+        "memory_bits": 0,
+        "inferred_latches": 0
+      }
+    },
+    {
+      "sync_stages": 3,
+      "coarse": {
+        "cells": 295,
+        "cells_including_metadata": 321,
+        "metadata_cells": 26,
+        "cell_types": {
+          "$adff": 62,
+          "$adffe": 32,
+          "$alu": 26,
+          "$eq": 9,
+          "$logic_and": 24,
+          "$logic_not": 11,
+          "$logic_or": 1,
+          "$mem_v2": 2,
+          "$mux": 18,
+          "$ne": 6,
+          "$not": 23,
+          "$or": 4,
+          "$pmux": 1,
+          "$reduce_and": 30,
+          "$reduce_bool": 6,
+          "$reduce_or": 4,
+          "$scopeinfo": 26,
+          "$xor": 36
+        },
+        "register_bits": 1574,
+        "abstract_memories": [
+          {
+            "name": "fifo_a.u_ram.mem",
+            "width": 32,
+            "depth": 256,
+            "bits": 8192
+          },
+          {
+            "name": "fifo_b.u_ram.mem",
+            "width": 32,
+            "depth": 256,
+            "bits": 8192
+          }
+        ],
+        "memory_bits": 16384,
+        "inferred_latches": 0
+      },
+      "generic_mapped": {
+        "cells": 37426,
+        "cells_including_metadata": 37452,
+        "metadata_cells": 26,
+        "cell_types": {
+          "$_AND_": 2125,
+          "$_DFFE_PN0P_": 1377,
+          "$_DFFE_PN1P_": 2,
+          "$_DFFE_PP_": 16384,
+          "$_DFF_PN0_": 253,
+          "$_DFF_PN1_": 2,
+          "$_MUX_": 16354,
+          "$_NOT_": 141,
+          "$_OR_": 144,
+          "$_XOR_": 644,
+          "$scopeinfo": 26
+        },
+        "register_bits": 18018,
+        "abstract_memories": [],
+        "memory_bits": 0,
+        "inferred_latches": 0
+      }
+    }
+  ]
+}

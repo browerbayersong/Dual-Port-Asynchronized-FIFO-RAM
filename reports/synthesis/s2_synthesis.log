@@ -1,0 +1,1894 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)
+
+-- Executing script file `synth.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/reset_sync.v
+Parsing Verilog input from `rtl/reset_sync.v' to AST representation.
+Generating RTLIL representation for module `\reset_sync'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: rtl/gray_sync.v
+Parsing Verilog input from `rtl/gray_sync.v' to AST representation.
+Generating RTLIL representation for module `\gray_sync'.
+Warning: Replacing memory \pipe with list of registers. See rtl/gray_sync.v:15
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: rtl/fifo_ram.v
+Parsing Verilog input from `rtl/fifo_ram.v' to AST representation.
+Generating RTLIL representation for module `\fifo_ram'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: rtl/async_fifo.v
+Parsing Verilog input from `rtl/async_fifo.v' to AST representation.
+Warning: Encountered `translate_off' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using a portable and standards-compliant construct such as `ifdef is recommended!
+Generating RTLIL representation for module `\async_fifo'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: rtl/snapshot_mailbox.v
+Parsing Verilog input from `rtl/snapshot_mailbox.v' to AST representation.
+Generating RTLIL representation for module `\snapshot_mailbox'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: rtl/fifo_monitor.v
+Parsing Verilog input from `rtl/fifo_monitor.v' to AST representation.
+Generating RTLIL representation for module `\fifo_monitor'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: rtl/dual_async_fifo.v
+Parsing Verilog input from `rtl/dual_async_fifo.v' to AST representation.
+Generating RTLIL representation for module `\dual_async_fifo'.
+Successfully finished Verilog frontend.
+Parameter \SYNC_STAGES = 2
+Parameter \AUTO_REFRESH_CYCLES = 32
+
+8. Executing AST frontend in derive mode using pre-parsed AST for module `\dual_async_fifo'.
+Parameter \SYNC_STAGES = 2
+Parameter \AUTO_REFRESH_CYCLES = 32
+Generating RTLIL representation for module `$paramod$486feae8a2abf3ddee43439a759edfd92a8ab064\dual_async_fifo'.
+
+9. Executing SYNTH pass.
+
+9.1. Executing HIERARCHY pass (managing design hierarchy).
+
+9.1.1. Analyzing design hierarchy..
+Top module:  \dual_async_fifo
+Used module:     \async_fifo
+Used module:         \fifo_ram
+Used module:         \gray_sync
+Used module:         \reset_sync
+Used module:     \fifo_monitor
+Used module:         \snapshot_mailbox
+Parameter \DATA_WIDTH = 32
+Parameter \ADDR_WIDTH = 8
+
+9.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\fifo_ram'.
+Parameter \DATA_WIDTH = 32
+Parameter \ADDR_WIDTH = 8
+Generating RTLIL representation for module `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram'.
+Parameter \WIDTH = 9
+Parameter \STAGES = 2
+
+9.1.3. Executing AST frontend in derive mode using pre-parsed AST for module `\gray_sync'.
+Parameter \WIDTH = 9
+Parameter \STAGES = 2
+Generating RTLIL representation for module `$paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync'.
+Warning: Replacing memory \pipe with list of registers. See rtl/gray_sync.v:15
+Parameter \WIDTH = 9
+Parameter \STAGES = 2
+Found cached RTLIL representation for module `$paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync'.
+Parameter \WIDTH = 1
+Parameter \STAGES = 2
+
+9.1.4. Executing AST frontend in derive mode using pre-parsed AST for module `\gray_sync'.
+Parameter \WIDTH = 1
+Parameter \STAGES = 2
+Generating RTLIL representation for module `$paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync'.
+Warning: Replacing memory \pipe with list of registers. See rtl/gray_sync.v:15
+Parameter \WIDTH = 1
+Parameter \STAGES = 2
+Found cached RTLIL representation for module `$paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync'.
+Parameter \WIDTH = 139
+Parameter \SYNC_STAGES = 2
+
+9.1.5. Executing AST frontend in derive mode using pre-parsed AST for module `\snapshot_mailbox'.
+Parameter \WIDTH = 139
+Parameter \SYNC_STAGES = 2
+Generating RTLIL representation for module `$paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox'.
+Parameter \WIDTH = 75
+Parameter \SYNC_STAGES = 2
+
+9.1.6. Executing AST frontend in derive mode using pre-parsed AST for module `\snapshot_mailbox'.
+Parameter \WIDTH = 75
+Parameter \SYNC_STAGES = 2
+Generating RTLIL representation for module `$paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox'.
+Parameter \WIDTH = 139
+Parameter \SYNC_STAGES = 2
+Found cached RTLIL representation for module `$paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox'.
+Parameter \WIDTH = 75
+Parameter \SYNC_STAGES = 2
+Found cached RTLIL representation for module `$paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox'.
+Parameter \DATA_WIDTH = 32
+Parameter \ADDR_WIDTH = 8
+Parameter \SYNC_STAGES = 2
+Parameter \COUNT_WIDTH = 32
+Parameter \AF_ASSERT = 224
+Parameter \AF_CLEAR = 224
+Parameter \AE_ASSERT = 32
+Parameter \AE_CLEAR = 32
+
+9.1.7. Executing AST frontend in derive mode using pre-parsed AST for module `\async_fifo'.
+Parameter \DATA_WIDTH = 32
+Parameter \ADDR_WIDTH = 8
+Parameter \SYNC_STAGES = 2
+Parameter \COUNT_WIDTH = 32
+Parameter \AF_ASSERT = 224
+Parameter \AF_CLEAR = 224
+Parameter \AE_ASSERT = 32
+Parameter \AE_CLEAR = 32
+Generating RTLIL representation for module `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo'.
+Parameter \DATA_WIDTH = 32
+Parameter \ADDR_WIDTH = 8
+Parameter \SYNC_STAGES = 2
+Parameter \COUNT_WIDTH = 32
+Parameter \AF_ASSERT = 224
+Parameter \AF_CLEAR = 224
+Parameter \AE_ASSERT = 32
+Parameter \AE_CLEAR = 32
+Found cached RTLIL representation for module `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo'.
+Parameter \WRITE_WIDTH = 75
+Parameter \READ_WIDTH = 139
+Parameter \SYNC_STAGES = 2
+Parameter \AUTO_REFRESH_CYCLES = 32
+
+9.1.8. Executing AST frontend in derive mode using pre-parsed AST for module `\fifo_monitor'.
+Parameter \WRITE_WIDTH = 75
+Parameter \READ_WIDTH = 139
+Parameter \SYNC_STAGES = 2
+Parameter \AUTO_REFRESH_CYCLES = 32
+Generating RTLIL representation for module `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor'.
+
+9.1.9. Analyzing design hierarchy..
+Top module:  \dual_async_fifo
+Used module:     $paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo
+Used module:         \fifo_ram
+Used module:         \gray_sync
+Used module:         \reset_sync
+Used module:     $paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor
+Used module:         \snapshot_mailbox
+Used module:             $paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync
+Parameter \DATA_WIDTH = 32
+Parameter \ADDR_WIDTH = 8
+Found cached RTLIL representation for module `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram'.
+Parameter \WIDTH = 9
+Parameter \STAGES = 2
+Found cached RTLIL representation for module `$paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync'.
+Parameter \WIDTH = 9
+Parameter \STAGES = 2
+Found cached RTLIL representation for module `$paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync'.
+Parameter \WIDTH = 139
+Parameter \SYNC_STAGES = 2
+Found cached RTLIL representation for module `$paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox'.
+Parameter \WIDTH = 75
+Parameter \SYNC_STAGES = 2
+Found cached RTLIL representation for module `$paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox'.
+Parameter \WIDTH = 139
+Parameter \SYNC_STAGES = 2
+Found cached RTLIL representation for module `$paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox'.
+Parameter \WIDTH = 75
+Parameter \SYNC_STAGES = 2
+Found cached RTLIL representation for module `$paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox'.
+
+9.1.10. Analyzing design hierarchy..
+Top module:  \dual_async_fifo
+Used module:     $paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo
+Used module:         $paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram
+Used module:         $paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync
+Used module:         \reset_sync
+Used module:     $paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor
+Used module:         $paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox
+Used module:             \gray_sync
+Used module:         $paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox
+Parameter \WIDTH = 1
+Parameter \STAGES = 2
+Found cached RTLIL representation for module `$paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync'.
+Parameter \WIDTH = 1
+Parameter \STAGES = 2
+Found cached RTLIL representation for module `$paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync'.
+Parameter \WIDTH = 1
+Parameter \STAGES = 2
+Found cached RTLIL representation for module `$paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync'.
+Parameter \WIDTH = 1
+Parameter \STAGES = 2
+Found cached RTLIL representation for module `$paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync'.
+
+9.1.11. Analyzing design hierarchy..
+Top module:  \dual_async_fifo
+Used module:     $paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo
+Used module:         $paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram
+Used module:         $paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync
+Used module:         \reset_sync
+Used module:     $paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor
+Used module:         $paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox
+Used module:             $paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync
+Used module:         $paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox
+
+9.1.12. Analyzing design hierarchy..
+Top module:  \dual_async_fifo
+Used module:     $paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo
+Used module:         $paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram
+Used module:         $paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync
+Used module:         \reset_sync
+Used module:     $paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor
+Used module:         $paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox
+Used module:             $paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync
+Used module:         $paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox
+Removing unused module `\fifo_monitor'.
+Removing unused module `\snapshot_mailbox'.
+Removing unused module `\async_fifo'.
+Removing unused module `\fifo_ram'.
+Removing unused module `\gray_sync'.
+Removed 5 unused modules.
+
+9.2. Executing PROC pass (convert processes to netlists).
+
+9.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.$proc$rtl/fifo_monitor.v:60$312'.
+Cleaned up 1 empty switch.
+
+9.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$rtl/gray_sync.v:13$171 in module $paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync.
+Marked 1 switch rules as full_case in process $proc$rtl/fifo_ram.v:25$168 in module $paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.
+Marked 1 switch rules as full_case in process $proc$rtl/fifo_ram.v:20$161 in module $paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.
+Removed 1 dead cases from process $proc$rtl/fifo_monitor.v:60$312 in module $paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.
+Marked 3 switch rules as full_case in process $proc$rtl/fifo_monitor.v:60$312 in module $paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.
+Marked 10 switch rules as full_case in process $proc$rtl/async_fifo.v:121$236 in module $paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.
+Marked 6 switch rules as full_case in process $proc$rtl/async_fifo.v:100$213 in module $paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.
+Marked 1 switch rules as full_case in process $proc$rtl/snapshot_mailbox.v:25$178 in module $paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox.
+Marked 1 switch rules as full_case in process $proc$rtl/snapshot_mailbox.v:25$175 in module $paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox.
+Marked 1 switch rules as full_case in process $proc$rtl/gray_sync.v:13$173 in module $paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync.
+Marked 1 switch rules as full_case in process $proc$rtl/reset_sync.v:8$1 in module reset_sync.
+Removed a total of 1 dead cases.
+
+9.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 16 redundant assignments.
+Promoted 41 assignments to connections.
+
+9.2.4. Executing PROC_INIT pass (extract init attributes).
+
+9.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `$paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync.$proc$rtl/gray_sync.v:13$171'.
+Found async reset \rd_rst_n in `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.$proc$rtl/fifo_ram.v:25$168'.
+Found async reset \monitor_rst_done in `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.$proc$rtl/fifo_monitor.v:60$312'.
+Found async reset \rd_rst_done in `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+Found async reset \wr_rst_done in `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:100$213'.
+Found async reset \src_rst_n in `$paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox.$proc$rtl/snapshot_mailbox.v:25$178'.
+Found async reset \src_rst_n in `$paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox.$proc$rtl/snapshot_mailbox.v:25$175'.
+Found async reset \rst_n in `$paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync.$proc$rtl/gray_sync.v:13$173'.
+Found async reset \arst_n in `\reset_sync.$proc$rtl/reset_sync.v:8$1'.
+
+9.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~23 debug messages>
+
+9.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync.$proc$rtl/gray_sync.v:13$171'.
+     1/3: $1\i[31:0]
+     2/3: $0\pipe[1][8:0]
+     3/3: $0\pipe[0][8:0]
+Creating decoders for process `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.$proc$rtl/fifo_ram.v:25$168'.
+     1/2: $0\rd_data_valid[0:0]
+     2/2: $0\rd_data[31:0]
+Creating decoders for process `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.$proc$rtl/fifo_ram.v:20$161'.
+     1/3: $1$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$167
+     2/3: $1$memwr$\mem$rtl/fifo_ram.v:21$160_DATA[31:0]$166
+     3/3: $1$memwr$\mem$rtl/fifo_ram.v:21$160_ADDR[7:0]$165
+Creating decoders for process `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.$proc$rtl/fifo_monitor.v:60$312'.
+     1/9: $0\snapshot_valid[0:0]
+     2/9: $0\idle_cycles[31:0]
+     3/9: $0\state[1:0]
+     4/9: $0\b_read_status[138:0]
+     5/9: $0\a_read_status[138:0]
+     6/9: $0\b_write_status[74:0]
+     7/9: $0\a_write_status[74:0]
+     8/9: $0\snapshot_id[31:0]
+     9/9: $0\request_toggle[0:0]
+Creating decoders for process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:90$293'.
+Creating decoders for process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:89$280'.
+Creating decoders for process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+     1/30: $3\increment_saturated$func$rtl/async_fifo.v:143$188.$result[31:0]$278
+     2/30: $2\increment_saturated$func$rtl/async_fifo.v:143$188.$result[31:0]$275
+     3/30: $2\increment_saturated$func$rtl/async_fifo.v:143$188.value[31:0]$276
+     4/30: $3\increment_saturated$func$rtl/async_fifo.v:142$187.$result[31:0]$273
+     5/30: $2\increment_saturated$func$rtl/async_fifo.v:142$187.$result[31:0]$270
+     6/30: $2\increment_saturated$func$rtl/async_fifo.v:142$187.value[31:0]$271
+     7/30: $3\increment_saturated$func$rtl/async_fifo.v:141$186.$result[31:0]$266
+     8/30: $2\increment_saturated$func$rtl/async_fifo.v:141$186.$result[31:0]$263
+     9/30: $2\increment_saturated$func$rtl/async_fifo.v:141$186.value[31:0]$264
+    10/30: $3\increment_saturated$func$rtl/async_fifo.v:140$185.$result[31:0]$259
+    11/30: $2\increment_saturated$func$rtl/async_fifo.v:140$185.$result[31:0]$256
+    12/30: $2\increment_saturated$func$rtl/async_fifo.v:140$185.value[31:0]$257
+    13/30: $0\stall_previous[0:0]
+    14/30: $1\increment_saturated$func$rtl/async_fifo.v:143$188.value[31:0]$253
+    15/30: $1\increment_saturated$func$rtl/async_fifo.v:143$188.$result[31:0]$252
+    16/30: $1\increment_saturated$func$rtl/async_fifo.v:142$187.value[31:0]$251
+    17/30: $1\increment_saturated$func$rtl/async_fifo.v:142$187.$result[31:0]$250
+    18/30: $1\increment_saturated$func$rtl/async_fifo.v:141$186.value[31:0]$249
+    19/30: $1\increment_saturated$func$rtl/async_fifo.v:141$186.$result[31:0]$248
+    20/30: $1\increment_saturated$func$rtl/async_fifo.v:140$185.value[31:0]$247
+    21/30: $1\increment_saturated$func$rtl/async_fifo.v:140$185.$result[31:0]$246
+    22/30: $0\rd_level[8:0]
+    23/30: $0\empty[0:0]
+    24/30: $0\rgray[8:0]
+    25/30: $0\rbin[8:0]
+    26/30: $0\backpressure_cycles[31:0]
+    27/30: $0\backpressure_count[31:0]
+    28/30: $0\underflow_count[31:0]
+    29/30: $0\read_count[31:0]
+    30/30: $0\almost_empty[0:0]
+Creating decoders for process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:100$213'.
+     1/17: $3\increment_saturated$func$rtl/async_fifo.v:117$184.$result[31:0]$234
+     2/17: $2\increment_saturated$func$rtl/async_fifo.v:117$184.$result[31:0]$231
+     3/17: $2\increment_saturated$func$rtl/async_fifo.v:117$184.value[31:0]$232
+     4/17: $3\increment_saturated$func$rtl/async_fifo.v:116$183.$result[31:0]$228
+     5/17: $2\increment_saturated$func$rtl/async_fifo.v:116$183.$result[31:0]$225
+     6/17: $2\increment_saturated$func$rtl/async_fifo.v:116$183.value[31:0]$226
+     7/17: $1\increment_saturated$func$rtl/async_fifo.v:117$184.value[31:0]$222
+     8/17: $1\increment_saturated$func$rtl/async_fifo.v:117$184.$result[31:0]$221
+     9/17: $1\increment_saturated$func$rtl/async_fifo.v:116$183.value[31:0]$220
+    10/17: $1\increment_saturated$func$rtl/async_fifo.v:116$183.$result[31:0]$219
+    11/17: $0\wr_level[8:0]
+    12/17: $0\full[0:0]
+    13/17: $0\wgray[8:0]
+    14/17: $0\wbin[8:0]
+    15/17: $0\overflow_count[31:0]
+    16/17: $0\write_count[31:0]
+    17/17: $0\almost_full[0:0]
+Creating decoders for process `$paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox.$proc$rtl/snapshot_mailbox.v:25$178'.
+     1/2: $0\source_ack[0:0]
+     2/2: $0\held_data[74:0]
+Creating decoders for process `$paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox.$proc$rtl/snapshot_mailbox.v:25$175'.
+     1/2: $0\source_ack[0:0]
+     2/2: $0\held_data[138:0]
+Creating decoders for process `$paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync.$proc$rtl/gray_sync.v:13$173'.
+     1/3: $1\i[31:0]
+     2/3: $0\pipe[1][0:0]
+     3/3: $0\pipe[0][0:0]
+Creating decoders for process `\reset_sync.$proc$rtl/reset_sync.v:8$1'.
+     1/1: $0\release_pipe[1:0]
+
+9.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\gray_to_binary$func$rtl/async_fifo.v:90$182.$result' from process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:90$293'.
+No latch inferred for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\gray_to_binary$func$rtl/async_fifo.v:89$181.$result' from process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:89$280'.
+
+9.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync.\i' using process `$paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync.$proc$rtl/gray_sync.v:13$171'.
+  created $adff cell `$procdff$480' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync.\pipe[0]' using process `$paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync.$proc$rtl/gray_sync.v:13$171'.
+  created $adff cell `$procdff$485' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync.\pipe[1]' using process `$paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync.$proc$rtl/gray_sync.v:13$171'.
+  created $adff cell `$procdff$490' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.\rd_data' using process `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.$proc$rtl/fifo_ram.v:25$168'.
+  created $adff cell `$procdff$495' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.\rd_data_valid' using process `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.$proc$rtl/fifo_ram.v:25$168'.
+  created $adff cell `$procdff$500' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.$memwr$\mem$rtl/fifo_ram.v:21$160_ADDR' using process `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.$proc$rtl/fifo_ram.v:20$161'.
+  created $dff cell `$procdff$501' with positive edge clock.
+Creating register for signal `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.$memwr$\mem$rtl/fifo_ram.v:21$160_DATA' using process `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.$proc$rtl/fifo_ram.v:20$161'.
+  created $dff cell `$procdff$502' with positive edge clock.
+Creating register for signal `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.$memwr$\mem$rtl/fifo_ram.v:21$160_EN' using process `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.$proc$rtl/fifo_ram.v:20$161'.
+  created $dff cell `$procdff$503' with positive edge clock.
+Creating register for signal `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.\request_toggle' using process `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.$proc$rtl/fifo_monitor.v:60$312'.
+  created $adff cell `$procdff$508' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.\snapshot_valid' using process `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.$proc$rtl/fifo_monitor.v:60$312'.
+  created $adff cell `$procdff$513' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.\snapshot_id' using process `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.$proc$rtl/fifo_monitor.v:60$312'.
+  created $adff cell `$procdff$518' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.\a_write_status' using process `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.$proc$rtl/fifo_monitor.v:60$312'.
+  created $adff cell `$procdff$523' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.\b_write_status' using process `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.$proc$rtl/fifo_monitor.v:60$312'.
+  created $adff cell `$procdff$528' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.\a_read_status' using process `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.$proc$rtl/fifo_monitor.v:60$312'.
+  created $adff cell `$procdff$533' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.\b_read_status' using process `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.$proc$rtl/fifo_monitor.v:60$312'.
+  created $adff cell `$procdff$538' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.\state' using process `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.$proc$rtl/fifo_monitor.v:60$312'.
+  created $adff cell `$procdff$543' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.\idle_cycles' using process `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.$proc$rtl/fifo_monitor.v:60$312'.
+  created $adff cell `$procdff$548' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\empty' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$553' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\almost_empty' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$558' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\rd_level' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$563' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\read_count' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$568' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\underflow_count' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$573' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\backpressure_count' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$578' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\backpressure_cycles' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$583' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\rbin' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$588' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\rgray' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$593' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\stall_previous' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$598' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\increment_saturated$func$rtl/async_fifo.v:140$185.$result' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$603' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\increment_saturated$func$rtl/async_fifo.v:140$185.value' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$608' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\increment_saturated$func$rtl/async_fifo.v:141$186.$result' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$613' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\increment_saturated$func$rtl/async_fifo.v:141$186.value' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$618' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\increment_saturated$func$rtl/async_fifo.v:142$187.$result' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$623' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\increment_saturated$func$rtl/async_fifo.v:142$187.value' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$628' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\increment_saturated$func$rtl/async_fifo.v:143$188.$result' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$633' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\increment_saturated$func$rtl/async_fifo.v:143$188.value' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+  created $adff cell `$procdff$638' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\full' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:100$213'.
+  created $adff cell `$procdff$643' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\almost_full' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:100$213'.
+  created $adff cell `$procdff$648' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\wr_level' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:100$213'.
+  created $adff cell `$procdff$653' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\write_count' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:100$213'.
+  created $adff cell `$procdff$658' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\overflow_count' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:100$213'.
+  created $adff cell `$procdff$663' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\wbin' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:100$213'.
+  created $adff cell `$procdff$668' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\wgray' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:100$213'.
+  created $adff cell `$procdff$673' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\increment_saturated$func$rtl/async_fifo.v:116$183.$result' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:100$213'.
+  created $adff cell `$procdff$678' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\increment_saturated$func$rtl/async_fifo.v:116$183.value' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:100$213'.
+  created $adff cell `$procdff$683' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\increment_saturated$func$rtl/async_fifo.v:117$184.$result' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:100$213'.
+  created $adff cell `$procdff$688' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.\increment_saturated$func$rtl/async_fifo.v:117$184.value' using process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:100$213'.
+  created $adff cell `$procdff$693' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox.\held_data' using process `$paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox.$proc$rtl/snapshot_mailbox.v:25$178'.
+  created $adff cell `$procdff$698' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox.\source_ack' using process `$paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox.$proc$rtl/snapshot_mailbox.v:25$178'.
+  created $adff cell `$procdff$703' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox.\held_data' using process `$paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox.$proc$rtl/snapshot_mailbox.v:25$175'.
+  created $adff cell `$procdff$708' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox.\source_ack' using process `$paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox.$proc$rtl/snapshot_mailbox.v:25$175'.
+  created $adff cell `$procdff$713' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync.\i' using process `$paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync.$proc$rtl/gray_sync.v:13$173'.
+  created $adff cell `$procdff$718' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync.\pipe[0]' using process `$paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync.$proc$rtl/gray_sync.v:13$173'.
+  created $adff cell `$procdff$723' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync.\pipe[1]' using process `$paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync.$proc$rtl/gray_sync.v:13$173'.
+  created $adff cell `$procdff$728' with positive edge clock and positive level reset.
+Creating register for signal `\reset_sync.\release_pipe' using process `\reset_sync.$proc$rtl/reset_sync.v:8$1'.
+  created $adff cell `$procdff$733' with positive edge clock and positive level reset.
+
+9.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+9.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync.$proc$rtl/gray_sync.v:13$171'.
+Found and cleaned up 1 empty switch in `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.$proc$rtl/fifo_ram.v:25$168'.
+Removing empty process `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.$proc$rtl/fifo_ram.v:25$168'.
+Found and cleaned up 1 empty switch in `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.$proc$rtl/fifo_ram.v:20$161'.
+Removing empty process `$paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.$proc$rtl/fifo_ram.v:20$161'.
+Found and cleaned up 3 empty switches in `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.$proc$rtl/fifo_monitor.v:60$312'.
+Removing empty process `$paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.$proc$rtl/fifo_monitor.v:60$312'.
+Removing empty process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:90$293'.
+Removing empty process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:89$280'.
+Found and cleaned up 10 empty switches in `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+Removing empty process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:121$236'.
+Found and cleaned up 6 empty switches in `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:100$213'.
+Removing empty process `$paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.$proc$rtl/async_fifo.v:100$213'.
+Found and cleaned up 1 empty switch in `$paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox.$proc$rtl/snapshot_mailbox.v:25$178'.
+Removing empty process `$paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox.$proc$rtl/snapshot_mailbox.v:25$178'.
+Found and cleaned up 1 empty switch in `$paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox.$proc$rtl/snapshot_mailbox.v:25$175'.
+Removing empty process `$paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox.$proc$rtl/snapshot_mailbox.v:25$175'.
+Removing empty process `$paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync.$proc$rtl/gray_sync.v:13$173'.
+Removing empty process `reset_sync.$proc$rtl/reset_sync.v:8$1'.
+Cleaned up 23 empty switches.
+
+9.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync.
+<suppressed ~6 debug messages>
+Optimizing module $paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.
+<suppressed ~4 debug messages>
+Optimizing module dual_async_fifo.
+Optimizing module $paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.
+<suppressed ~24 debug messages>
+Optimizing module $paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.
+<suppressed ~61 debug messages>
+Optimizing module $paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox.
+<suppressed ~4 debug messages>
+Optimizing module $paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox.
+<suppressed ~4 debug messages>
+Optimizing module $paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync.
+<suppressed ~6 debug messages>
+Optimizing module reset_sync.
+<suppressed ~2 debug messages>
+
+9.3. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync...
+Checking module $paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram...
+Checking module dual_async_fifo...
+Checking module $paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor...
+Checking module $paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo...
+Checking module $paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox...
+Checking module $paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox...
+Checking module $paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync...
+Checking module reset_sync...
+Found and reported 0 problems.
+
+9.4. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$0fdaa8fc7ee23bc1b724d8b60e07fae33df53260\gray_sync.
+Deleting now unused module $paramod$ce0c38940747abe9a6fc0e1739aaf602f7b0afe8\fifo_ram.
+Deleting now unused module $paramod$8e90c7e4c73970acccf52ef47c72e51bd30eac9a\fifo_monitor.
+Deleting now unused module $paramod$477dce1475138ced44bc10edecef11e43ce8ff6f\async_fifo.
+Deleting now unused module $paramod$e75023d4d0a62fe15947a4c43190b92e994047bc\snapshot_mailbox.
+Deleting now unused module $paramod$31b16ca83f821e609b1d571e4f340f920d741dcc\snapshot_mailbox.
+Deleting now unused module $paramod$3a60f47c0d38c845717b76847acd7e2fa5ab0dff\gray_sync.
+Deleting now unused module reset_sync.
+<suppressed ~17 debug messages>
+
+9.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+
+9.6. Executing CHECK pass (checking for obvious problems).
+Checking module dual_async_fifo...
+Found and reported 0 problems.
+
+9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+Removed 214 unused cells and 714 unused wires.
+<suppressed ~239 debug messages>
+
+9.8. Executing OPT pass (performing simple optimizations).
+
+9.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+
+9.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dual_async_fifo'.
+Computing hashes of 327 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Computing hashes of 316 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+<suppressed ~33 debug messages>
+Removed a total of 11 cells.
+
+9.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dual_async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $flatten\fifo_b.$procmux$372.
+    dead port 2/2 on $mux $flatten\fifo_b.$procmux$384.
+    dead port 2/2 on $mux $flatten\fifo_b.$procmux$396.
+    dead port 2/2 on $mux $flatten\fifo_b.$procmux$408.
+    dead port 2/2 on $mux $flatten\fifo_b.$procmux$437.
+    dead port 2/2 on $mux $flatten\fifo_b.$procmux$449.
+    dead port 2/2 on $mux $flatten\fifo_a.$procmux$449.
+    dead port 2/2 on $mux $flatten\fifo_a.$procmux$437.
+    dead port 2/2 on $mux $flatten\fifo_a.$procmux$408.
+    dead port 2/2 on $mux $flatten\fifo_a.$procmux$396.
+    dead port 2/2 on $mux $flatten\fifo_a.$procmux$384.
+    dead port 2/2 on $mux $flatten\fifo_a.$procmux$372.
+Removed 12 multiplexer ports.
+<suppressed ~114 debug messages>
+
+9.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dual_async_fifo.
+    Consolidated identical input bits for $mux cell $flatten\fifo_a.\u_ram.$procmux$322:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164
+      New ports: A=1'0, B=1'1, Y=$flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0]
+      New connections: $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [31:1] = { $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_a.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] }
+    Consolidated identical input bits for $mux cell $flatten\fifo_b.\u_ram.$procmux$322:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164
+      New ports: A=1'0, B=1'1, Y=$flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0]
+      New connections: $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [31:1] = { $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] $flatten\fifo_b.\u_ram.$0$memwr$\mem$rtl/fifo_ram.v:21$160_EN[31:0]$164 [0] }
+  Optimizing cells in module \dual_async_fifo.
+Performed a total of 2 changes.
+
+9.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dual_async_fifo'.
+Computing hashes of 304 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Removed a total of 0 cells.
+
+9.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+Removed 0 unused cells and 23 unused wires.
+<suppressed ~1 debug messages>
+
+9.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+
+9.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dual_async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~102 debug messages>
+
+9.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dual_async_fifo.
+Performed a total of 0 changes.
+
+9.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dual_async_fifo'.
+Computing hashes of 304 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Removed a total of 0 cells.
+
+9.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+
+9.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+
+9.8.16. Finished fast OPT passes. (There is nothing left to do.)
+
+9.9. Executing FSM pass (extract and optimize FSM).
+
+9.9.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking dual_async_fifo.u_monitor.state as FSM state register:
+    Users of register don't seem to benefit from recoding.
+
+9.9.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+9.9.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+9.9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+
+9.9.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+9.9.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+9.9.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+9.9.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+9.10. Executing OPT pass (performing simple optimizations).
+
+9.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+
+9.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dual_async_fifo'.
+Computing hashes of 304 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Removed a total of 0 cells.
+
+9.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dual_async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~102 debug messages>
+
+9.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dual_async_fifo.
+Performed a total of 0 changes.
+
+9.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dual_async_fifo'.
+Computing hashes of 304 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Removed a total of 0 cells.
+
+9.10.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\u_monitor.\u_b_read.$procdff$713 ($adff) from module dual_async_fifo (D = \u_monitor.u_b_read.u_request_sync.pipe[1], Q = \u_monitor.u_b_read.source_ack).
+Adding EN signal on $flatten\u_monitor.\u_b_read.$procdff$708 ($adff) from module dual_async_fifo (D = { \fifo_b.almost_empty \fifo_b.empty \fifo_b.rd_level \fifo_b.backpressure_cycles \fifo_b.backpressure_count \fifo_b.underflow_count \fifo_b.read_count }, Q = \u_monitor.u_b_read.held_data).
+Adding EN signal on $flatten\u_monitor.\u_b_write.$procdff$703 ($adff) from module dual_async_fifo (D = \u_monitor.u_b_write.u_request_sync.pipe[1], Q = \u_monitor.u_b_write.source_ack).
+Adding EN signal on $flatten\u_monitor.\u_b_write.$procdff$698 ($adff) from module dual_async_fifo (D = { \fifo_b.almost_full \fifo_b.full \fifo_b.wr_level \fifo_b.overflow_count \fifo_b.write_count }, Q = \u_monitor.u_b_write.held_data).
+Adding EN signal on $flatten\u_monitor.\u_a_read.$procdff$713 ($adff) from module dual_async_fifo (D = \u_monitor.u_a_read.u_request_sync.pipe[1], Q = \u_monitor.u_a_read.source_ack).
+Adding EN signal on $flatten\u_monitor.\u_a_read.$procdff$708 ($adff) from module dual_async_fifo (D = { \fifo_a.almost_empty \fifo_a.empty \fifo_a.rd_level \fifo_a.backpressure_cycles \fifo_a.backpressure_count \fifo_a.underflow_count \fifo_a.read_count }, Q = \u_monitor.u_a_read.held_data).
+Adding EN signal on $flatten\u_monitor.\u_a_write.$procdff$703 ($adff) from module dual_async_fifo (D = \u_monitor.u_a_write.u_request_sync.pipe[1], Q = \u_monitor.u_a_write.source_ack).
+Adding EN signal on $flatten\u_monitor.\u_a_write.$procdff$698 ($adff) from module dual_async_fifo (D = { \fifo_a.almost_full \fifo_a.full \fifo_a.wr_level \fifo_a.overflow_count \fifo_a.write_count }, Q = \u_monitor.u_a_write.held_data).
+Adding EN signal on $flatten\u_monitor.$procdff$543 ($adff) from module dual_async_fifo (D = $flatten\u_monitor.$0\state[1:0], Q = \u_monitor.state).
+Adding EN signal on $flatten\u_monitor.$procdff$528 ($adff) from module dual_async_fifo (D = \u_monitor.u_b_write.held_data, Q = \u_monitor.b_write_status).
+Adding EN signal on $flatten\u_monitor.$procdff$548 ($adff) from module dual_async_fifo (D = $flatten\u_monitor.$procmux$336_Y, Q = \u_monitor.idle_cycles).
+Adding EN signal on $flatten\u_monitor.$procdff$523 ($adff) from module dual_async_fifo (D = \u_monitor.u_a_write.held_data, Q = \u_monitor.a_write_status).
+Adding EN signal on $flatten\u_monitor.$procdff$518 ($adff) from module dual_async_fifo (D = $flatten\u_monitor.$add$rtl/fifo_monitor.v:90$318_Y, Q = \u_monitor.snapshot_id).
+Adding EN signal on $flatten\u_monitor.$procdff$538 ($adff) from module dual_async_fifo (D = \u_monitor.u_b_read.held_data, Q = \u_monitor.b_read_status).
+Adding EN signal on $flatten\u_monitor.$procdff$508 ($adff) from module dual_async_fifo (D = $flatten\u_monitor.$not$rtl/fifo_monitor.v:76$315_Y, Q = \u_monitor.request_toggle).
+Adding EN signal on $flatten\u_monitor.$procdff$533 ($adff) from module dual_async_fifo (D = \u_monitor.u_a_read.held_data, Q = \u_monitor.a_read_status).
+Adding EN signal on $flatten\fifo_b.\u_ram.$procdff$495 ($adff) from module dual_async_fifo (D = $flatten\fifo_b.\u_ram.$memrd$\mem$rtl/fifo_ram.v:31$170_DATA, Q = \fifo_b.u_ram.rd_data).
+Adding EN signal on $flatten\fifo_b.$procdff$663 ($adff) from module dual_async_fifo (D = $flatten\fifo_b.$add$rtl/async_fifo.v:76$235_Y, Q = \fifo_b.overflow_count).
+Adding EN signal on $flatten\fifo_a.$procdff$648 ($adff) from module dual_async_fifo (D = $flatten\fifo_a.$0\almost_full[0:0], Q = \fifo_a.almost_full).
+Adding EN signal on $flatten\fifo_a.$procdff$558 ($adff) from module dual_async_fifo (D = $flatten\fifo_a.$0\almost_empty[0:0], Q = \fifo_a.almost_empty).
+Adding EN signal on $flatten\fifo_b.$procdff$658 ($adff) from module dual_async_fifo (D = $flatten\fifo_b.$add$rtl/async_fifo.v:76$229_Y, Q = \fifo_b.write_count).
+Adding EN signal on $flatten\fifo_b.$procdff$583 ($adff) from module dual_async_fifo (D = $flatten\fifo_b.$add$rtl/async_fifo.v:76$279_Y, Q = \fifo_b.backpressure_cycles).
+Adding EN signal on $flatten\fifo_b.$procdff$578 ($adff) from module dual_async_fifo (D = $flatten\fifo_b.$add$rtl/async_fifo.v:76$274_Y, Q = \fifo_b.backpressure_count).
+Adding EN signal on $flatten\fifo_b.$procdff$573 ($adff) from module dual_async_fifo (D = $flatten\fifo_b.$add$rtl/async_fifo.v:76$267_Y, Q = \fifo_b.underflow_count).
+Adding EN signal on $flatten\fifo_a.$procdff$568 ($adff) from module dual_async_fifo (D = $flatten\fifo_a.$add$rtl/async_fifo.v:76$260_Y, Q = \fifo_a.read_count).
+Adding EN signal on $flatten\fifo_b.$procdff$568 ($adff) from module dual_async_fifo (D = $flatten\fifo_b.$add$rtl/async_fifo.v:76$260_Y, Q = \fifo_b.read_count).
+Adding EN signal on $flatten\fifo_a.$procdff$573 ($adff) from module dual_async_fifo (D = $flatten\fifo_a.$add$rtl/async_fifo.v:76$267_Y, Q = \fifo_a.underflow_count).
+Adding EN signal on $flatten\fifo_b.$procdff$558 ($adff) from module dual_async_fifo (D = $flatten\fifo_b.$0\almost_empty[0:0], Q = \fifo_b.almost_empty).
+Adding EN signal on $flatten\fifo_b.$procdff$648 ($adff) from module dual_async_fifo (D = $flatten\fifo_b.$0\almost_full[0:0], Q = \fifo_b.almost_full).
+Adding EN signal on $flatten\fifo_a.$procdff$578 ($adff) from module dual_async_fifo (D = $flatten\fifo_a.$add$rtl/async_fifo.v:76$274_Y, Q = \fifo_a.backpressure_count).
+Adding EN signal on $flatten\fifo_a.$procdff$583 ($adff) from module dual_async_fifo (D = $flatten\fifo_a.$add$rtl/async_fifo.v:76$279_Y, Q = \fifo_a.backpressure_cycles).
+Adding EN signal on $flatten\fifo_a.\u_ram.$procdff$495 ($adff) from module dual_async_fifo (D = $flatten\fifo_a.\u_ram.$memrd$\mem$rtl/fifo_ram.v:31$170_DATA, Q = \fifo_a.u_ram.rd_data).
+Adding EN signal on $flatten\fifo_a.$procdff$658 ($adff) from module dual_async_fifo (D = $flatten\fifo_a.$add$rtl/async_fifo.v:76$229_Y, Q = \fifo_a.write_count).
+Adding EN signal on $flatten\fifo_a.$procdff$663 ($adff) from module dual_async_fifo (D = $flatten\fifo_a.$add$rtl/async_fifo.v:76$235_Y, Q = \fifo_a.overflow_count).
+
+9.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+Removed 42 unused cells and 42 unused wires.
+<suppressed ~43 debug messages>
+
+9.10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+<suppressed ~5 debug messages>
+
+9.10.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.10.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dual_async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~32 debug messages>
+
+9.10.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dual_async_fifo.
+Performed a total of 0 changes.
+
+9.10.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dual_async_fifo'.
+Computing hashes of 295 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Removed a total of 0 cells.
+
+9.10.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.10.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+
+9.10.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+
+9.10.16. Finished fast OPT passes. (There is nothing left to do.)
+
+9.11. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 2) from port B of cell dual_async_fifo.$auto$simple.cc:194:make_patterns_logic$766 ($ne).
+Removed top 1 bits (of 2) from port B of cell dual_async_fifo.$flatten\u_monitor.$procmux$345_CMP0 ($eq).
+Removed top 27 bits (of 32) from port B of cell dual_async_fifo.$flatten\u_monitor.$eq$rtl/fifo_monitor.v:33$306 ($eq).
+Removed top 31 bits (of 32) from port B of cell dual_async_fifo.$flatten\fifo_b.$add$rtl/async_fifo.v:76$279 ($add).
+Removed top 31 bits (of 32) from port B of cell dual_async_fifo.$flatten\fifo_b.$add$rtl/async_fifo.v:76$274 ($add).
+Removed top 31 bits (of 32) from port B of cell dual_async_fifo.$flatten\fifo_b.$add$rtl/async_fifo.v:76$267 ($add).
+Removed top 31 bits (of 32) from port B of cell dual_async_fifo.$flatten\fifo_b.$add$rtl/async_fifo.v:76$260 ($add).
+Removed top 3 bits (of 9) from port B of cell dual_async_fifo.$flatten\fifo_b.$gt$rtl/async_fifo.v:139$255 ($gt).
+Removed top 3 bits (of 9) from port B of cell dual_async_fifo.$flatten\fifo_b.$le$rtl/async_fifo.v:138$254 ($le).
+Removed top 31 bits (of 32) from port B of cell dual_async_fifo.$flatten\fifo_b.$add$rtl/async_fifo.v:76$235 ($add).
+Removed top 31 bits (of 32) from port B of cell dual_async_fifo.$flatten\fifo_b.$add$rtl/async_fifo.v:76$229 ($add).
+Removed top 1 bits (of 9) from port B of cell dual_async_fifo.$flatten\fifo_b.$lt$rtl/async_fifo.v:115$224 ($lt).
+Removed top 1 bits (of 9) from port B of cell dual_async_fifo.$flatten\fifo_b.$ge$rtl/async_fifo.v:114$223 ($ge).
+Removed top 1 bits (of 9) from port A of cell dual_async_fifo.$flatten\fifo_b.$xor$rtl/async_fifo.v:86$207 ($xor).
+Removed top 1 bits (of 9) from port A of cell dual_async_fifo.$flatten\fifo_b.$xor$rtl/async_fifo.v:85$205 ($xor).
+Removed top 8 bits (of 9) from port B of cell dual_async_fifo.$flatten\fifo_b.$add$rtl/async_fifo.v:84$203 ($add).
+Removed top 8 bits (of 9) from port B of cell dual_async_fifo.$flatten\fifo_b.$add$rtl/async_fifo.v:83$202 ($add).
+Removed top 31 bits (of 32) from port B of cell dual_async_fifo.$flatten\fifo_a.$add$rtl/async_fifo.v:76$279 ($add).
+Removed top 31 bits (of 32) from port B of cell dual_async_fifo.$flatten\fifo_a.$add$rtl/async_fifo.v:76$274 ($add).
+Removed top 31 bits (of 32) from port B of cell dual_async_fifo.$flatten\fifo_a.$add$rtl/async_fifo.v:76$267 ($add).
+Removed top 31 bits (of 32) from port B of cell dual_async_fifo.$flatten\fifo_a.$add$rtl/async_fifo.v:76$260 ($add).
+Removed top 3 bits (of 9) from port B of cell dual_async_fifo.$flatten\fifo_a.$gt$rtl/async_fifo.v:139$255 ($gt).
+Removed top 3 bits (of 9) from port B of cell dual_async_fifo.$flatten\fifo_a.$le$rtl/async_fifo.v:138$254 ($le).
+Removed top 31 bits (of 32) from port B of cell dual_async_fifo.$flatten\fifo_a.$add$rtl/async_fifo.v:76$235 ($add).
+Removed top 31 bits (of 32) from port B of cell dual_async_fifo.$flatten\fifo_a.$add$rtl/async_fifo.v:76$229 ($add).
+Removed top 1 bits (of 9) from port B of cell dual_async_fifo.$flatten\fifo_a.$lt$rtl/async_fifo.v:115$224 ($lt).
+Removed top 1 bits (of 9) from port B of cell dual_async_fifo.$flatten\fifo_a.$ge$rtl/async_fifo.v:114$223 ($ge).
+Removed top 1 bits (of 9) from port A of cell dual_async_fifo.$flatten\fifo_a.$xor$rtl/async_fifo.v:86$207 ($xor).
+Removed top 1 bits (of 9) from port A of cell dual_async_fifo.$flatten\fifo_a.$xor$rtl/async_fifo.v:85$205 ($xor).
+Removed top 8 bits (of 9) from port B of cell dual_async_fifo.$flatten\fifo_a.$add$rtl/async_fifo.v:84$203 ($add).
+Removed top 8 bits (of 9) from port B of cell dual_async_fifo.$flatten\fifo_a.$add$rtl/async_fifo.v:83$202 ($add).
+
+9.12. Executing PEEPOPT pass (run peephole optimizers).
+
+9.13. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+
+9.14. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module dual_async_fifo:
+  creating $macc model for $flatten\fifo_b.$add$rtl/async_fifo.v:76$260 ($add).
+  creating $macc model for $flatten\fifo_b.$add$rtl/async_fifo.v:76$274 ($add).
+  creating $macc model for $flatten\fifo_b.$add$rtl/async_fifo.v:76$279 ($add).
+  creating $macc model for $flatten\fifo_b.$add$rtl/async_fifo.v:76$267 ($add).
+  creating $macc model for $flatten\fifo_b.$sub$rtl/async_fifo.v:91$211 ($sub).
+  creating $macc model for $flatten\fifo_b.$add$rtl/async_fifo.v:83$202 ($add).
+  creating $macc model for $flatten\u_monitor.$add$rtl/fifo_monitor.v:79$316 ($add).
+  creating $macc model for $flatten\u_monitor.$add$rtl/fifo_monitor.v:90$318 ($add).
+  creating $macc model for $flatten\fifo_b.$sub$rtl/async_fifo.v:92$212 ($sub).
+  creating $macc model for $flatten\fifo_b.$add$rtl/async_fifo.v:76$229 ($add).
+  creating $macc model for $flatten\fifo_a.$add$rtl/async_fifo.v:76$279 ($add).
+  creating $macc model for $flatten\fifo_a.$add$rtl/async_fifo.v:76$274 ($add).
+  creating $macc model for $flatten\fifo_a.$add$rtl/async_fifo.v:76$267 ($add).
+  creating $macc model for $flatten\fifo_a.$add$rtl/async_fifo.v:76$260 ($add).
+  creating $macc model for $flatten\fifo_b.$add$rtl/async_fifo.v:84$203 ($add).
+  creating $macc model for $flatten\fifo_a.$add$rtl/async_fifo.v:76$235 ($add).
+  creating $macc model for $flatten\fifo_a.$add$rtl/async_fifo.v:76$229 ($add).
+  creating $macc model for $flatten\fifo_a.$sub$rtl/async_fifo.v:92$212 ($sub).
+  creating $macc model for $flatten\fifo_a.$sub$rtl/async_fifo.v:91$211 ($sub).
+  creating $macc model for $flatten\fifo_a.$add$rtl/async_fifo.v:84$203 ($add).
+  creating $macc model for $flatten\fifo_a.$add$rtl/async_fifo.v:83$202 ($add).
+  creating $macc model for $flatten\fifo_b.$add$rtl/async_fifo.v:76$235 ($add).
+  creating $alu model for $macc $flatten\fifo_b.$add$rtl/async_fifo.v:76$235.
+  creating $alu model for $macc $flatten\fifo_a.$add$rtl/async_fifo.v:83$202.
+  creating $alu model for $macc $flatten\fifo_a.$add$rtl/async_fifo.v:84$203.
+  creating $alu model for $macc $flatten\fifo_a.$sub$rtl/async_fifo.v:91$211.
+  creating $alu model for $macc $flatten\fifo_a.$sub$rtl/async_fifo.v:92$212.
+  creating $alu model for $macc $flatten\fifo_a.$add$rtl/async_fifo.v:76$229.
+  creating $alu model for $macc $flatten\fifo_a.$add$rtl/async_fifo.v:76$235.
+  creating $alu model for $macc $flatten\fifo_b.$add$rtl/async_fifo.v:84$203.
+  creating $alu model for $macc $flatten\fifo_a.$add$rtl/async_fifo.v:76$260.
+  creating $alu model for $macc $flatten\fifo_a.$add$rtl/async_fifo.v:76$267.
+  creating $alu model for $macc $flatten\fifo_a.$add$rtl/async_fifo.v:76$274.
+  creating $alu model for $macc $flatten\fifo_a.$add$rtl/async_fifo.v:76$279.
+  creating $alu model for $macc $flatten\fifo_b.$add$rtl/async_fifo.v:76$229.
+  creating $alu model for $macc $flatten\fifo_b.$sub$rtl/async_fifo.v:92$212.
+  creating $alu model for $macc $flatten\u_monitor.$add$rtl/fifo_monitor.v:90$318.
+  creating $alu model for $macc $flatten\u_monitor.$add$rtl/fifo_monitor.v:79$316.
+  creating $alu model for $macc $flatten\fifo_b.$add$rtl/async_fifo.v:83$202.
+  creating $alu model for $macc $flatten\fifo_b.$sub$rtl/async_fifo.v:91$211.
+  creating $alu model for $macc $flatten\fifo_b.$add$rtl/async_fifo.v:76$267.
+  creating $alu model for $macc $flatten\fifo_b.$add$rtl/async_fifo.v:76$279.
+  creating $alu model for $macc $flatten\fifo_b.$add$rtl/async_fifo.v:76$274.
+  creating $alu model for $macc $flatten\fifo_b.$add$rtl/async_fifo.v:76$260.
+  creating $alu model for $flatten\fifo_b.$le$rtl/async_fifo.v:138$254 ($le): new $alu
+  creating $alu model for $flatten\fifo_b.$gt$rtl/async_fifo.v:139$255 ($gt): merged with $flatten\fifo_b.$le$rtl/async_fifo.v:138$254.
+  creating $alu model for $flatten\fifo_b.$ge$rtl/async_fifo.v:114$223 ($ge): new $alu
+  creating $alu model for $flatten\fifo_b.$lt$rtl/async_fifo.v:115$224 ($lt): merged with $flatten\fifo_b.$ge$rtl/async_fifo.v:114$223.
+  creating $alu model for $flatten\fifo_a.$gt$rtl/async_fifo.v:139$255 ($gt): new $alu
+  creating $alu model for $flatten\fifo_a.$le$rtl/async_fifo.v:138$254 ($le): merged with $flatten\fifo_a.$gt$rtl/async_fifo.v:139$255.
+  creating $alu model for $flatten\fifo_a.$lt$rtl/async_fifo.v:115$224 ($lt): new $alu
+  creating $alu model for $flatten\fifo_a.$ge$rtl/async_fifo.v:114$223 ($ge): merged with $flatten\fifo_a.$lt$rtl/async_fifo.v:115$224.
+  creating $alu cell for $flatten\fifo_a.$lt$rtl/async_fifo.v:115$224, $flatten\fifo_a.$ge$rtl/async_fifo.v:114$223: $auto$alumacc.cc:578:replace_alu$858
+  creating $alu cell for $flatten\fifo_a.$gt$rtl/async_fifo.v:139$255, $flatten\fifo_a.$le$rtl/async_fifo.v:138$254: $auto$alumacc.cc:578:replace_alu$871
+  creating $alu cell for $flatten\fifo_b.$ge$rtl/async_fifo.v:114$223, $flatten\fifo_b.$lt$rtl/async_fifo.v:115$224: $auto$alumacc.cc:578:replace_alu$884
+  creating $alu cell for $flatten\fifo_b.$le$rtl/async_fifo.v:138$254, $flatten\fifo_b.$gt$rtl/async_fifo.v:139$255: $auto$alumacc.cc:578:replace_alu$897
+  creating $alu cell for $flatten\fifo_b.$add$rtl/async_fifo.v:76$260: $auto$alumacc.cc:578:replace_alu$910
+  creating $alu cell for $flatten\fifo_b.$add$rtl/async_fifo.v:76$274: $auto$alumacc.cc:578:replace_alu$913
+  creating $alu cell for $flatten\fifo_b.$add$rtl/async_fifo.v:76$279: $auto$alumacc.cc:578:replace_alu$916
+  creating $alu cell for $flatten\fifo_b.$add$rtl/async_fifo.v:76$267: $auto$alumacc.cc:578:replace_alu$919
+  creating $alu cell for $flatten\fifo_b.$sub$rtl/async_fifo.v:91$211: $auto$alumacc.cc:578:replace_alu$922
+  creating $alu cell for $flatten\fifo_b.$add$rtl/async_fifo.v:83$202: $auto$alumacc.cc:578:replace_alu$925
+  creating $alu cell for $flatten\u_monitor.$add$rtl/fifo_monitor.v:79$316: $auto$alumacc.cc:578:replace_alu$928
+  creating $alu cell for $flatten\u_monitor.$add$rtl/fifo_monitor.v:90$318: $auto$alumacc.cc:578:replace_alu$931
+  creating $alu cell for $flatten\fifo_b.$sub$rtl/async_fifo.v:92$212: $auto$alumacc.cc:578:replace_alu$934
+  creating $alu cell for $flatten\fifo_b.$add$rtl/async_fifo.v:76$229: $auto$alumacc.cc:578:replace_alu$937
+  creating $alu cell for $flatten\fifo_a.$add$rtl/async_fifo.v:76$279: $auto$alumacc.cc:578:replace_alu$940
+  creating $alu cell for $flatten\fifo_a.$add$rtl/async_fifo.v:76$274: $auto$alumacc.cc:578:replace_alu$943
+  creating $alu cell for $flatten\fifo_a.$add$rtl/async_fifo.v:76$267: $auto$alumacc.cc:578:replace_alu$946
+  creating $alu cell for $flatten\fifo_a.$add$rtl/async_fifo.v:76$260: $auto$alumacc.cc:578:replace_alu$949
+  creating $alu cell for $flatten\fifo_b.$add$rtl/async_fifo.v:84$203: $auto$alumacc.cc:578:replace_alu$952
+  creating $alu cell for $flatten\fifo_a.$add$rtl/async_fifo.v:76$235: $auto$alumacc.cc:578:replace_alu$955
+  creating $alu cell for $flatten\fifo_a.$add$rtl/async_fifo.v:76$229: $auto$alumacc.cc:578:replace_alu$958
+  creating $alu cell for $flatten\fifo_a.$sub$rtl/async_fifo.v:92$212: $auto$alumacc.cc:578:replace_alu$961
+  creating $alu cell for $flatten\fifo_a.$sub$rtl/async_fifo.v:91$211: $auto$alumacc.cc:578:replace_alu$964
+  creating $alu cell for $flatten\fifo_a.$add$rtl/async_fifo.v:84$203: $auto$alumacc.cc:578:replace_alu$967
+  creating $alu cell for $flatten\fifo_a.$add$rtl/async_fifo.v:83$202: $auto$alumacc.cc:578:replace_alu$970
+  creating $alu cell for $flatten\fifo_b.$add$rtl/async_fifo.v:76$235: $auto$alumacc.cc:578:replace_alu$973
+  created 26 $alu and 0 $macc cells.
+
+9.15. Executing SHARE pass (SAT-based resource sharing).
+
+9.16. Executing OPT pass (performing simple optimizations).
+
+9.16.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+<suppressed ~4 debug messages>
+
+9.16.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dual_async_fifo'.
+Computing hashes of 311 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Removed a total of 0 cells.
+
+9.16.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dual_async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~32 debug messages>
+
+9.16.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dual_async_fifo.
+Performed a total of 0 changes.
+
+9.16.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dual_async_fifo'.
+Computing hashes of 311 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Removed a total of 0 cells.
+
+9.16.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.16.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+Removed 0 unused cells and 8 unused wires.
+<suppressed ~1 debug messages>
+
+9.16.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+
+9.16.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.16.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dual_async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~32 debug messages>
+
+9.16.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dual_async_fifo.
+Performed a total of 0 changes.
+
+9.16.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dual_async_fifo'.
+Computing hashes of 311 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Removed a total of 0 cells.
+
+9.16.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.16.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+
+9.16.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+
+9.16.16. Finished fast OPT passes. (There is nothing left to do.)
+
+9.17. Executing MEMORY pass.
+
+9.17.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+9.17.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+9.17.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing dual_async_fifo.fifo_a.u_ram.mem write port 0.
+  Analyzing dual_async_fifo.fifo_b.u_ram.mem write port 0.
+
+9.17.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+9.17.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\fifo_a.u_ram.mem'[0] in module `\dual_async_fifo':
+    merging output FF to cell.
+Checking read port `\fifo_b.u_ram.mem'[0] in module `\dual_async_fifo':
+    merging output FF to cell.
+
+9.17.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+Removed 2 unused cells and 66 unused wires.
+<suppressed ~3 debug messages>
+
+9.17.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+9.17.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+9.17.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+
+9.17.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+9.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+
+10. Executing CHECK pass (checking for obvious problems).
+Checking module dual_async_fifo...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\dual_async_fifo": {
+         "num_wires":         532,
+         "num_wire_bits":     7018,
+         "num_pub_wires":     338,
+         "num_pub_wire_bits": 5124,
+         "num_ports":         55,
+         "num_port_bits":     1038,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         309,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$adff": 50,
+            "$adffe": 32,
+            "$alu": 26,
+            "$eq": 9,
+            "$logic_and": 24,
+            "$logic_not": 11,
+            "$logic_or": 1,
+            "$mem_v2": 2,
+            "$mux": 18,
+            "$ne": 6,
+            "$not": 23,
+            "$or": 4,
+            "$pmux": 1,
+            "$reduce_and": 30,
+            "$reduce_bool": 6,
+            "$reduce_or": 4,
+            "$scopeinfo": 26,
+            "$xor": 36
+         }
+      }
+   },
+      "design": {
+         "num_wires":         532,
+         "num_wire_bits":     7018,
+         "num_pub_wires":     338,
+         "num_pub_wire_bits": 5124,
+         "num_ports":         55,
+         "num_port_bits":     1038,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         309,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$adff": 50,
+            "$adffe": 32,
+            "$alu": 26,
+            "$eq": 9,
+            "$logic_and": 24,
+            "$logic_not": 11,
+            "$logic_or": 1,
+            "$mem_v2": 2,
+            "$mux": 18,
+            "$ne": 6,
+            "$not": 23,
+            "$or": 4,
+            "$pmux": 1,
+            "$reduce_and": 30,
+            "$reduce_bool": 6,
+            "$reduce_or": 4,
+            "$scopeinfo": 26,
+            "$xor": 36
+         }
+      }
+}
+
+11. Executing JSON backend.
+
+12. Executing SYNTH pass.
+
+12.1. Executing OPT pass (performing simple optimizations).
+
+12.1.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+<suppressed ~38 debug messages>
+
+12.1.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dual_async_fifo'.
+Computing hashes of 312 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Removed a total of 0 cells.
+
+12.1.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.1.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+Removed 0 unused cells and 45 unused wires.
+<suppressed ~1 debug messages>
+
+12.1.5. Finished fast OPT passes.
+
+12.2. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \fifo_a.u_ram.mem in module \dual_async_fifo:
+  created 256 $dff cells and 0 static cells of width 32.
+Extracted data FF from read port 0 of dual_async_fifo.fifo_a.u_ram.mem: $\fifo_a.u_ram.mem$rdreg[0]
+  read interface: 1 $dff and 255 $mux cells.
+  write interface: 256 write mux blocks.
+Mapping memory \fifo_b.u_ram.mem in module \dual_async_fifo:
+  created 256 $dff cells and 0 static cells of width 32.
+Extracted data FF from read port 0 of dual_async_fifo.fifo_b.u_ram.mem: $\fifo_b.u_ram.mem$rdreg[0]
+  read interface: 1 $dff and 255 $mux cells.
+  write interface: 256 write mux blocks.
+
+12.3. Executing OPT pass (performing simple optimizations).
+
+12.3.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+<suppressed ~34 debug messages>
+
+12.3.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dual_async_fifo'.
+Computing hashes of 2982 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Removed a total of 0 cells.
+
+12.3.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dual_async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1540 debug messages>
+
+12.3.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dual_async_fifo.
+Performed a total of 0 changes.
+
+12.3.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dual_async_fifo'.
+Computing hashes of 2982 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Removed a total of 0 cells.
+
+12.3.6. Executing OPT_SHARE pass.
+
+12.3.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.3.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+Removed 2 unused cells and 1042 unused wires.
+<suppressed ~3 debug messages>
+
+12.3.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+
+12.3.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+12.3.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dual_async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1540 debug messages>
+
+12.3.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dual_async_fifo.
+Performed a total of 0 changes.
+
+12.3.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dual_async_fifo'.
+Computing hashes of 2980 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Removed a total of 0 cells.
+
+12.3.14. Executing OPT_SHARE pass.
+
+12.3.15. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\fifo_a.u_ram.mem[0]$1098 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[0]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[1]$1100 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[1]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[2]$1102 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[2]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[3]$1104 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[3]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[4]$1106 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[4]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[5]$1108 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[5]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[6]$1110 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[6]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[7]$1112 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[7]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[8]$1114 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[8]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[9]$1116 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[9]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[10]$1118 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[10]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[11]$1120 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[11]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[12]$1122 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[12]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[13]$1124 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[13]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[14]$1126 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[14]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[15]$1128 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[15]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[16]$1130 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[16]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[17]$1132 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[17]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[18]$1134 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[18]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[19]$1136 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[19]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[20]$1138 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[20]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[21]$1140 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[21]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[22]$1142 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[22]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[23]$1144 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[23]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[24]$1146 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[24]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[25]$1148 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[25]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[26]$1150 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[26]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[27]$1152 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[27]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[28]$1154 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[28]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[29]$1156 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[29]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[30]$1158 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[30]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[31]$1160 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[31]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[32]$1162 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[32]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[33]$1164 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[33]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[34]$1166 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[34]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[35]$1168 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[35]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[36]$1170 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[36]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[37]$1172 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[37]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[38]$1174 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[38]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[39]$1176 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[39]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[40]$1178 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[40]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[41]$1180 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[41]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[42]$1182 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[42]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[43]$1184 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[43]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[44]$1186 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[44]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[45]$1188 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[45]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[46]$1190 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[46]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[47]$1192 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[47]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[48]$1194 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[48]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[49]$1196 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[49]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[50]$1198 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[50]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[51]$1200 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[51]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[52]$1202 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[52]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[53]$1204 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[53]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[54]$1206 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[54]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[55]$1208 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[55]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[56]$1210 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[56]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[57]$1212 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[57]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[58]$1214 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[58]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[59]$1216 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[59]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[60]$1218 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[60]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[61]$1220 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[61]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[62]$1222 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[62]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[63]$1224 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[63]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[64]$1226 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[64]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[65]$1228 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[65]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[66]$1230 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[66]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[67]$1232 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[67]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[68]$1234 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[68]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[69]$1236 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[69]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[70]$1238 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[70]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[71]$1240 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[71]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[72]$1242 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[72]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[73]$1244 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[73]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[74]$1246 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[74]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[75]$1248 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[75]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[76]$1250 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[76]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[77]$1252 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[77]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[78]$1254 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[78]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[79]$1256 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[79]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[80]$1258 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[80]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[81]$1260 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[81]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[82]$1262 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[82]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[83]$1264 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[83]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[84]$1266 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[84]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[85]$1268 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[85]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[86]$1270 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[86]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[87]$1272 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[87]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[88]$1274 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[88]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[89]$1276 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[89]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[90]$1278 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[90]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[91]$1280 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[91]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[92]$1282 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[92]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[93]$1284 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[93]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[94]$1286 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[94]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[95]$1288 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[95]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[96]$1290 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[96]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[97]$1292 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[97]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[98]$1294 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[98]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[99]$1296 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[99]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[100]$1298 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[100]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[101]$1300 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[101]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[102]$1302 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[102]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[103]$1304 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[103]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[104]$1306 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[104]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[105]$1308 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[105]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[106]$1310 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[106]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[107]$1312 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[107]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[108]$1314 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[108]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[109]$1316 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[109]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[110]$1318 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[110]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[111]$1320 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[111]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[112]$1322 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[112]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[113]$1324 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[113]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[114]$1326 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[114]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[115]$1328 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[115]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[116]$1330 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[116]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[117]$1332 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[117]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[118]$1334 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[118]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[119]$1336 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[119]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[120]$1338 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[120]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[121]$1340 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[121]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[122]$1342 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[122]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[123]$1344 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[123]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[124]$1346 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[124]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[125]$1348 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[125]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[126]$1350 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[126]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[127]$1352 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[127]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[128]$1354 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[128]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[129]$1356 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[129]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[130]$1358 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[130]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[131]$1360 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[131]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[132]$1362 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[132]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[133]$1364 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[133]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[134]$1366 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[134]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[135]$1368 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[135]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[136]$1370 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[136]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[137]$1372 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[137]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[138]$1374 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[138]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[139]$1376 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[139]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[140]$1378 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[140]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[141]$1380 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[141]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[142]$1382 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[142]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[143]$1384 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[143]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[144]$1386 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[144]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[145]$1388 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[145]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[146]$1390 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[146]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[147]$1392 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[147]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[148]$1394 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[148]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[149]$1396 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[149]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[150]$1398 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[150]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[151]$1400 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[151]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[152]$1402 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[152]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[153]$1404 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[153]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[154]$1406 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[154]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[155]$1408 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[155]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[156]$1410 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[156]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[157]$1412 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[157]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[158]$1414 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[158]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[159]$1416 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[159]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[160]$1418 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[160]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[161]$1420 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[161]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[162]$1422 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[162]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[163]$1424 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[163]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[164]$1426 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[164]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[165]$1428 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[165]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[166]$1430 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[166]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[167]$1432 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[167]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[168]$1434 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[168]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[169]$1436 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[169]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[170]$1438 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[170]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[171]$1440 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[171]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[172]$1442 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[172]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[173]$1444 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[173]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[174]$1446 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[174]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[175]$1448 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[175]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[176]$1450 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[176]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[177]$1452 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[177]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[178]$1454 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[178]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[179]$1456 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[179]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[180]$1458 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[180]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[181]$1460 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[181]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[182]$1462 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[182]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[183]$1464 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[183]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[184]$1466 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[184]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[185]$1468 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[185]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[186]$1470 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[186]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[187]$1472 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[187]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[188]$1474 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[188]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[189]$1476 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[189]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[190]$1478 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[190]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[191]$1480 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[191]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[192]$1482 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[192]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[193]$1484 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[193]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[194]$1486 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[194]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[195]$1488 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[195]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[196]$1490 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[196]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[197]$1492 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[197]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[198]$1494 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[198]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[199]$1496 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[199]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[200]$1498 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[200]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[201]$1500 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[201]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[202]$1502 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[202]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[203]$1504 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[203]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[204]$1506 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[204]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[205]$1508 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[205]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[206]$1510 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[206]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[207]$1512 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[207]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[208]$1514 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[208]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[209]$1516 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[209]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[210]$1518 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[210]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[211]$1520 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[211]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[212]$1522 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[212]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[213]$1524 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[213]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[214]$1526 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[214]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[215]$1528 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[215]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[216]$1530 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[216]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[217]$1532 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[217]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[218]$1534 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[218]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[219]$1536 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[219]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[220]$1538 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[220]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[221]$1540 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[221]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[222]$1542 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[222]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[223]$1544 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[223]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[224]$1546 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[224]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[225]$1548 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[225]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[226]$1550 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[226]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[227]$1552 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[227]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[228]$1554 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[228]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[229]$1556 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[229]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[230]$1558 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[230]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[231]$1560 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[231]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[232]$1562 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[232]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[233]$1564 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[233]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[234]$1566 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[234]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[235]$1568 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[235]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[236]$1570 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[236]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[237]$1572 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[237]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[238]$1574 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[238]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[239]$1576 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[239]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[240]$1578 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[240]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[241]$1580 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[241]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[242]$1582 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[242]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[243]$1584 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[243]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[244]$1586 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[244]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[245]$1588 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[245]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[246]$1590 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[246]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[247]$1592 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[247]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[248]$1594 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[248]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[249]$1596 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[249]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[250]$1598 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[250]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[251]$1600 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[251]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[252]$1602 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[252]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[253]$1604 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[253]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[254]$1606 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[254]).
+Adding EN signal on $memory\fifo_a.u_ram.mem[255]$1608 ($dff) from module dual_async_fifo (D = \a_wr_data, Q = \fifo_a.u_ram.mem[255]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[0]$4039 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[0]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[1]$4041 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[1]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[2]$4043 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[2]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[3]$4045 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[3]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[4]$4047 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[4]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[5]$4049 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[5]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[6]$4051 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[6]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[7]$4053 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[7]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[8]$4055 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[8]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[9]$4057 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[9]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[10]$4059 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[10]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[11]$4061 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[11]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[12]$4063 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[12]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[13]$4065 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[13]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[14]$4067 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[14]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[15]$4069 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[15]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[16]$4071 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[16]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[17]$4073 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[17]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[18]$4075 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[18]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[19]$4077 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[19]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[20]$4079 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[20]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[21]$4081 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[21]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[22]$4083 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[22]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[23]$4085 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[23]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[24]$4087 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[24]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[25]$4089 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[25]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[26]$4091 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[26]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[27]$4093 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[27]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[28]$4095 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[28]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[29]$4097 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[29]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[30]$4099 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[30]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[31]$4101 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[31]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[32]$4103 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[32]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[33]$4105 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[33]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[34]$4107 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[34]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[35]$4109 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[35]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[36]$4111 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[36]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[37]$4113 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[37]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[38]$4115 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[38]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[39]$4117 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[39]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[40]$4119 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[40]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[41]$4121 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[41]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[42]$4123 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[42]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[43]$4125 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[43]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[44]$4127 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[44]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[45]$4129 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[45]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[46]$4131 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[46]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[47]$4133 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[47]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[48]$4135 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[48]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[49]$4137 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[49]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[50]$4139 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[50]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[51]$4141 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[51]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[52]$4143 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[52]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[53]$4145 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[53]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[54]$4147 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[54]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[55]$4149 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[55]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[56]$4151 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[56]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[57]$4153 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[57]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[58]$4155 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[58]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[59]$4157 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[59]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[60]$4159 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[60]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[61]$4161 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[61]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[62]$4163 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[62]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[63]$4165 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[63]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[64]$4167 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[64]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[65]$4169 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[65]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[66]$4171 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[66]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[67]$4173 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[67]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[68]$4175 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[68]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[69]$4177 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[69]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[70]$4179 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[70]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[71]$4181 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[71]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[72]$4183 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[72]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[73]$4185 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[73]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[74]$4187 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[74]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[75]$4189 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[75]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[76]$4191 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[76]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[77]$4193 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[77]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[78]$4195 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[78]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[79]$4197 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[79]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[80]$4199 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[80]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[81]$4201 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[81]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[82]$4203 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[82]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[83]$4205 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[83]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[84]$4207 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[84]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[85]$4209 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[85]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[86]$4211 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[86]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[87]$4213 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[87]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[88]$4215 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[88]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[89]$4217 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[89]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[90]$4219 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[90]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[91]$4221 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[91]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[92]$4223 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[92]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[93]$4225 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[93]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[94]$4227 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[94]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[95]$4229 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[95]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[96]$4231 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[96]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[97]$4233 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[97]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[98]$4235 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[98]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[99]$4237 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[99]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[100]$4239 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[100]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[101]$4241 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[101]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[102]$4243 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[102]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[103]$4245 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[103]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[104]$4247 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[104]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[105]$4249 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[105]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[106]$4251 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[106]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[107]$4253 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[107]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[108]$4255 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[108]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[109]$4257 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[109]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[110]$4259 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[110]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[111]$4261 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[111]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[112]$4263 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[112]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[113]$4265 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[113]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[114]$4267 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[114]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[115]$4269 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[115]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[116]$4271 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[116]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[117]$4273 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[117]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[118]$4275 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[118]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[119]$4277 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[119]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[120]$4279 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[120]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[121]$4281 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[121]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[122]$4283 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[122]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[123]$4285 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[123]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[124]$4287 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[124]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[125]$4289 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[125]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[126]$4291 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[126]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[127]$4293 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[127]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[128]$4295 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[128]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[129]$4297 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[129]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[130]$4299 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[130]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[131]$4301 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[131]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[132]$4303 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[132]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[133]$4305 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[133]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[134]$4307 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[134]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[135]$4309 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[135]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[136]$4311 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[136]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[137]$4313 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[137]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[138]$4315 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[138]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[139]$4317 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[139]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[140]$4319 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[140]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[141]$4321 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[141]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[142]$4323 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[142]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[143]$4325 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[143]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[144]$4327 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[144]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[145]$4329 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[145]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[146]$4331 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[146]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[147]$4333 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[147]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[148]$4335 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[148]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[149]$4337 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[149]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[150]$4339 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[150]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[151]$4341 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[151]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[152]$4343 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[152]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[153]$4345 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[153]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[154]$4347 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[154]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[155]$4349 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[155]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[156]$4351 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[156]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[157]$4353 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[157]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[158]$4355 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[158]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[159]$4357 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[159]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[160]$4359 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[160]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[161]$4361 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[161]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[162]$4363 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[162]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[163]$4365 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[163]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[164]$4367 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[164]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[165]$4369 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[165]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[166]$4371 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[166]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[167]$4373 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[167]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[168]$4375 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[168]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[169]$4377 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[169]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[170]$4379 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[170]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[171]$4381 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[171]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[172]$4383 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[172]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[173]$4385 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[173]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[174]$4387 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[174]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[175]$4389 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[175]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[176]$4391 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[176]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[177]$4393 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[177]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[178]$4395 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[178]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[179]$4397 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[179]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[180]$4399 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[180]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[181]$4401 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[181]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[182]$4403 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[182]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[183]$4405 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[183]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[184]$4407 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[184]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[185]$4409 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[185]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[186]$4411 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[186]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[187]$4413 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[187]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[188]$4415 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[188]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[189]$4417 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[189]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[190]$4419 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[190]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[191]$4421 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[191]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[192]$4423 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[192]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[193]$4425 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[193]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[194]$4427 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[194]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[195]$4429 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[195]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[196]$4431 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[196]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[197]$4433 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[197]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[198]$4435 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[198]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[199]$4437 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[199]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[200]$4439 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[200]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[201]$4441 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[201]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[202]$4443 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[202]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[203]$4445 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[203]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[204]$4447 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[204]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[205]$4449 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[205]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[206]$4451 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[206]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[207]$4453 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[207]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[208]$4455 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[208]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[209]$4457 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[209]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[210]$4459 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[210]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[211]$4461 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[211]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[212]$4463 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[212]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[213]$4465 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[213]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[214]$4467 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[214]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[215]$4469 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[215]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[216]$4471 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[216]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[217]$4473 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[217]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[218]$4475 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[218]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[219]$4477 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[219]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[220]$4479 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[220]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[221]$4481 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[221]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[222]$4483 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[222]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[223]$4485 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[223]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[224]$4487 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[224]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[225]$4489 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[225]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[226]$4491 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[226]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[227]$4493 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[227]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[228]$4495 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[228]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[229]$4497 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[229]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[230]$4499 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[230]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[231]$4501 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[231]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[232]$4503 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[232]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[233]$4505 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[233]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[234]$4507 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[234]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[235]$4509 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[235]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[236]$4511 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[236]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[237]$4513 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[237]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[238]$4515 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[238]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[239]$4517 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[239]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[240]$4519 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[240]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[241]$4521 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[241]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[242]$4523 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[242]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[243]$4525 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[243]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[244]$4527 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[244]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[245]$4529 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[245]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[246]$4531 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[246]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[247]$4533 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[247]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[248]$4535 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[248]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[249]$4537 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[249]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[250]$4539 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[250]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[251]$4541 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[251]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[252]$4543 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[252]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[253]$4545 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[253]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[254]$4547 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[254]).
+Adding EN signal on $memory\fifo_b.u_ram.mem[255]$4549 ($dff) from module dual_async_fifo (D = \b_wr_data, Q = \fifo_b.u_ram.mem[255]).
+
+12.3.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+Removed 512 unused cells and 512 unused wires.
+<suppressed ~513 debug messages>
+
+12.3.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+
+12.3.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+12.3.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \dual_async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~516 debug messages>
+
+12.3.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \dual_async_fifo.
+Performed a total of 0 changes.
+
+12.3.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dual_async_fifo'.
+Computing hashes of 2468 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Removed a total of 0 cells.
+
+12.3.22. Executing OPT_SHARE pass.
+
+12.3.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.3.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+
+12.3.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+
+12.3.26. Finished fast OPT passes. (There is nothing left to do.)
+
+12.4. Executing TECHMAP pass (map to technology primitives).
+
+12.4.1. Executing Verilog-2005 frontend: /share/techmap.v
+Parsing Verilog input from `/share/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+12.4.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod$6a42b6fefed750f8a1c58eab59479d960557103c\_90_alu for cells of type $alu.
+Using template $paramod$53700bbee849b2010ad0b60a61ccd204a10e24ca\_90_alu for cells of type $alu.
+Using template $paramod$d2fa05d38998afabc6d4f34471305d0af4b8b2df\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod$8742280fdebca84e1c87f2a86ed84f62d558f4cc\_90_alu for cells of type $alu.
+Using template $paramod$f956edc9fe4df758d9fdb10bfc518a364c99e75e\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001001 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001001 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~5518 debug messages>
+
+12.5. Executing OPT pass (performing simple optimizations).
+
+12.5.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module dual_async_fifo.
+<suppressed ~4543 debug messages>
+
+12.5.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\dual_async_fifo'.
+Computing hashes of 38335 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Computing hashes of 38090 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Computing hashes of 37990 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Computing hashes of 37942 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Computing hashes of 37918 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+Computing hashes of 37906 cells of `\dual_async_fifo'.
+Finding duplicate cells in `\dual_async_fifo'.
+<suppressed ~1287 debug messages>
+Removed a total of 429 cells.
+
+12.5.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.5.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \dual_async_fifo..
+Removed 498 unused cells and 2725 unused wires.
+<suppressed ~499 debug messages>
+
+12.5.5. Finished fast OPT passes.
+
+13. Executing CHECK pass (checking for obvious problems).
+Checking module dual_async_fifo...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\dual_async_fifo": {
+         "num_wires":         2904,
+         "num_wire_bits":     41333,
+         "num_pub_wires":     850,
+         "num_pub_wire_bits": 21508,
+         "num_ports":         55,
+         "num_port_bits":     1038,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         37408,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_AND_": 2125,
+            "$_DFFE_PN0P_": 1377,
+            "$_DFFE_PN1P_": 2,
+            "$_DFFE_PP_": 16384,
+            "$_DFF_PN0_": 209,
+            "$_DFF_PN1_": 2,
+            "$_MUX_": 16354,
+            "$_NOT_": 141,
+            "$_OR_": 144,
+            "$_XOR_": 644,
+            "$scopeinfo": 26
+         }
+      }
+   },
+      "design": {
+         "num_wires":         2904,
+         "num_wire_bits":     41333,
+         "num_pub_wires":     850,
+         "num_pub_wire_bits": 21508,
+         "num_ports":         55,
+         "num_port_bits":     1038,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         37408,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_AND_": 2125,
+            "$_DFFE_PN0P_": 1377,
+            "$_DFFE_PN1P_": 2,
+            "$_DFFE_PP_": 16384,
+            "$_DFF_PN0_": 209,
+            "$_DFF_PN1_": 2,
+            "$_MUX_": 16354,
+            "$_NOT_": 141,
+            "$_OR_": 144,
+            "$_XOR_": 644,
+            "$scopeinfo": 26
+         }
+      }
+}
+
+14. Executing JSON backend.

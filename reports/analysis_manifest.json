@@ -1,0 +1,175 @@
+{
+  "captured_at": "2026-10-24T18:37:04.370910+08:00",
+  "checkout_head_at_capture": "a4cdf6882c19b1b91bf8231b77a5acebe5202310",
+  "branch": "feat/coverage-generic-synthesis",
+  "commit_note": "The checkout HEAD is the parent baseline if analysis changes are uncommitted; source hashes identify tested files. The containing Git commit identifies the delivered artifact set.",
+  "target_device": null,
+  "scope": "generic synthesis and RTL simulation; no physical PPA",
+  "package_versions": {
+    "click": "8.5.0",
+    "platformdirs": "4.13.5",
+    "systemc": "3.0.2.1",
+    "verilator": "5.48.0",
+    "wasmtime": "47.0.1",
+    "yowasp-runtime": "1.96",
+    "yowasp-yosys": "0.70.0.0.post1259",
+    "ziglang": "0.14.1"
+  },
+  "source_sha256_lf": {
+    "rtl/async_fifo.v": "e025f54838e568febd786792b73a22b2e423d55cff36cb9fb49156a817081012",
+    "rtl/dual_async_fifo.v": "c940202153b905314d70c02d1dde0cdd941b85eea43e0736ddf2446ee8a9c246",
+    "rtl/fifo_monitor.v": "e06a49b2f9da92c6f6feddc6ddfdae0662070bbfbc85658e4d574e560229c3d9",
+    "rtl/fifo_ram.v": "65920c9c03f6627027c4143621b0c98afc517547fcd6d1b25e660038018973e3",
+    "rtl/gray_sync.v": "1955c6a6c7f4a8cbd358d3f96f3be511c4579600ac0d5d327946271192a2c291",
+    "rtl/reset_sync.v": "8c3cc852ba0d247853f3af221ce1f7906e56b49ea65008b436ebd2dbb74e9821",
+    "rtl/snapshot_mailbox.v": "05e07e15264c03b8b5922fc4e43c49a0525839f035269ccd9bef0a3b5199cec0",
+    "sim/dual_rtl.f": "8c3bfa6bd226fe8c901db6dca549c471d6a8dec32af3cef8ba58aa066facb7ca",
+    "sim/dual_tb.f": "fbaf6509de6ca300f016102ce29a00bf27f307b166e72ef67a62fa81b15bccf9",
+    "sim/performance_tb.f": "337cc192646cc01317e6c79c84cb5556be0c4a1b3aa1c9a425f2a2fa72d85474",
+    "sim/regress_dual.ps1": "80ddffb656f1db22c44ffb27636aef029b06a1291da33058cbe547b3fbe3898c",
+    "sim/regress_single.ps1": "03a4efd89c5b95655d87cfd0172b253c048ac5270c3a00d5e590376e92c7d41c",
+    "sim/rtl.f": "73cc507b85b6bc960026efb00285e25d5fb236808bcac172c1d33fee748b4031",
+    "sim/run_dual.ps1": "96fa4dbcc0931a0324467e81df25911f0b51a84031cbb9998cd3d3f47265b21e",
+    "sim/run_single.ps1": "1e7d6238325d9db2833fc2c42c9e815c859a2770a1ee389eaa5de47784c07cbc",
+    "sim/single_tb.f": "9ddd146ee772678dd87d778db92721804a694695d08eb457c28d310cb2a5903d",
+    "tb/dual_fifo_tb.sv": "012205643e653505e77c90c6cca9584210b508b53a6ae5abc4173688cf1e0f72",
+    "tb/fifo_channel_checker.sv": "641b83e65636b44ed880c4d07eab7a8ee94bb549f9622ff3cbd20796f3c570e9",
+    "tb/fifo_performance_tb.sv": "19119645639979fe6e4a5caa4a8f8ead3330c4f9b7e882de6286840d90ef1d64",
+    "tb/native_coverage_top.sv": "feec3fa885f5cebde37ba67b0ff81c58ff7782a3a39277cc0d76361d845f7d56",
+    "tb/single_fifo_tb.sv": "d80d84c0e8bf3836d3f524f2cafb0bb2863efd77ffd5d6ea59f7408e9c6c8053",
+    "tb/snapshot_source_checker.sv": "c6ba7a6ba4db0d0e754d1eed0a51136cbc558945c5221a61a6412e62171b6710",
+    "tools/capture_analysis_manifest.py": "04935a6e7d3d684501510da82786bc0ec7755c9686e33539244932bbda48b6ae",
+    "tools/native_replay.cpp": "d77e29f3b1f7f0790de94b0044710a1e89b0d35a8252d8989fd42924ca9aceac",
+    "tools/report_native_coverage.py": "2fadb3c37ea3677119674bd815730af6d8dfc025c33a1213d93a66a6f8b47323",
+    "tools/requirements-analysis.txt": "232a0f21bc57abda480fee47732b63711722e33788fe565a9ff6dd68e241bb94",
+    "tools/run_native_coverage.py": "85a3e9125df9d27d5f24320929868b2b29cf532d3030ddf3d01ca8fb734b9620",
+    "tools/run_performance.py": "7123f194f3e7f1ef4f05bc1aea1a7145085d5e7be81e4cd82cdb12952da5e31b",
+    "tools/run_synthesis.py": "daa116faec0a2307a3d75c18ab835fdff4afc3de11d0ba85cd7125967d5dc249"
+  },
+  "report_sha256": {
+    "reports/synthesis/s2_coarse_stat.json": {
+      "sha256": "2d006dfb1b202bd577954e5a72c4760c0c71b152ffc3afb589c6efd7962c9f32",
+      "normalization": "CRLF to LF"
+    },
+    "reports/synthesis/s2_mapped_stat.json": {
+      "sha256": "c39d8463b0b24dd7305ce572c43d38577c3f02210b3d286505cd7b83a7139e8d",
+      "normalization": "CRLF to LF"
+    },
+    "reports/synthesis/s2_synth.ys": {
+      "sha256": "c474be026c63caedb9d3a8e788c62bc46a98dcfcfb1771fcc857e53d7129cdef",
+      "normalization": "CRLF to LF"
+    },
+    "reports/synthesis/s2_synthesis.log": {
+      "sha256": "430940543ab03cfcac41d5c1b5cf9b11b1fb5de1a83a950fe994d71d81be2f83",
+      "normalization": "CRLF to LF"
+    },
+    "reports/synthesis/s3_coarse_stat.json": {
+      "sha256": "b72bc045d155ff96910c76b8e17d1a0aed82ab642c6822f68e1f35c423ccae5f",
+      "normalization": "CRLF to LF"
+    },
+    "reports/synthesis/s3_mapped_stat.json": {
+      "sha256": "47092638f808b7da9838e053d8428b5a9d86216020f4978c805a2a7b3d7a0511",
+      "normalization": "CRLF to LF"
+    },
+    "reports/synthesis/s3_synth.ys": {
+      "sha256": "de9cce154c53d761ba8b8247377e38dd356d1745ba40092a27db6cc8bf270d89",
+      "normalization": "CRLF to LF"
+    },
+    "reports/synthesis/s3_synthesis.log": {
+      "sha256": "0058c57a2dcb2e000a21c3f5d411aaeddc8a1e1dff0126572a3e031c6a8ae18c",
+      "normalization": "CRLF to LF"
+    },
+    "reports/synthesis/summary.json": {
+      "sha256": "ab9c461c69fef0f4ce24e11b19ee8cce2c99e719dc72c1cb6448eb0f9d9ac8df",
+      "normalization": "CRLF to LF"
+    },
+    "reports/performance/perf_s2_block0_aw10000_ar6000_bw17500_br5000.log": {
+      "sha256": "559be1606dfa05b84ed7c9b3f77f11e984dd112655c89f6078275597dff0b4af",
+      "normalization": "CRLF to LF"
+    },
+    "reports/performance/perf_s2_block0_aw5000_ar23000_bw7000_br25000.log": {
+      "sha256": "17963902495f402523ecab0c3197cc84dfeae9f90e8f1c590bcee60394fcd360",
+      "normalization": "CRLF to LF"
+    },
+    "reports/performance/perf_s2_block8_aw10000_ar6000_bw17500_br5000.log": {
+      "sha256": "5753eef759f9e6650214d0a2025b167eca1de8ee783271da3404a8e8027cf106",
+      "normalization": "CRLF to LF"
+    },
+    "reports/performance/perf_s3_block0_aw10000_ar6000_bw17500_br5000.log": {
+      "sha256": "47c341db91b91d98f9d0c6d040d9d9257dd7ac7fc57799235d62a766be80d7a9",
+      "normalization": "CRLF to LF"
+    },
+    "reports/performance/perf_s3_block0_aw5000_ar23000_bw7000_br25000.log": {
+      "sha256": "98152b216e0903f84f99f691de2035cb8a22e709f9c642966c7c6516ae323e53",
+      "normalization": "CRLF to LF"
+    },
+    "reports/performance/perf_s3_block8_aw10000_ar6000_bw17500_br5000.log": {
+      "sha256": "ff408475ad5bd7a3a740c0a7b734f883c43afb00441ca31f56440aacaf5baad7",
+      "normalization": "CRLF to LF"
+    },
+    "reports/performance/summary.json": {
+      "sha256": "d639b1ea009ca2ed045659961fe2feac7fe78e9167a38e49a8863d8365c38037",
+      "normalization": "CRLF to LF"
+    },
+    "reports/native_coverage/negative_checker.log": {
+      "sha256": "ee2bcf204aa027d60cc4a81987582c4f2d2441257979df7c126cdf8603f9a30e",
+      "normalization": "CRLF to LF"
+    },
+    "reports/native_coverage/run_manifest.json": {
+      "sha256": "f34c74496a6b107d8325154f496f20a5b3c6b3ad6f0f54a69445ea1adf0a95d4",
+      "normalization": "CRLF to LF"
+    },
+    "reports/native_coverage/s2_manual.dat": {
+      "sha256": "4ca1f921227902d1d1f658ba3f780c1a81d98dd851f83a9ae70922ad59d6e45f",
+      "normalization": "raw binary"
+    },
+    "reports/native_coverage/s2_manual_build.log": {
+      "sha256": "b05ae1d694941bc38c410060b6879498ca34a603e821f89e40b4df9fdb075a89",
+      "normalization": "CRLF to LF"
+    },
+    "reports/native_coverage/s2_manual_modelsim.log": {
+      "sha256": "fa484f0c38210b40da8dcaff355b231745992ff736065a5715639646b5a96619",
+      "normalization": "CRLF to LF"
+    },
+    "reports/native_coverage/s2_manual_modelsim_driver.log": {
+      "sha256": "9d331d5f2c617fc3e2ed60edd1280f70beacbf7e56ba4697ea9726de01893490",
+      "normalization": "CRLF to LF"
+    },
+    "reports/native_coverage/s2_manual_replay.log": {
+      "sha256": "8ba19f66bfc42c56b71291dbb272d6b167ca38d16bf4494c5253a884f032e6c0",
+      "normalization": "CRLF to LF"
+    },
+    "reports/native_coverage/s2_manual_verilate.log": {
+      "sha256": "449a6ed976f2935df7a82d9afac79e971b793bbc3472a3b098f0f79fd62e4d71",
+      "normalization": "CRLF to LF"
+    },
+    "reports/native_coverage/s3_auto_hysteresis_saturation.dat": {
+      "sha256": "cc1e41e1bfc368cb40a309ccc804fa9da4f976ece9e0479711bbf7085b6ec900",
+      "normalization": "raw binary"
+    },
+    "reports/native_coverage/s3_auto_hysteresis_saturation_build.log": {
+      "sha256": "84ba072112e811d5a5664aaed8e776ec5dab02757849d6809de998195a958391",
+      "normalization": "CRLF to LF"
+    },
+    "reports/native_coverage/s3_auto_hysteresis_saturation_modelsim.log": {
+      "sha256": "7e498a2c481d31f8befe818c931bc5bfeb36ffd5ae8ccd6fa120a57c21ce8f98",
+      "normalization": "CRLF to LF"
+    },
+    "reports/native_coverage/s3_auto_hysteresis_saturation_modelsim_driver.log": {
+      "sha256": "04648cc3c5c56c161e9a7ac749f19b5a239fb9b05f9b03b9ccf0188446d236f1",
+      "normalization": "CRLF to LF"
+    },
+    "reports/native_coverage/s3_auto_hysteresis_saturation_replay.log": {
+      "sha256": "be966a89989b697171e526716bd3b826493ad16ec20df12be337c9b766129de7",
+      "normalization": "CRLF to LF"
+    },
+    "reports/native_coverage/s3_auto_hysteresis_saturation_verilate.log": {
+      "sha256": "7a3c0bc114bafdeacabd7ec4fcfb26078e4f6869c4ea3900e15c3079466ca369",
+      "normalization": "CRLF to LF"
+    },
+    "reports/native_coverage/summary.json": {
+      "sha256": "79621b61e65909c8170922dfa0f7b675bf7ba84717f9ad92744ac76981d7403b",
+      "normalization": "CRLF to LF"
+    }
+  }
+}

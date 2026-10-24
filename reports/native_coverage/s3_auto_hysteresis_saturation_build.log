@@ -1,0 +1,29 @@
+D:\fifo_build\native_common\obj_s3_auto_hysteresis_saturation\Vnative_coverage_top___024root__0.cpp:1620:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+ 1619 |         if ((vlSelfRef.native_coverage_top__DOT__previous_bw_edges 
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1620 |              == vlSelfRef.native_coverage_top__DOT__bw_edges)) {
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\fifo_build\native_common\obj_s3_auto_hysteresis_saturation\Vnative_coverage_top___024root__0.cpp:1620:14: note: remove extraneous parentheses around the comparison to silence this warning
+ 1619 |         if ((vlSelfRef.native_coverage_top__DOT__previous_bw_edges 
+      |             ~
+ 1620 |              == vlSelfRef.native_coverage_top__DOT__bw_edges)) {
+      |              ^                                              ~
+D:\fifo_build\native_common\obj_s3_auto_hysteresis_saturation\Vnative_coverage_top___024root__0.cpp:1620:14: note: use '=' to turn this equality comparison into an assignment
+ 1620 |              == vlSelfRef.native_coverage_top__DOT__bw_edges)) {
+      |              ^~
+      |              =
+D:\fifo_build\native_common\obj_s3_auto_hysteresis_saturation\Vnative_coverage_top___024root__0.cpp:3402:18: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+ 3401 |             if ((vlSelfRef.native_coverage_top__DOT__previous_bw_edges 
+      |                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3402 |                  == vlSelfRef.native_coverage_top__DOT__bw_edges)) {
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\fifo_build\native_common\obj_s3_auto_hysteresis_saturation\Vnative_coverage_top___024root__0.cpp:3402:18: note: remove extraneous parentheses around the comparison to silence this warning
+ 3401 |             if ((vlSelfRef.native_coverage_top__DOT__previous_bw_edges 
+      |                 ~
+ 3402 |                  == vlSelfRef.native_coverage_top__DOT__bw_edges)) {
+      |                  ^                                              ~
+D:\fifo_build\native_common\obj_s3_auto_hysteresis_saturation\Vnative_coverage_top___024root__0.cpp:3402:18: note: use '=' to turn this equality comparison into an assignment
+ 3402 |                  == vlSelfRef.native_coverage_top__DOT__bw_edges)) {
+      |                  ^~
+      |                  =
+2 warnings generated.

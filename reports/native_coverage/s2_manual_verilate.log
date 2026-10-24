@@ -1,0 +1,21 @@
+%Warning-WIDTHTRUNC: rtl\async_fifo.v:39:31: Operator VAR 'AF_SET' expects 9 bits on the Initial value, but Initial value's VARREF 'AF_ASSERT' generates 32 bits.
+                                           : ... note: In instance 'native_coverage_top.dut.fifo_b'
+   39 |     localparam [ADDR_WIDTH:0] AF_SET = AF_ASSERT;
+      |                               ^~~~~~
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=0.000
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: rtl\async_fifo.v:40:31: Operator VAR 'AF_DROP' expects 9 bits on the Initial value, but Initial value's VARREF 'AF_CLEAR' generates 32 bits.
+                                           : ... note: In instance 'native_coverage_top.dut.fifo_b'
+   40 |     localparam [ADDR_WIDTH:0] AF_DROP = AF_CLEAR;
+      |                               ^~~~~~~
+%Warning-WIDTHTRUNC: rtl\async_fifo.v:41:31: Operator VAR 'AE_SET' expects 9 bits on the Initial value, but Initial value's VARREF 'AE_ASSERT' generates 32 bits.
+                                           : ... note: In instance 'native_coverage_top.dut.fifo_b'
+   41 |     localparam [ADDR_WIDTH:0] AE_SET = AE_ASSERT;
+      |                               ^~~~~~
+%Warning-WIDTHTRUNC: rtl\async_fifo.v:42:31: Operator VAR 'AE_DROP' expects 9 bits on the Initial value, but Initial value's VARREF 'AE_CLEAR' generates 32 bits.
+                                           : ... note: In instance 'native_coverage_top.dut.fifo_b'
+   42 |     localparam [ADDR_WIDTH:0] AE_DROP = AE_CLEAR;
+      |                               ^~~~~~~
+- V e r i l a t i o n   R e p o r t:  rev vUNKNOWN-built20260516-4e853d8
+- Verilator: Built from 0.204 MB sources in 9 modules, into 0.427 MB in 5 C++ files needing 0.001 MB
+- Verilator: Walltime 0.157 s (elab=0.004, cvt=0.094, bld=0.000); cpu 0.000 s on 1 threads; allocated 17.898 MB

@@ -1,0 +1,7 @@
+yowasp-yosys==0.70.0.0.post1259
+yowasp-runtime==1.96
+wasmtime==47.0.1
+platformdirs==4.13.5
+click==8.5.0
+verilator==5.48.0
+systemc==3.0.2.1

@@ -1,0 +1,29 @@
+# vsim -c -onfinish stop -l run.log -gSYNC_STAGES=2 -gBLOCK_CYCLES=8 -gA_WRITE_HALF_PS=10000 -gA_READ_HALF_PS=6000 -gB_WRITE_HALF_PS=17500 -gB_READ_HALF_PS=5000 work.fifo_performance_tb -do "run -all; quit -f" 
+# Start time: 18:25:19 on Oct 24,2026
+# Loading sv_std.std
+# Loading work.fifo_performance_tb
+# Loading work.dual_async_fifo
+# Loading work.async_fifo
+# Loading work.reset_sync
+# Loading work.gray_sync
+# Loading work.fifo_ram
+# Loading work.fifo_monitor
+# Loading work.snapshot_mailbox
+# Loading work.fifo_channel_checker
+# run -all
+# PERF_CONFIG: sync=2 block_cycles=8 a_wr_half_ps=10000 a_rd_half_ps=6000 b_wr_half_ps=17500 b_rd_half_ps=5000
+# PERF_LATENCY: channel=1 first_read_ns=32.500 write_at_ns=1032.500 read_at_ns=1065.000
+# PERF_LATENCY: channel=0 first_read_ns=44.000 write_at_ns=1030.000 read_at_ns=1074.000
+# PERF_LATENCY: channel=0 full_release_ns=48.000 read_at_ns=11382.000 release_at_ns=11430.000
+# PERF_LATENCY: channel=1 full_release_ns=77.500 read_at_ns=11385.000 release_at_ns=11462.500
+# PERF_WINDOW: channel=0 duration_ns=200000.000 reads=3332 words_per_s=16660000.000 mbps=533.120 stall_cycles=13335
+# PERF_WINDOW: channel=1 duration_ns=200000.000 reads=4000 words_per_s=20000000.000 mbps=640.000 stall_cycles=16000
+# PERF_ACCOUNTING: A writes=4161 reads=3906 discarded=255 pending=0 B writes=4890 reads=4635 discarded=255 pending=0
+# RESULT: PASS performance checks=676181
+# ** Note: $finish    : tb/fifo_performance_tb.sv(157)
+#    Time: 256288 ns  Iteration: 0  Instance: /fifo_performance_tb
+# Break in Module fifo_performance_tb at tb/fifo_performance_tb.sv line 157
+# Stopped at tb/fifo_performance_tb.sv line 157
+#  quit -f
+# End time: 18:25:21 on Oct 24,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
