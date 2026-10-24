@@ -1,0 +1,46 @@
+single_s2_seed1_w10000_r6000_p0_c32_h0
+# CUSTOM_COVERAGE: occupancy=10/10 write_wraps=5 read_wraps=5 overflow=850 underflow=1593 bp_events=564 longest_stall=16
+# RESULT: PASS checks=190474 writes=2954 reads=2941 reset_discarded=13 decisions=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\logs\single_s2_seed1_w10000_r6000_p0_c32_h0.log
+GUI: do {D:/fifo_sim/single_s2_seed1_w10000_r6000_p0_c32_h0/run_gui.do}
+single_s3_seed1_w10000_r6000_p0_c32_h0
+# CUSTOM_COVERAGE: occupancy=10/10 write_wraps=5 read_wraps=5 overflow=850 underflow=1592 bp_events=564 longest_stall=16
+# RESULT: PASS checks=191328 writes=2954 reads=2941 reset_discarded=13 decisions=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\logs\single_s3_seed1_w10000_r6000_p0_c32_h0.log
+GUI: do {D:/fifo_sim/single_s3_seed1_w10000_r6000_p0_c32_h0/run_gui.do}
+single_s2_seed7_w10000_r6000_p1000_c32_h0
+# CUSTOM_COVERAGE: occupancy=10/10 write_wraps=5 read_wraps=5 overflow=775 underflow=1590 bp_events=495 longest_stall=16
+# RESULT: PASS checks=190465 writes=3025 reads=3012 reset_discarded=13 decisions=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\logs\single_s2_seed7_w10000_r6000_p1000_c32_h0.log
+GUI: do {D:/fifo_sim/single_s2_seed7_w10000_r6000_p1000_c32_h0/run_gui.do}
+single_s2_seed23_w10000_r6000_p5000_c32_h0
+# CUSTOM_COVERAGE: occupancy=10/10 write_wraps=5 read_wraps=5 overflow=829 underflow=1573 bp_events=557 longest_stall=16
+# RESULT: PASS checks=190292 writes=2977 reads=2964 reset_discarded=13 decisions=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\logs\single_s2_seed23_w10000_r6000_p5000_c32_h0.log
+GUI: do {D:/fifo_sim/single_s2_seed23_w10000_r6000_p5000_c32_h0/run_gui.do}
+single_s3_seed101_w10000_r6000_p500_c32_h0
+# CUSTOM_COVERAGE: occupancy=10/10 write_wraps=5 read_wraps=5 overflow=805 underflow=1567 bp_events=555 longest_stall=16
+# RESULT: PASS checks=191389 writes=3017 reads=3004 reset_discarded=13 decisions=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\logs\single_s3_seed101_w10000_r6000_p500_c32_h0.log
+GUI: do {D:/fifo_sim/single_s3_seed101_w10000_r6000_p500_c32_h0/run_gui.do}
+single_s3_seed2026_w17500_r5000_p2500_c32_h0
+# CUSTOM_COVERAGE: occupancy=10/10 write_wraps=6 read_wraps=6 overflow=331 underflow=4744 bp_events=686 longest_stall=16
+# RESULT: PASS checks=318350 writes=3525 reads=3512 reset_discarded=13 decisions=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\logs\single_s3_seed2026_w17500_r5000_p2500_c32_h0.log
+GUI: do {D:/fifo_sim/single_s3_seed2026_w17500_r5000_p2500_c32_h0/run_gui.do}
+single_s2_seed37_w5000_r23000_p500_c32_h0
+# CUSTOM_COVERAGE: occupancy=10/10 write_wraps=3 read_wraps=3 overflow=1986 underflow=60 bp_events=137 longest_stall=16
+# RESULT: PASS checks=138044 writes=1854 reads=1841 reset_discarded=13 decisions=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\logs\single_s2_seed37_w5000_r23000_p500_c32_h0.log
+GUI: do {D:/fifo_sim/single_s2_seed37_w5000_r23000_p500_c32_h0/run_gui.do}
+single_s3_seed11_w10000_r6000_p0_c4_h0
+# CUSTOM_COVERAGE: occupancy=10/10 write_wraps=5 read_wraps=5 overflow=819 underflow=1626 bp_events=542 longest_stall=16
+# RESULT: PASS checks=191399 writes=2974 reads=2961 reset_discarded=13 decisions=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\logs\single_s3_seed11_w10000_r6000_p0_c4_h0.log
+GUI: do {D:/fifo_sim/single_s3_seed11_w10000_r6000_p0_c4_h0/run_gui.do}
+single_s2_seed13_w10000_r6000_p0_c32_h1
+# CUSTOM_COVERAGE: occupancy=10/10 write_wraps=5 read_wraps=5 overflow=816 underflow=1577 bp_events=560 longest_stall=16
+# RESULT: PASS checks=190554 writes=2994 reads=2981 reset_discarded=13 decisions=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\logs\single_s2_seed13_w10000_r6000_p0_c32_h1.log
+GUI: do {D:/fifo_sim/single_s2_seed13_w10000_r6000_p0_c32_h1/run_gui.do}
+REGRESSION: PASS 9/9 configurations

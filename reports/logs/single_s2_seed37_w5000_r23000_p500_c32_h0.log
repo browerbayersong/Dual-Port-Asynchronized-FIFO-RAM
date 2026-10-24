@@ -1,0 +1,34 @@
+# vsim -c -l run.log -onfinish stop -sv_seed 37 -gSYNC_STAGES=2 -gCOUNT_WIDTH=32 -gAF_CLEAR=224 -gAE_CLEAR=32 work.single_fifo_tb "+OPS=5000" "+WR_HALF_PS=5000" "+RD_HALF_PS=23000" "+RD_PHASE_PS=500" -do "run -all; quit -f" 
+# Start time: 14:07:49 on Oct 24,2026
+# Loading sv_std.std
+# Loading work.single_fifo_tb
+# Loading work.async_fifo
+# Loading work.reset_sync
+# Loading work.gray_sync
+# Loading work.fifo_ram
+# run -all
+# RUN_CONFIG: sync=2 count_width=32 ops=5000 wr_half_ps=5000 rd_half_ps=23000 phase_ps=500 af_clear=224 ae_clear=32
+# TEST: fill_drain_and_error_guard
+# TEST: thresholds_and_hysteresis
+# TEST: backpressure
+# TEST: random_mix decisions=5000
+# TEST: reset_with_pending_data
+# COVER_BIN: occupancy_index=0 hits=8
+# COVER_BIN: occupancy_index=1 hits=17
+# COVER_BIN: occupancy_index=2 hits=16
+# COVER_BIN: occupancy_index=3 hits=17
+# COVER_BIN: occupancy_index=4 hits=18
+# COVER_BIN: occupancy_index=5 hits=10
+# COVER_BIN: occupancy_index=6 hits=9
+# COVER_BIN: occupancy_index=7 hits=8
+# COVER_BIN: occupancy_index=8 hits=309
+# COVER_BIN: occupancy_index=9 hits=213
+# CUSTOM_COVERAGE: occupancy=10/10 write_wraps=3 read_wraps=3 overflow=1986 underflow=60 bp_events=137 longest_stall=16
+# RESULT: PASS checks=138044 writes=1854 reads=1841 reset_discarded=13 decisions=5000
+# ** Note: $finish    : tb/single_fifo_tb.sv(411)
+#    Time: 141657510 ps  Iteration: 0  Instance: /single_fifo_tb
+# Break in Module single_fifo_tb at tb/single_fifo_tb.sv line 411
+# Stopped at tb/single_fifo_tb.sv line 411
+#  quit -f
+# End time: 14:07:50 on Oct 24,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

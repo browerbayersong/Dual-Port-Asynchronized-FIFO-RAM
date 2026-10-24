@@ -1,0 +1,9 @@
+# Simulator products are generated outside the source checkout by the runner.
+work/
+modelsim.ini
+transcript
+*.wlf
+*.vcd
+*.ucdb
+*.bak
+*.tmp

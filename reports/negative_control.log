@@ -1,0 +1,22 @@
+# vsim -c -onfinish stop -sv_seed 1 -l negative.log work.single_fifo_tb "+OPS=5000" -do "run -all; quit -f" 
+# Start time: 14:06:30 on Oct 24,2026
+# Loading sv_std.std
+# Loading work.single_fifo_tb
+# Loading work.async_fifo
+# Loading work.reset_sync
+# Loading work.gray_sync
+# Loading work.fifo_ram
+# run -all
+# RUN_CONFIG: sync=2 count_width=32 ops=5000 wr_half_ps=10000 rd_half_ps=6000 phase_ps=0 af_clear=224 ae_clear=32
+# TEST: fill_drain_and_error_guard
+# CHECK_FAIL at 6018000: FIFO data order / content
+# RESULT: FAIL
+# ** Fatal: single FIFO self-check failed
+#    Time: 6018001 ps  Scope: single_fifo_tb.check File: tb/single_fifo_tb.sv Line: 75
+# ** Note: $finish    : tb/single_fifo_tb.sv(75)
+#    Time: 6018001 ps  Iteration: 0  Instance: /single_fifo_tb
+# Break in Task check at tb/single_fifo_tb.sv line 75
+# Stopped at tb/single_fifo_tb.sv line 75
+#  quit -f
+# End time: 14:06:31 on Oct 24,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0

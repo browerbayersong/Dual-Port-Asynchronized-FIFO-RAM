@@ -1,0 +1,9 @@
+Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+Start time: 14:07:36 on Oct 24,2026
+vlog -sv -work work -f sim/single_tb.f 
+-- Compiling module single_fifo_tb
+
+Top level modules:
+	single_fifo_tb
+End time: 14:07:36 on Oct 24,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

@@ -1,0 +1,12 @@
+Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+Start time: 14:07:36 on Oct 24,2026
+vlog -work work -f sim/rtl.f 
+-- Compiling module reset_sync
+-- Compiling module gray_sync
+-- Compiling module fifo_ram
+-- Compiling module async_fifo
+
+Top level modules:
+	async_fifo
+End time: 14:07:36 on Oct 24,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

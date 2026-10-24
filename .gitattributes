@@ -1,0 +1,9 @@
+* text=auto
+*.v text eol=lf
+*.sv text eol=lf
+*.f text eol=lf
+*.ps1 text eol=lf
+*.md text eol=lf
+*.sha256 text eol=lf
+# Preserve simulator output formatting without treating its trailing spaces as code errors.
+*.log -whitespace
