@@ -1,0 +1,11 @@
+Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+Start time: 14:36:22 on Oct 24,2026
+vlog -sv -work work -f sim/dual_tb.f 
+-- Compiling module fifo_channel_checker
+-- Compiling module snapshot_source_checker
+-- Compiling module dual_fifo_tb
+
+Top level modules:
+	dual_fifo_tb
+End time: 14:36:22 on Oct 24,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

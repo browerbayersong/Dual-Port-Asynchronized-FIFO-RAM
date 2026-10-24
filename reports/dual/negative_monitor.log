@@ -1,0 +1,26 @@
+# vsim -c -onfinish stop -sv_seed 1 -l negative.log work.dual_fifo_tb "+OPS=5000" -do "run -all; quit -f" 
+# Start time: 14:37:25 on Oct 24,2026
+# Loading sv_std.std
+# Loading work.dual_fifo_tb
+# Loading work.dual_async_fifo
+# Loading work.async_fifo
+# Loading work.reset_sync
+# Loading work.gray_sync
+# Loading work.fifo_ram
+# Loading work.fifo_monitor
+# Loading work.snapshot_mailbox
+# Loading work.fifo_channel_checker
+# Loading work.snapshot_source_checker
+# run -all
+# RUN_CONFIG: dual sync=2 count_width=32 ops_per_channel=5000 a_rd_phase_ps=1000 b_wr_phase_ps=2500 b_rd_phase_ps=500 auto=0 af_clear=224 ae_clear=32
+# CHECK_FAIL dual at 1255000: published snapshot differs from independently sampled source packets
+# RESULT: FAIL
+# ** Fatal: dual FIFO / monitor check failed
+#    Time: 1255001 ps  Scope: dual_fifo_tb.check File: tb/dual_fifo_tb.sv Line: 126
+# ** Note: $finish    : tb/dual_fifo_tb.sv(126)
+#    Time: 1255001 ps  Iteration: 0  Instance: /dual_fifo_tb
+# Break in Task check at tb/dual_fifo_tb.sv line 126
+# Stopped at tb/dual_fifo_tb.sv line 126
+#  quit -f
+# End time: 14:37:25 on Oct 24,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

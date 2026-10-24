@@ -1,0 +1,43 @@
+# vsim -c -l run.log -onfinish stop -sv_seed 2026 -gSYNC_STAGES=3 -gCOUNT_WIDTH=4 -gAF_CLEAR=220 -gAE_CLEAR=36 -gAUTO_REFRESH_CYCLES=8 work.dual_fifo_tb "+OPS=5000" "+A_RD_PHASE_PS=1000" "+B_WR_PHASE_PS=2500" "+B_RD_PHASE_PS=500" -do "run -all; quit -f" 
+# Start time: 14:37:00 on Oct 24,2026
+# Loading sv_std.std
+# Loading work.dual_fifo_tb
+# Loading work.dual_async_fifo
+# Loading work.async_fifo
+# Loading work.reset_sync
+# Loading work.gray_sync
+# Loading work.fifo_ram
+# Loading work.fifo_monitor
+# Loading work.snapshot_mailbox
+# Loading work.fifo_channel_checker
+# Loading work.snapshot_source_checker
+# run -all
+# RUN_CONFIG: dual sync=3 count_width=4 ops_per_channel=5000 a_rd_phase_ps=1000 b_wr_phase_ps=2500 b_rd_phase_ps=500 auto=8 af_clear=220 ae_clear=36
+# TEST: 6.1/6.3 dual_fill_drain_and_errors
+# TEST: 6.6 dual_state_combinations_and_live_snapshot
+# TEST: 6.4 dual_thresholds
+# TEST: 6.5 dual_backpressure
+# TEST: 6.2 concurrent_random_mix ops_per_channel=5000
+# TEST: common_reset_with_both_channels_nonempty
+# COVER_BIN: occupancy_index=0 a_hits=203 b_hits=567
+# COVER_BIN: occupancy_index=1 a_hits=363 b_hits=945
+# COVER_BIN: occupancy_index=2 a_hits=31 b_hits=27
+# COVER_BIN: occupancy_index=3 a_hits=33 b_hits=23
+# COVER_BIN: occupancy_index=4 a_hits=31 b_hits=32
+# COVER_BIN: occupancy_index=5 a_hits=17 b_hits=15
+# COVER_BIN: occupancy_index=6 a_hits=15 b_hits=12
+# COVER_BIN: occupancy_index=7 a_hits=12 b_hits=11
+# COVER_BIN: occupancy_index=8 a_hits=213 b_hits=147
+# COVER_BIN: occupancy_index=9 a_hits=96 b_hits=34
+# COVER_TRANSITIONS: a_flags=8/8 b_flags=8/8 a_bp_lengths=3/3 b_bp_lengths=3/3
+# CUSTOM_COVERAGE: a_occupancy=10/10 b_occupancy=10/10 dual_combinations=4/4 snapshots=1123 busy_ignored=0 clock_pause=0 reset_cancel=0 auto_requests=393
+# CHANNEL_A: writes=3445 reads=3432 reset_discarded=13 wrap_w=6 wrap_r=6
+# CHANNEL_B: writes=3859 reads=3838 reset_discarded=21 wrap_w=7 wrap_r=7
+# RESULT: PASS checks=988162 snapshots=1123 ops_per_channel=5000
+# ** Note: $finish    : tb/dual_fifo_tb.sv(438)
+#    Time: 288520 ns  Iteration: 1  Instance: /dual_fifo_tb
+# Break in Module dual_fifo_tb at tb/dual_fifo_tb.sv line 438
+# Stopped at tb/dual_fifo_tb.sv line 438
+#  quit -f
+# End time: 14:37:03 on Oct 24,2026, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0

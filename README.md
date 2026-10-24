@@ -13,14 +13,19 @@
 | [单通道使用说明](docs/SINGLE_CHANNEL.md) | 运行已经实现的单通道、9 组回归和波形 |
 | [接口定义](docs/INTERFACE.md) | 已实现的参数、端口、响应和统计口径 |
 | [验证报告](reports/SINGLE_CHANNEL_REPORT.md) | 实测结果、覆盖范围、原始日志与负向检查 |
+| [双通道运行说明](docs/DUAL_CHANNEL.md) | 运行两个独立 FIFO、统一监控与 10 组回归 |
+| [监控协议](docs/MONITOR_PROTOCOL.md) | 请求/确认状态机、自动刷新和状态包位段 |
+| [双通道验证报告](reports/dual/REPORT.md) | 双路及监控快照的实测结果和覆盖统计 |
 
-**当前状态（2026-10-24）：单通道 RTL、自动测试与运行脚本已实现，ModelSim 的 9 组配置回归通过。** 双通道顶层、统一监控、原生覆盖率与综合/PPA 仍待完成；完整操作手册的双通道入口属于后续约定。
+**当前状态（2026-10-24）：单通道、双通道顶层及统一监控均已实现。单通道已有 9 组通过记录，双通道最新 10 组回归通过。** 原生覆盖率与综合/PPA 仍待完成。
 
 在仓库根目录的 PowerShell 中运行：
 
 ~~~powershell
 & .\sim\run_single.ps1
 & .\sim\regress_single.ps1
+& .\sim\run_dual.ps1
+& .\sim\regress_dual.ps1
 ~~~
 
 脚本默认使用本机 ModelSim 10.3c，并在 D:/fifo_sim 的英文目录编译。其他机器通过参数配置工具与构建路径，详见单通道说明。

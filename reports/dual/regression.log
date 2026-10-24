@@ -1,0 +1,71 @@
+dual_s2_seed1_a1000_bw2500_br500_c32_h0_auto0_n5000
+# CUSTOM_COVERAGE: a_occupancy=10/10 b_occupancy=10/10 dual_combinations=4/4 snapshots=1019 busy_ignored=1 clock_pause=1 reset_cancel=1 auto_requests=0
+# CHANNEL_A: writes=3488 reads=3475 reset_discarded=13 wrap_w=6 wrap_r=6
+# CHANNEL_B: writes=3976 reads=3955 reset_discarded=21 wrap_w=7 wrap_r=7
+# RESULT: PASS checks=971136 snapshots=1019 ops_per_channel=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\dual\logs\dual_s2_seed1_a1000_bw2500_br500_c32_h0_auto0_n5000.log
+GUI: do {D:/fifo_sim/dual_s2_seed1_a1000_bw2500_br500_c32_h0_auto0_n5000/run_gui.do}
+dual_s3_seed1_a1000_bw2500_br500_c32_h0_auto0_n5000
+# CUSTOM_COVERAGE: a_occupancy=10/10 b_occupancy=10/10 dual_combinations=4/4 snapshots=733 busy_ignored=1 clock_pause=1 reset_cancel=1 auto_requests=0
+# CHANNEL_A: writes=3487 reads=3474 reset_discarded=13 wrap_w=6 wrap_r=6
+# CHANNEL_B: writes=3975 reads=3954 reset_discarded=21 wrap_w=7 wrap_r=7
+# RESULT: PASS checks=984394 snapshots=733 ops_per_channel=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\dual\logs\dual_s3_seed1_a1000_bw2500_br500_c32_h0_auto0_n5000.log
+GUI: do {D:/fifo_sim/dual_s3_seed1_a1000_bw2500_br500_c32_h0_auto0_n5000/run_gui.do}
+dual_s2_seed7_a0_bw0_br0_c32_h0_auto0_n5000
+# CUSTOM_COVERAGE: a_occupancy=10/10 b_occupancy=10/10 dual_combinations=4/4 snapshots=1019 busy_ignored=1 clock_pause=1 reset_cancel=1 auto_requests=0
+# CHANNEL_A: writes=3530 reads=3517 reset_discarded=13 wrap_w=6 wrap_r=6
+# CHANNEL_B: writes=3952 reads=3931 reset_discarded=21 wrap_w=7 wrap_r=7
+# RESULT: PASS checks=971156 snapshots=1019 ops_per_channel=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\dual\logs\dual_s2_seed7_a0_bw0_br0_c32_h0_auto0_n5000.log
+GUI: do {D:/fifo_sim/dual_s2_seed7_a0_bw0_br0_c32_h0_auto0_n5000/run_gui.do}
+dual_s2_seed23_a5000_bw1000_br1500_c32_h0_auto0_n5000
+# CUSTOM_COVERAGE: a_occupancy=10/10 b_occupancy=10/10 dual_combinations=4/4 snapshots=1019 busy_ignored=1 clock_pause=1 reset_cancel=1 auto_requests=0
+# CHANNEL_A: writes=3472 reads=3459 reset_discarded=13 wrap_w=6 wrap_r=6
+# CHANNEL_B: writes=3981 reads=3960 reset_discarded=21 wrap_w=7 wrap_r=7
+# RESULT: PASS checks=970222 snapshots=1019 ops_per_channel=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\dual\logs\dual_s2_seed23_a5000_bw1000_br1500_c32_h0_auto0_n5000.log
+GUI: do {D:/fifo_sim/dual_s2_seed23_a5000_bw1000_br1500_c32_h0_auto0_n5000/run_gui.do}
+dual_s3_seed101_a500_bw7250_br3750_c32_h0_auto0_n5000
+# CUSTOM_COVERAGE: a_occupancy=10/10 b_occupancy=10/10 dual_combinations=4/4 snapshots=852 busy_ignored=1 clock_pause=1 reset_cancel=1 auto_requests=0
+# CHANNEL_A: writes=3433 reads=3420 reset_discarded=13 wrap_w=6 wrap_r=6
+# CHANNEL_B: writes=3892 reads=3871 reset_discarded=21 wrap_w=7 wrap_r=7
+# RESULT: PASS checks=982456 snapshots=852 ops_per_channel=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\dual\logs\dual_s3_seed101_a500_bw7250_br3750_c32_h0_auto0_n5000.log
+GUI: do {D:/fifo_sim/dual_s3_seed101_a500_bw7250_br3750_c32_h0_auto0_n5000/run_gui.do}
+dual_s2_seed37_a1000_bw2500_br500_c4_h0_auto0_n5000
+# CUSTOM_COVERAGE: a_occupancy=10/10 b_occupancy=10/10 dual_combinations=4/4 snapshots=1019 busy_ignored=1 clock_pause=1 reset_cancel=1 auto_requests=0
+# CHANNEL_A: writes=3534 reads=3521 reset_discarded=13 wrap_w=6 wrap_r=6
+# CHANNEL_B: writes=3983 reads=3962 reset_discarded=21 wrap_w=7 wrap_r=7
+# RESULT: PASS checks=971243 snapshots=1019 ops_per_channel=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\dual\logs\dual_s2_seed37_a1000_bw2500_br500_c4_h0_auto0_n5000.log
+GUI: do {D:/fifo_sim/dual_s2_seed37_a1000_bw2500_br500_c4_h0_auto0_n5000/run_gui.do}
+dual_s3_seed11_a1000_bw2500_br500_c32_h1_auto0_n5000
+# CUSTOM_COVERAGE: a_occupancy=10/10 b_occupancy=10/10 dual_combinations=4/4 snapshots=733 busy_ignored=1 clock_pause=1 reset_cancel=1 auto_requests=0
+# CHANNEL_A: writes=3534 reads=3521 reset_discarded=13 wrap_w=6 wrap_r=6
+# CHANNEL_B: writes=3958 reads=3937 reset_discarded=21 wrap_w=7 wrap_r=7
+# RESULT: PASS checks=984455 snapshots=733 ops_per_channel=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\dual\logs\dual_s3_seed11_a1000_bw2500_br500_c32_h1_auto0_n5000.log
+GUI: do {D:/fifo_sim/dual_s3_seed11_a1000_bw2500_br500_c32_h1_auto0_n5000/run_gui.do}
+dual_s2_seed13_a1000_bw2500_br500_c32_h0_auto8_n5000
+# CUSTOM_COVERAGE: a_occupancy=10/10 b_occupancy=10/10 dual_combinations=4/4 snapshots=1524 busy_ignored=0 clock_pause=0 reset_cancel=0 auto_requests=508
+# CHANNEL_A: writes=3491 reads=3478 reset_discarded=13 wrap_w=6 wrap_r=6
+# CHANNEL_B: writes=3941 reads=3920 reset_discarded=21 wrap_w=7 wrap_r=7
+# RESULT: PASS checks=972001 snapshots=1524 ops_per_channel=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\dual\logs\dual_s2_seed13_a1000_bw2500_br500_c32_h0_auto8_n5000.log
+GUI: do {D:/fifo_sim/dual_s2_seed13_a1000_bw2500_br500_c32_h0_auto8_n5000/run_gui.do}
+dual_s2_seed19_a1000_bw2500_br500_c32_h0_auto32_n5000
+# CUSTOM_COVERAGE: a_occupancy=10/10 b_occupancy=10/10 dual_combinations=4/4 snapshots=1249 busy_ignored=0 clock_pause=0 reset_cancel=0 auto_requests=233
+# CHANNEL_A: writes=3518 reads=3505 reset_discarded=13 wrap_w=6 wrap_r=6
+# CHANNEL_B: writes=3973 reads=3952 reset_discarded=21 wrap_w=7 wrap_r=7
+# RESULT: PASS checks=968424 snapshots=1249 ops_per_channel=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\dual\logs\dual_s2_seed19_a1000_bw2500_br500_c32_h0_auto32_n5000.log
+GUI: do {D:/fifo_sim/dual_s2_seed19_a1000_bw2500_br500_c32_h0_auto32_n5000/run_gui.do}
+dual_s3_seed2026_a1000_bw2500_br500_c4_h1_auto8_n5000
+# CUSTOM_COVERAGE: a_occupancy=10/10 b_occupancy=10/10 dual_combinations=4/4 snapshots=1123 busy_ignored=0 clock_pause=0 reset_cancel=0 auto_requests=393
+# CHANNEL_A: writes=3445 reads=3432 reset_discarded=13 wrap_w=6 wrap_r=6
+# CHANNEL_B: writes=3859 reads=3838 reset_discarded=21 wrap_w=7 wrap_r=7
+# RESULT: PASS checks=988162 snapshots=1123 ops_per_channel=5000
+Log: D:\课程设计\Dual-Port-Asynchronized-FIFO-RAM\reports\dual\logs\dual_s3_seed2026_a1000_bw2500_br500_c4_h1_auto8_n5000.log
+GUI: do {D:/fifo_sim/dual_s3_seed2026_a1000_bw2500_br500_c4_h1_auto8_n5000/run_gui.do}
+DUAL_REGRESSION: PASS 10/10 configurations

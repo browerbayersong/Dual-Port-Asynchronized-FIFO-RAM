@@ -33,7 +33,7 @@ DATA_WIDTH、ADDR_WIDTH、COUNT_WIDTH 至少为 1。0<=AF_CLEAR<=AF_ASSERT<=DEPT
 | 输出 | read_count、underflow_count | 各 COUNT_WIDTH，读域 | 成功读、空时有效读尝试 |
 | 输出 | backpressure_count、backpressure_cycles | 各 COUNT_WIDTH，读域 | 背压事件与周期 |
 
-统计输出保持各自的时钟域属性，尚未经过统一监控跨域采样；不能逐位直接同步正在变化的二进制统计总线。
+单通道这些统计输出保持各自的时钟域属性，不能逐位直接同步变化中的二进制总线。双通道顶层另提供经过握手采集的 monitor_clk 域统一状态，详见 [监控协议](MONITOR_PROTOCOL.md)。
 
 ## 接受、响应与复位
 
