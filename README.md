@@ -20,7 +20,8 @@
 | [通用综合报告](reports/synthesis/REPORT.md) | 两级/三级寄存器与 RAM 资源比较 |
 | [原生覆盖率报告](reports/native_coverage/REPORT.md) | 63 个功能点、断言激活、代码覆盖率与原始数据库 |
 | [延迟与吞吐报告](reports/performance/REPORT.md) | 六组 RTL 性能测量 |
-| [正式课程报告](deliverables/双异步FIFO课程设计报告.docx) | 可编辑Word，个人信息与分工留空；另有[正文](docs/COURSE_REPORT.md) |
+| [正式课程报告](deliverables/双异步FIFO课程设计报告.docx) | 原PDF第一页封面，正文按六部分组织；个人信息与分工留空，另有[正文](docs/COURSE_REPORT.md) |
+| [原版封面单页](assets/course-report-cover.pdf) | 从课程任务书第1页直接提取，保留原校徽、校名及空白栏 |
 | [目标实现操作](docs/TARGET_ANALYSIS.md) | TD布局布线、约束生效、报告生成及复现 |
 | [目标资源与时序](reports/implementation/REPORT.md) | PH1A100软件评估、两种时序视图及关键警告 |
 | [MTBF 相对分析](reports/mtbf/REPORT.md) | 可靠性模型、级数代价及参数缺项 |

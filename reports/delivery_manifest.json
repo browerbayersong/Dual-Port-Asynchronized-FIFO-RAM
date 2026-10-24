@@ -1,33 +1,61 @@
 {
-  "captured_at": "2026-10-24T23:35:34.788274+08:00",
-  "checkout_parent_baseline": "8b62574b29e8b4f6622adc85d0ac1432d35efbc9",
+  "captured_at": "2026-10-24T23:56:22.302832+08:00",
+  "checkout_parent_baseline": "1714e688d1322b95b73e3b8ecefa3b703f790c38",
   "commit_note": "The containing Git commit identifies the delivered set; hashes identify exact measured inputs and outputs. Earlier reports retain their original manifests.",
   "scope": "Software target analysis and course report; full IO timing is not closed, TMR-5506 remains, power W unavailable",
+  "cover_source": {
+    "source_file_name": "硬件描述语言 课设题目27.pdf",
+    "source_pdf_sha256": "690fb59f67fa00362489e3495b0ebe97db4a279f972f69e4c2e134363ddd754a",
+    "source_page_number": 1,
+    "page_width_pt": 595.32,
+    "page_height_pt": 841.92,
+    "extracted_pdf_sha256": "7771398e963b892915d98321937a3ec0d70a525045f08ab5c19c55ead4a0cf95",
+    "cover_png_sha256": "20e9358e21728aa1087b4459bfb01f05e930a0ae6f4ac1126a2d73184ad6aaec",
+    "raster_dpi": 300,
+    "page_content_stream_unchanged": true,
+    "fields": "All original blank fields and original year retained; no personal details inserted",
+    "report_top_level_sections": [
+      "设计题目",
+      "设计目的",
+      "设计内容",
+      "设计结果分析",
+      "总结",
+      "参考文献"
+    ]
+  },
+  "report_top_level_sections": [
+    "1 设计题目",
+    "2 设计目的",
+    "3 设计内容",
+    "4 设计结果分析",
+    "5 总结",
+    "6 参考文献"
+  ],
   "visual_qa": {
     "renderer": "WPS COM PDF export plus packaged DOCX rasterizer and Poppler",
     "pages_inspected": 20,
-    "qa_pdf_sha256": "efa2c08aef6516a0bb23d8ca02f0ace87b061d41b086dc001e38729517f43de0",
+    "qa_pdf_sha256": "b891d70f74b89614ce13e3ce8848d795ecec07b1729ab8b273fc0f5d3c6d1e6b",
     "page_png_sha256": {
-      "page-1.png": "e1b5591454df09936b0a279f34d6da0593ea6fcc3927d755cb164d72488c56e3",
-      "page-2.png": "3d0fcd86c33ae4091a8cf4c6dba4ecbda265c2c3f6187c8ef27625d9e3a601cf",
-      "page-3.png": "6e782be9922a9a630eb21c3b6f1444c310bdb4d4b47f714bb539c3bba32906a6",
-      "page-4.png": "49a8a19907342295182d48d17fefc648cbca9cb8bb429870cc47e914e9eb9a1e",
-      "page-5.png": "de244378eaf1ab79e9067202ca44ad21d1cca37393750d5fd322c44c8b3b093b",
-      "page-6.png": "08c328139f05ff395a6e54226e0e92a4fbb3da186487ed3701cf09258f1774f0",
-      "page-7.png": "f484655a96e40eac695a3b6624a5deb897e6b7da1f79e7001faf92c92a1e9511",
-      "page-8.png": "fde96e3de600d25bee0d3f785c0ff0a2dd456f6c963f8b5e89c3e9e54a750fe0",
-      "page-9.png": "7f56a79fff685e19d590eb2c824c71ef59d001e9c1247a651edff700aa4ef2c6",
-      "page-10.png": "0ab4c657f60365143dd62344b63bf47bc386a779d4d0743a63ba1b507126c03a",
-      "page-11.png": "55c30c01fca47e34cf41102d5ffed15c0d5e9eafdee8df7d612f424710c44e62",
-      "page-12.png": "0266da5c4c0903f0bb30e1d6f549728011ab3960525d4aacb10aecd44748de6c",
-      "page-13.png": "7aedc572bdfd7480267d4c19601b2162252ae06fe5e063f150bf5f6c480aeab6",
-      "page-14.png": "141db36270e575dbf32a5333c9dc6cf256e87c5cd2ff29bfe4f013d06214b8ed",
-      "page-15.png": "db0511bb39a4ec1e4d62582569e3311043174cb6638d6f7fa9978673144a183a",
-      "page-16.png": "93d08db0529c2f2a4de5959a6b95426d42034ca4ecb7cf42076dc5b6bd62f075",
-      "page-17.png": "7f4a91b31194b6b20ceb72cc5f47f3b12577ba09d628c20785e67a35a8daf29c",
-      "page-18.png": "416a78ae64cb5a6f6c62eb970a90f172ec2fca55c1b770f3c3a148f0e1064a24",
-      "page-19.png": "dbfc31faff30b29f81b4482694f3b2f9eb09da3d2e4f9412ca1ff7c2620c4fc2",
-      "page-20.png": "327f050027d4c317139640858be0bf7ce067f6a3133b1d3cfa8b976094f0ae5f"
+      "page-1.png": "c3b87f8a66475932a11fe55213f4a53f18b4f9436da00dad243b943af027728c",
+      "page-2.png": "398b7a4dd1d9dbdb876124cc2b23a2ea02092dfc010317472ff8c1d1f4547748",
+      "page-3.png": "af0ccb82d9b860a5a812512178a3f4010dde4a6c666385635242e90ddf5ae6cc",
+      "page-4.png": "48d83d6b7b7df7e45f61aaaf1b4134657c87d18c96bbc5967699e2175bb3da8e",
+      "page-5.png": "5b65b90ac634ff70ae73d789d347cb7ddef7d3ace7d1645b969cc63006fa2bc7",
+      "page-6.png": "af42c30e7e185779a0ddca5b13b666261798d11c4b2e75b6a7fa48aba37ce760",
+      "page-7.png": "508f7eb83b5e0020c93dec846fb27b2f9cf317d6f541e02d0f3c6c8e733e026a",
+      "page-8.png": "f64f67189f272e2808c5b875df669490673a8ac1e5a528637f2c56623855fcc0",
+      "page-9.png": "ef1d78b693e38f67cfa0c963a6e7069285e3f5611968abfe1e0e6f43fa040b0f",
+      "page-10.png": "cf03bffef8b5f0f61948314ad2a5b60afa4bb33fdc4ddd77b25109c6b64574e8",
+      "page-11.png": "7c668dea0152964201dcd4867c4c6eabcd95c0c4daf9823368791097713872c1",
+      "page-12.png": "4230ce584bd0e564633f7c46bf5286e0922b9ca754be0b092e243e7b14fe7d77",
+      "page-13.png": "cc655da5d93aad3f1d0c8643d3ead7b2032418c07b64d3f92274c4ad76e3cde1",
+      "page-14.png": "8be90a73552f8c0b72cff1c557b88bfd11f2c1f6415e72602732200bf3923d21",
+      "page-15.png": "f7ca00d5762279ab52cc9ac79ee2376ad5e6ba4cd4ba94dbece5e1db21b474af",
+      "page-16.png": "0169235c53ea4e3baa939057f5c3110013bcd60b099e1cb0060c36c4554bed89",
+      "page-17.png": "64f89acc94b24b5eef153e74f7e83d0d301fbe6275f637587b9fe346bba4f10a",
+      "page-18.png": "5146fbc847666b64c68a9fb0182cc589bd79456524967bdde826ae151c4a110c",
+      "page-19.png": "a4d19e36363121497213544254706e25f389d9bb7aeed0303d117fdf785d213f",
+      "page-20.png": "30b25303539f611223c4777ef893a80beef2face4e7dc30e4221f3a2b904ef10"
     }
   },
   "source_sha256_lf": {
@@ -57,12 +85,13 @@
     "constraints/README.md": "3df55695cd69d007fd143b8d17877a4a6461097ad4da9c8c9db3d53d4572425c",
     "constraints/td_endpoint_audit.tcl": "e94d064b4467d0244cb2d9fdaeb52c3044d3632b35056fa66003df6f80f38d5d",
     "constraints/td_eval.sdc": "b8db6f9ced0c339e635dbf7604b1b66ee1e83fdc65b486fb0f41976809082460",
-    "tools/audit_delivery.py": "c5423394055cb2f89dc1c6001227813c7a5e9436b685b7fa58c51eba138a4f21",
-    "tools/build_course_report.py": "17972c838d2d9c44db323a401a40ddc83d7d750a9d84d7d8174f3882dde93985",
+    "tools/audit_delivery.py": "a5e7e08c9f10ec4694b8d11f07712f78d5d78a9e5b121825e83090a22503c652",
+    "tools/build_course_report.py": "fac7ad7b3ce0059c29e18c64951e7a10f25193ad3a05e8d5c26de8a18e90eda8",
     "tools/capture_analysis_manifest.py": "04935a6e7d3d684501510da82786bc0ec7755c9686e33539244932bbda48b6ae",
     "tools/create_eval_wrapper.py": "67bb2463ea759ea50c2cdba9e093d570b25236c81a2401c85b218e6166074bd2",
     "tools/create_td_constraints.py": "ddcc25a754d32f3ee640040ecdd1424ce09b2c4805ed551a2f9bb4232eeb079a",
     "tools/export_report_pdf.ps1": "5b6212a7c41a1ebc8873465a03bc67d6464e5d6cf3f092d9c2195f971901be01",
+    "tools/extract_report_cover.py": "d09e81213b0078e9061cda2e046ba70ad5bddb3d24675d240ca699ada662efc4",
     "tools/native_replay.cpp": "d77e29f3b1f7f0790de94b0044710a1e89b0d35a8252d8989fd42924ca9aceac",
     "tools/probe_power.py": "232fb4820d82ee36bbac1e9fa5d8a37d9c71325e789b026ef5a6b2a647e28dfc",
     "tools/render_course_report.py": "fdbf1ef46eda514ca92875936d002434ebde38994698d96fb19e3524563a33ae",
@@ -77,18 +106,18 @@
     "tools/run_td.py": "3aa5a6159e6dcbcf731b7c24b9c390c3af55d3e308652c4eae83a8ddf165ebb3",
     "tools/summarize_td.py": "8cc592efc779f30c8a54f97655277ab8376dd9286dd193fd25a10408f05b3cb0",
     "tools/verify_eval_wrapper.py": "d0e374e45cb352a620493b20a8e1fd347691c6cd12d868e9d1bc9a8a864e6dd1",
-    "docs/AI_ASSISTANCE.md": "ee2210ec2750cf485eff4d43747e6522d8e7d33c4f9eb88f6318e4212e73e26a",
+    "docs/AI_ASSISTANCE.md": "a37fd1ebecf3aca0d6b179b86981077834697cea9c0d00438c8304876f049105",
     "docs/ANALYSIS.md": "77aa977632796b9e5fdd7f6ff7ed8d2d3343665dd69cf8ee2c027feeef57701b",
-    "docs/COURSE_REPORT.md": "c79248cd4b834fe5cbeb980bf5e2359d3f3acaa0f46929eae70b5277b69f0e37",
+    "docs/COURSE_REPORT.md": "4c156f2ac212625822eadf61ab23d61fff7e6c003dee0f1cea2bb8c6a3a9403d",
     "docs/DUAL_CHANNEL.md": "f01227fda433271fe7121504ffee6a55cd13fc9306299e699888b36933e0e554",
     "docs/ENVIRONMENT.md": "2708fb364b6bc5735a754c17cf5db5efb12dfc8965e1492a27d8d00864fb34fa",
     "docs/INTERFACE.md": "2517b432d3823a1e880b5ee4860a64d16edecf69b32088d3ff03845c3ee71e57",
     "docs/MONITOR_PROTOCOL.md": "71ad7106306ad858c7174bb914f5233b213a99aec577b49305fa6a6ef070dcca",
     "docs/OPERATION_MANUAL.md": "5d28525edc7de2d572b78e0ed9a99a03b48b06d34d923efff4080d953f2e2359",
     "docs/SINGLE_CHANNEL.md": "2be88c5daf91383ab813e042b487e6821b548b39ffc3b260af2b4ab20f960a69",
-    "docs/TARGET_ANALYSIS.md": "6a17f167f20a9b9277322e3962a3f1ad2b7195fa6b3b77bd92ff79b04c4f085f",
+    "docs/TARGET_ANALYSIS.md": "3a0b754da5413cd8e7061a74826d83934fd3eb41a6c354ec5c2108b6590b86f0",
     "docs/TASKS.md": "091d0eb8c451fb8437edfdb47bcb03c54737be4afaa09ffce40e0cdfc4ede7a7",
-    "README.md": "9dba9563479720ce4cd766b0a0527234f5e64142be680b3fc75a08eb08358182"
+    "README.md": "734491facb375dd42394929dec8704cf5e84a7c3401f35a6ed9239a50442dc72"
   },
   "artifacts": {
     "reports/implementation/manifest.json": {
@@ -352,7 +381,19 @@
       "encoding": "canonical_LF_bytes"
     },
     "deliverables/双异步FIFO课程设计报告.docx": {
-      "sha256": "df35b109289a854db767c49fe0506932ef2a2fcf4bdbdeae3fd41a664500a7fa",
+      "sha256": "3c31ea65fd54605dde45d7dd9bbd157ef544d8ed1936ce460cac4cac8a97f92e",
+      "encoding": "raw_bytes"
+    },
+    "assets/course-report-cover.json": {
+      "sha256": "c755b76a00227b4993fc1431b2403bfb4f6cb6dc212c1a3d2091fa06d53ab525",
+      "encoding": "canonical_LF_bytes"
+    },
+    "assets/course-report-cover.pdf": {
+      "sha256": "7771398e963b892915d98321937a3ec0d70a525045f08ab5c19c55ead4a0cf95",
+      "encoding": "raw_bytes"
+    },
+    "assets/course-report-cover.png": {
+      "sha256": "20e9358e21728aa1087b4459bfb01f05e930a0ae6f4ac1126a2d73184ad6aaec",
       "encoding": "raw_bytes"
     }
   },
@@ -366,6 +407,9 @@
     "missing_power_preserved": true,
     "personal_fields_blank": true,
     "six_report_figures": true,
-    "local_document_links": true
+    "local_document_links": true,
+    "original_pdf_cover_preserved": true,
+    "six_required_top_level_sections": true,
+    "sixteen_technical_and_division_tables": true
   }
 }

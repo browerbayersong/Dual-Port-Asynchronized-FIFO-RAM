@@ -5,6 +5,7 @@
 ## 已交付结果
 
 - [正式课程报告](../deliverables/双异步FIFO课程设计报告.docx)及[可检索正文](COURSE_REPORT.md)。个人信息和实际分工按用户要求留空。
+- [原版封面单页](../assets/course-report-cover.pdf)：直接提取任务书第1页，Word内以300 dpi整页图像保留原样。正文一级章节为设计题目、设计目的、设计内容、设计结果分析、总结、参考文献，接口、验证及分析内容归入相应下级章节。
 - [目标实现报告](../reports/implementation/REPORT.md)：资源、时序、约束证据及警告。
 - [MTBF 相对分析](../reports/mtbf/REPORT.md)：说明模型、额外稳定时间及44位寄存器代价，不填没有器件参数支持的绝对年数。
 - [干净目录复现](../reports/reproduction/summary.json)：同一计算机新目录重新编译，指定配置及完整10组通过；不冒充其他成员独立复现。
@@ -62,6 +63,8 @@ $env:PYTHONPATH = 'D:/fifo_tools/report_deps'
 ```
 
 绘图需要可用中文字体，本机为 `C:/Windows/Fonts/msyh.ttc`。图中数据来自真实通过运行，raw VCD保存在仓库外；MTBF图是无量纲数学曲线。报告使用python-docx生成，Word公式保持可编辑。
+
+封面资产位于assets，包含原始单页PDF、300 dpi PNG和来源哈希；原任务书PDF不随项目整体上传。已有资产时可直接生成报告，若需重新提取，可运行 `python tools/extract_report_cover.py --source 'D:/课程设计/硬件描述语言 课设题目27.pdf'` 并将参数换为实际文件路径。封面整页保留，正文文字与表格保持可编辑；封面不添加个人信息，正文页码从1开始。
 
 本机没有LibreOffice。渲染辅助程序使用已安装WPS的后台COM导出，再调用文档技能自带的PDF栅格器和Poppler，输出到 `D:/fifo_build/report_qa`。若WPS实例中已有打开文档，脚本会停止以避免影响用户文档；其他机器可直接在Word/WPS导出。报告更改后必须重新导出并逐页核对。PNG为内部排版检查产物，不作为报告交付。
 

@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import re
 import subprocess
+import zipfile
 from docx import Document
 from pypdf import PdfReader
 
@@ -64,9 +65,19 @@ def main():
             if re.match(r'\w+://|mailto:|#',target):continue
             assert (p.parent/target.split('#')[0]).exists(), f'Broken local link: {p.name}: {target}'
     doc=Document(ROOT/'deliverables/双异步FIFO课程设计报告.docx')
-    assert len(doc.inline_shapes)==6
-    for label in ['学生学院','专业班级','学号','学生姓名']:
-        assert any(p.text.startswith(label+'\t___') for p in doc.paragraphs)
+    assert len(doc.inline_shapes)==6 and len(doc.tables)==16
+    expected_sections=['1 设计题目','2 设计目的','3 设计内容','4 设计结果分析','5 总结','6 参考文献']
+    assert [p.text for p in doc.paragraphs if p.style.name=='Heading 1']==expected_sections
+    anchors=doc._element.xpath('.//wp:anchor')
+    assert len(anchors)==1
+    cover=json.loads((ROOT/'assets/course-report-cover.json').read_text(encoding='utf-8'))
+    assert digest(ROOT/'assets/course-report-cover.pdf',True)==cover['extracted_pdf_sha256']
+    assert digest(ROOT/'assets/course-report-cover.png',True)==cover['cover_png_sha256']
+    assert len(PdfReader(ROOT/'assets/course-report-cover.pdf').pages)==1
+    assert cover['page_content_stream_unchanged'] is True
+    with zipfile.ZipFile(ROOT/'deliverables/双异步FIFO课程设计报告.docx') as package:
+        media=[package.read(p) for p in package.namelist() if p.startswith('word/media/')]
+        assert cover['cover_png_sha256'] in [hashlib.sha256(data).hexdigest() for data in media]
     assert all(not c.text for row in doc.tables[-1].rows[1:] for c in row.cells)
     assert not doc._element.xpath('.//w:pBdr') and not doc.styles.element.xpath('.//w:pBdr')
     qa=Path('D:/fifo_build/report_qa')
@@ -83,7 +94,7 @@ def main():
                 sources[p.relative_to(ROOT).as_posix()]=digest(p)
     sources['README.md']=digest(ROOT/'README.md')
     artifacts={}
-    for directory in ['reports/implementation','reports/figures','reports/reproduction','reports/mtbf','deliverables']:
+    for directory in ['reports/implementation','reports/figures','reports/reproduction','reports/mtbf','deliverables','assets']:
         for p in sorted((ROOT/directory).rglob('*')):
             if p.is_file():
                 binary=p.suffix in ['.png','.pdf','.docx']
@@ -92,13 +103,15 @@ def main():
         'checkout_parent_baseline':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         'commit_note':'The containing Git commit identifies the delivered set; hashes identify exact measured inputs and outputs. Earlier reports retain their original manifests.',
         'scope':'Software target analysis and course report; full IO timing is not closed, TMR-5506 remains, power W unavailable',
+        'cover_source':cover,'report_top_level_sections':expected_sections,
         'visual_qa':{'renderer':'WPS COM PDF export plus packaged DOCX rasterizer and Poppler',
             'pages_inspected':args.visual_qa_pages,'qa_pdf_sha256':digest(pdf,True),
             'page_png_sha256':{f'page-{i}.png':digest(qa/f'page-{i}.png',True) for i in range(1,args.visual_qa_pages+1)}},
         'source_sha256_lf':sources,'artifacts':artifacts,
         'checks':{'previous_rtl_tb_sim_unchanged':True,'implementation_inputs_match':True,'clean_reproduction_10_of_10':True,
             'wrapper_checks_both_stages':True,'five_clocks_and_472_bounds':True,'negative_interface_slack_preserved':True,
-            'missing_power_preserved':True,'personal_fields_blank':True,'six_report_figures':True,'local_document_links':True}}
+            'missing_power_preserved':True,'personal_fields_blank':True,'six_report_figures':True,'local_document_links':True,
+            'original_pdf_cover_preserved':True,'six_required_top_level_sections':True,'sixteen_technical_and_division_tables':True}}
     (ROOT/'reports/delivery_manifest.json').write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     print('DELIVERY_AUDIT: PASS',args.visual_qa_pages,'pages, original RTL/TB unchanged, target/reproduction/report consistent')
 
