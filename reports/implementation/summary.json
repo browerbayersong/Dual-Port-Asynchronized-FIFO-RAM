@@ -1,0 +1,482 @@
+{
+  "tool": "Tang Dynasty V6.2.168116",
+  "device": "PH1A100SFG676",
+  "speed_grade": 2,
+  "scope": "Software evaluation including read-only status mux. Full IO timing is not closed; filtered internal reports are not IO signoff.",
+  "configurations": [
+    {
+      "sync_stages": 2,
+      "registers": 1532,
+      "lut6": 1040,
+      "core_lut6": 799,
+      "wrapper_lut6": 241,
+      "io": 231,
+      "eram20k": 2,
+      "interface": {
+        "setup_wns_ns": -5.919,
+        "hold_wns_ns": -2.794,
+        "sta_coverage_percent": 100.0,
+        "clocks": {
+          "monitor_clk": {
+            "target_mhz": 100.0
+          },
+          "a_rd_clk": {
+            "target_mhz": 83.333
+          },
+          "b_rd_clk": {
+            "target_mhz": 100.0
+          },
+          "b_wr_clk": {
+            "target_mhz": 28.571
+          },
+          "a_wr_clk": {
+            "target_mhz": 50.0
+          }
+        }
+      },
+      "core": {
+        "definition": "Native report_timing_path between internal register nets under unchanged full SDC; worst 20 endpoints per group",
+        "setup_wns_ns": 0.387,
+        "hold_wns_ns": 0.021,
+        "clocks": {
+          "a_rd_clk": {
+            "fmax_mhz": 211.149,
+            "min_period_ns": 4.736,
+            "setup_wns_ns": 7.264,
+            "hold_wns_ns": 0.027
+          },
+          "a_wr_clk": {
+            "fmax_mhz": 131.718,
+            "min_period_ns": 7.592,
+            "setup_wns_ns": 12.408,
+            "hold_wns_ns": 0.034
+          },
+          "b_rd_clk": {
+            "fmax_mhz": 173.31,
+            "min_period_ns": 5.77,
+            "setup_wns_ns": 4.23,
+            "hold_wns_ns": 0.025
+          },
+          "b_wr_clk": {
+            "fmax_mhz": 173.31,
+            "min_period_ns": 5.77,
+            "setup_wns_ns": 29.23,
+            "hold_wns_ns": 0.021
+          },
+          "monitor_clk": {
+            "fmax_mhz": 104.026,
+            "min_period_ns": 9.613,
+            "setup_wns_ns": 0.387,
+            "hold_wns_ns": 0.033
+          }
+        }
+      },
+      "cdc_bounds": [
+        {
+          "type": "max_delay",
+          "total": 9,
+          "dominated": 9,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/fifo_a/u_r2w/gray_in\\[[0-8]\\]$}] -to [get_regs -hier -regexp {^dut/fifo_a/u_r2w/pipe\\[0\\]\\[[0-8]\\]$}] 12"
+        },
+        {
+          "type": "max_delay",
+          "total": 9,
+          "dominated": 9,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/fifo_a/u_w2r/gray_in\\[[0-8]\\]$}] -to [get_regs -hier -regexp {^dut/fifo_a/u_w2r/pipe\\[0\\]\\[[0-8]\\]$}] 20"
+        },
+        {
+          "type": "max_delay",
+          "total": 9,
+          "dominated": 9,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/fifo_b/u_r2w/gray_in\\[[0-8]\\]$}] -to [get_regs -hier -regexp {^dut/fifo_b/u_r2w/pipe\\[0\\]\\[[0-8]\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 9,
+          "dominated": 9,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/fifo_b/u_w2r/gray_in\\[[0-8]\\]$}] -to [get_regs -hier -regexp {^dut/fifo_b/u_w2r/pipe\\[0\\]\\[[0-8]\\]$}] 35"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/request_toggle$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_a_write/u_request_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_a_write/source_ack$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_a_write/u_ack_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 75,
+          "dominated": 75,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_a_write/held_data\\[[0-9]+\\]$}] -to [get_regs -hier -regexp {^dut/u_monitor/a_write_status\\[[0-9]+\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/request_toggle$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_a_read/u_request_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_a_read/source_ack$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_a_read/u_ack_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 139,
+          "dominated": 139,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_a_read/held_data\\[[0-9]+\\]$}] -to [get_regs -hier -regexp {^dut/u_monitor/a_read_status\\[[0-9]+\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/request_toggle$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_b_write/u_request_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_b_write/source_ack$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_b_write/u_ack_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 75,
+          "dominated": 75,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_b_write/held_data\\[[0-9]+\\]$}] -to [get_regs -hier -regexp {^dut/u_monitor/b_write_status\\[[0-9]+\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/request_toggle$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_b_read/u_request_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_b_read/source_ack$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_b_read/u_ack_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 139,
+          "dominated": 139,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_b_read/held_data\\[[0-9]+\\]$}] -to [get_regs -hier -regexp {^dut/u_monitor/b_read_status\\[[0-9]+\\]$}] 10"
+        }
+      ],
+      "cdc_max_delay_valid_paths": 472,
+      "gray_delay_evidence": [
+        {
+          "bus": "a_r2w",
+          "reported_bits": 9,
+          "max_delay_ns": 1.035,
+          "min_delay_same_max_corner_ns": 0.579,
+          "spread_same_max_corner_ns": 0.456,
+          "source_period_bound_ns": 12.0
+        },
+        {
+          "bus": "a_w2r",
+          "reported_bits": 9,
+          "max_delay_ns": 1.007,
+          "min_delay_same_max_corner_ns": 0.587,
+          "spread_same_max_corner_ns": 0.42,
+          "source_period_bound_ns": 20.0
+        },
+        {
+          "bus": "b_r2w",
+          "reported_bits": 9,
+          "max_delay_ns": 1.064,
+          "min_delay_same_max_corner_ns": 0.689,
+          "spread_same_max_corner_ns": 0.375,
+          "source_period_bound_ns": 10.0
+        },
+        {
+          "bus": "b_w2r",
+          "reported_bits": 9,
+          "max_delay_ns": 1.029,
+          "min_delay_same_max_corner_ns": 0.581,
+          "spread_same_max_corner_ns": 0.448,
+          "source_period_bound_ns": 35.0
+        }
+      ],
+      "independent_max_skew_command_status": "No separate native enforcement report; no independent set_max_skew pass is claimed. The audited per-bit absolute delay bound is the conservative skew bound.",
+      "power_w": null,
+      "power_status": "missing_device_power_library",
+      "critical_warning": "TMR-5506: ERAM address/chip-select signals driven by asynchronous-reset registers; physical RAM/reset behavior not signed off"
+    },
+    {
+      "sync_stages": 3,
+      "registers": 1576,
+      "lut6": 1040,
+      "core_lut6": 812,
+      "wrapper_lut6": 228,
+      "io": 231,
+      "eram20k": 2,
+      "interface": {
+        "setup_wns_ns": -5.919,
+        "hold_wns_ns": -2.794,
+        "sta_coverage_percent": 100.0,
+        "clocks": {
+          "monitor_clk": {
+            "target_mhz": 100.0
+          },
+          "b_rd_clk": {
+            "target_mhz": 100.0
+          },
+          "a_rd_clk": {
+            "target_mhz": 83.333
+          },
+          "a_wr_clk": {
+            "target_mhz": 50.0
+          },
+          "b_wr_clk": {
+            "target_mhz": 28.571
+          }
+        }
+      },
+      "core": {
+        "definition": "Native report_timing_path between internal register nets under unchanged full SDC; worst 20 endpoints per group",
+        "setup_wns_ns": 0.924,
+        "hold_wns_ns": 0.02,
+        "clocks": {
+          "a_rd_clk": {
+            "fmax_mhz": 190.114,
+            "min_period_ns": 5.26,
+            "setup_wns_ns": 6.74,
+            "hold_wns_ns": 0.02
+          },
+          "a_wr_clk": {
+            "fmax_mhz": 172.176,
+            "min_period_ns": 5.808,
+            "setup_wns_ns": 14.192,
+            "hold_wns_ns": 0.024
+          },
+          "b_rd_clk": {
+            "fmax_mhz": 189.609,
+            "min_period_ns": 5.274,
+            "setup_wns_ns": 4.726,
+            "hold_wns_ns": 0.02
+          },
+          "b_wr_clk": {
+            "fmax_mhz": 159.821,
+            "min_period_ns": 6.257,
+            "setup_wns_ns": 28.743,
+            "hold_wns_ns": 0.021
+          },
+          "monitor_clk": {
+            "fmax_mhz": 110.181,
+            "min_period_ns": 9.076,
+            "setup_wns_ns": 0.924,
+            "hold_wns_ns": 0.03
+          }
+        }
+      },
+      "cdc_bounds": [
+        {
+          "type": "max_delay",
+          "total": 9,
+          "dominated": 9,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/fifo_a/u_r2w/gray_in\\[[0-8]\\]$}] -to [get_regs -hier -regexp {^dut/fifo_a/u_r2w/pipe\\[0\\]\\[[0-8]\\]$}] 12"
+        },
+        {
+          "type": "max_delay",
+          "total": 9,
+          "dominated": 9,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/fifo_a/u_w2r/gray_in\\[[0-8]\\]$}] -to [get_regs -hier -regexp {^dut/fifo_a/u_w2r/pipe\\[0\\]\\[[0-8]\\]$}] 20"
+        },
+        {
+          "type": "max_delay",
+          "total": 9,
+          "dominated": 9,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/fifo_b/u_r2w/gray_in\\[[0-8]\\]$}] -to [get_regs -hier -regexp {^dut/fifo_b/u_r2w/pipe\\[0\\]\\[[0-8]\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 9,
+          "dominated": 9,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/fifo_b/u_w2r/gray_in\\[[0-8]\\]$}] -to [get_regs -hier -regexp {^dut/fifo_b/u_w2r/pipe\\[0\\]\\[[0-8]\\]$}] 35"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/request_toggle$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_a_write/u_request_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_a_write/source_ack$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_a_write/u_ack_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 75,
+          "dominated": 75,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_a_write/held_data\\[[0-9]+\\]$}] -to [get_regs -hier -regexp {^dut/u_monitor/a_write_status\\[[0-9]+\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/request_toggle$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_a_read/u_request_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_a_read/source_ack$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_a_read/u_ack_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 139,
+          "dominated": 139,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_a_read/held_data\\[[0-9]+\\]$}] -to [get_regs -hier -regexp {^dut/u_monitor/a_read_status\\[[0-9]+\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/request_toggle$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_b_write/u_request_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_b_write/source_ack$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_b_write/u_ack_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 75,
+          "dominated": 75,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_b_write/held_data\\[[0-9]+\\]$}] -to [get_regs -hier -regexp {^dut/u_monitor/b_write_status\\[[0-9]+\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/request_toggle$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_b_read/u_request_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 1,
+          "dominated": 1,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_b_read/source_ack$}] -to [get_regs -hier -regexp {^dut/u_monitor/u_b_read/u_ack_sync/pipe\\[0\\]\\[0\\]$}] 10"
+        },
+        {
+          "type": "max_delay",
+          "total": 139,
+          "dominated": 139,
+          "shadowed": 0,
+          "ignored": 0,
+          "constraint": "set_max_delay -datapath_only -from [get_regs -hier -regexp {^dut/u_monitor/u_b_read/held_data\\[[0-9]+\\]$}] -to [get_regs -hier -regexp {^dut/u_monitor/b_read_status\\[[0-9]+\\]$}] 10"
+        }
+      ],
+      "cdc_max_delay_valid_paths": 472,
+      "gray_delay_evidence": [
+        {
+          "bus": "a_r2w",
+          "reported_bits": 9,
+          "max_delay_ns": 0.95,
+          "min_delay_same_max_corner_ns": 0.587,
+          "spread_same_max_corner_ns": 0.363,
+          "source_period_bound_ns": 12.0
+        },
+        {
+          "bus": "a_w2r",
+          "reported_bits": 9,
+          "max_delay_ns": 1.203,
+          "min_delay_same_max_corner_ns": 0.577,
+          "spread_same_max_corner_ns": 0.626,
+          "source_period_bound_ns": 20.0
+        },
+        {
+          "bus": "b_r2w",
+          "reported_bits": 9,
+          "max_delay_ns": 1.158,
+          "min_delay_same_max_corner_ns": 0.587,
+          "spread_same_max_corner_ns": 0.571,
+          "source_period_bound_ns": 10.0
+        },
+        {
+          "bus": "b_w2r",
+          "reported_bits": 9,
+          "max_delay_ns": 0.929,
+          "min_delay_same_max_corner_ns": 0.575,
+          "spread_same_max_corner_ns": 0.354,
+          "source_period_bound_ns": 35.0
+        }
+      ],
+      "independent_max_skew_command_status": "No separate native enforcement report; no independent set_max_skew pass is claimed. The audited per-bit absolute delay bound is the conservative skew bound.",
+      "power_w": null,
+      "power_status": "missing_device_power_library",
+      "critical_warning": "TMR-5506: ERAM address/chip-select signals driven by asynchronous-reset registers; physical RAM/reset behavior not signed off"
+    }
+  ]
+}

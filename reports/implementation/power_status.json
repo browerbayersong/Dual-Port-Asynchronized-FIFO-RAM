@@ -1,0 +1,13 @@
+{
+  "status": "unavailable_missing_device_power_library",
+  "power_w": null,
+  "model_path": null,
+  "attempt_configuration": {
+    "device": "PH1A100SFG676",
+    "vccd_v": 0.9,
+    "vccaux_v": 1.8,
+    "junction_c": 85,
+    "vectorless_toggle_fraction": 0.125
+  },
+  "note": "No quantified power is accepted without a matching vendor model and result review. No SAIF-based measured workload is claimed."
+}

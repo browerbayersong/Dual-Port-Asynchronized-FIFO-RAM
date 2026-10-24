@@ -1,0 +1,27 @@
+{
+  "device": "PH1A100SFG676",
+  "speed": 2,
+  "assumption": "software evaluation target selected for installed tool; not specified by coursework",
+  "source_sha256_lf": {
+    "rtl/reset_sync.v": "8c3cc852ba0d247853f3af221ce1f7906e56b49ea65008b436ebd2dbb74e9821",
+    "rtl/gray_sync.v": "1955c6a6c7f4a8cbd358d3f96f3be511c4579600ac0d5d327946271192a2c291",
+    "rtl/fifo_ram.v": "65920c9c03f6627027c4143621b0c98afc517547fcd6d1b25e660038018973e3",
+    "rtl/async_fifo.v": "e025f54838e568febd786792b73a22b2e423d55cff36cb9fb49156a817081012",
+    "rtl/snapshot_mailbox.v": "05e07e15264c03b8b5922fc4e43c49a0525839f035269ccd9bef0a3b5199cec0",
+    "rtl/fifo_monitor.v": "e06a49b2f9da92c6f6feddc6ddfdae0662070bbfbc85658e4d574e560229c3d9",
+    "rtl/dual_async_fifo.v": "c940202153b905314d70c02d1dde0cdd941b85eea43e0736ddf2446ee8a9c246",
+    "analysis/dual_fifo_eval.v": "d4ae907b8019db02cc26a37f894feb2646fb8f566b929e48a1b3191ca8b36dcc",
+    "constraints/td_eval.sdc": "b8db6f9ced0c339e635dbf7604b1b66ee1e83fdc65b486fb0f41976809082460",
+    "constraints/td_endpoint_audit.tcl": "e94d064b4467d0244cb2d9fdaeb52c3044d3632b35056fa66003df6f80f38d5d"
+  },
+  "runs": [
+    {
+      "sync_stages": 3,
+      "build": "D:\\fifo_build\\impl_s3",
+      "result": "FLOW_COMPLETED",
+      "resume_from": "route",
+      "note": "Flow completion does not imply timing closure; see measured setup/hold slack.",
+      "wrapper_staged_sha256_lf": "89eb607547131b70ab37d0deaee154d9a127ff070ae7ce050de9d533cd05ee14"
+    }
+  ]
+}

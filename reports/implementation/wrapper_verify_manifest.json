@@ -1,0 +1,15 @@
+{
+  "derived_from": "tb/dual_fifo_tb.sv",
+  "source_tb_sha256_lf": "012205643e653505e77c90c6cca9584210b508b53a6ae5abc4173688cf1e0f72",
+  "derived_tb_sha256_lf": "896928654e85d8e016b6e3b1ba467ed9050287c876216f658515832bae8c9de0",
+  "configurations": {
+    "sync_stages": [
+      2,
+      3
+    ],
+    "seed": 1,
+    "auto_refresh_cycles": 32,
+    "ops_per_channel": 5000
+  },
+  "changes": "Only rebind the DUT, expose hidden status wires to the original scoreboards, and exercise all diagnostic mux selections."
+}

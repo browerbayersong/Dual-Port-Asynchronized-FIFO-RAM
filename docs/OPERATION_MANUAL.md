@@ -2,7 +2,7 @@
 
 适用项目：题目 1“双异步 FIFO 系统”。本文同时作为实现约定和后续运行指南。
 
-**2026-10-24 更新：单通道、双通道顶层与统一监控已实现，原生覆盖率、通用综合和六组 RTL 性能测量已有结果。** 当前入口见 [单通道说明](SINGLE_CHANNEL.md)、[双通道说明](DUAL_CHANNEL.md) 和 [分析操作说明](ANALYSIS.md)。本文保留最初目标流程：第 7—9 节的 +TEST 单独选择与 Questa 覆盖率命令仍是后续约定，当前双路脚本一次运行全部六类场景；本机实际使用 Verilator cover property 数据库。尚未确定用于软件评估的器件或工艺库，实现时序与功耗未完成。
+**2026-10-24 更新：设计、验证、原生覆盖率、通用综合、六组RTL性能及TD目标资源/时序分析已有结果，正式课程报告已整理。** 当前入口见 [单通道说明](SINGLE_CHANNEL.md)、[双通道说明](DUAL_CHANNEL.md)、[分析说明](ANALYSIS.md)及[目标实现操作](TARGET_ANALYSIS.md)。个人信息和分工留空。完整IO时序未收敛，保留ERAM复位风险，功耗缺厂商库。本文保留最初目标流程：第7—9节的+TEST单独选择与Questa命令仍为后续约定，当前双路一次运行全部六类场景，实际原生覆盖率采用Verilator cover property数据库。
 
 关联文档：[任务清单](TASKS.md) · [项目首页](../README.md)
 
@@ -327,6 +327,8 @@ vcover report -details reports/coverage/merged.ucdb
 闭环标准：指定可达功能 bins 命中 100%；未命中项有定位、补测或不可达说明。不得仅增加仿真时长后假定已完成覆盖。
 
 ## 10. 综合、时序、功耗与拓展
+
+本节后续表格为最初规划模板；当前实际数值、负裕量和缺项统一见 [目标实现报告](../reports/implementation/REPORT.md)、[MTBF分析](../reports/mtbf/REPORT.md)及[性能报告](../reports/performance/REPORT.md)，不能把模板中的待测当作已经完成的结果。
 
 ### 10.1 建立工程
 

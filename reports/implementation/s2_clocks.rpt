@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<clock_summary>
+		<groups size="5">
+				<clock_group name="a_rd_clk" size="1" endpoints="248" clocks="248" nonclocks="0"/>
+				<clock_group name="b_wr_clk" size="1" endpoints="146" clocks="146" nonclocks="0"/>
+				<clock_group name="a_wr_clk" size="1" endpoints="144" clocks="144" nonclocks="0"/>
+				<clock_group name="b_rd_clk" size="1" endpoints="239" clocks="239" nonclocks="0"/>
+				<clock_group name="monitor_clk" size="1" endpoints="297" clocks="297" nonclocks="0"/>
+		</groups>
+</clock_summary>

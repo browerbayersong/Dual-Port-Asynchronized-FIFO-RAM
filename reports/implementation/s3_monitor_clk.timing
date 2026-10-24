@@ -1,0 +1,1145 @@
+Created by          : Tang Dynasty v6.2.168116
+                    : Copyright (c) 2012-2025 Anlogic Inc.
+Generated           : Sat Oct 24 19:46:53 2026
+
+Top Model           : dual_fifo_eval
+Device              : PH1A100SFG676
+Speed               : 2
+STA coverage        : 100.00%
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     monitor_clk -> monitor_clk
+Type           :     Self
+From Clock     :     monitor_clk
+To Clock       :     monitor_clk
+Min Period     :     14.293ns
+Fmax           :     69.964MHz
+
+Statistics:
+Max            : SWNS     -4.293ns, STNS    -11.418ns,         3 Viol Endpoints,        10 Total Endpoints,        10 Paths Analyzed
+Min            : HWNS     -2.021ns, HTNS    -20.114ns,        10 Viol Endpoints,        10 Total Endpoints,        10 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : -4.293ns
+Begin Point         : dut/u_monitor/u_reset/release_pipe_reg[0]_syn_2.clk (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : snapshot_busy (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { monitor_clk rising@10.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 8.652ns (cell 5.740ns (66%), net 2.912ns (34%))
+Clock Skew          : 5.381ns
+Logic Level         : 2 ( PAD=1  LUT2=1 )
+Max Fanout          : 300
+Clock Uncertainty   : 0.260ns (sdc uncertainty: 0.200ns, default uncertainty: 0.060ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkin
+SCLK                x042y059z0          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkout
+net (fo=268)                            0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/u_reset/release_pipe_reg[0]_syn_2.clk
+launch edge                             0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+clk2q               x038y076z6          0.211    r     5.592          pin: dut/u_monitor/u_reset/release_pipe_reg[0]_syn_2.oqb
+net (fo=300)                            1.224          6.816          net: dut/u_monitor/u_reset/release_pipe[1],  rtl/reset_sync.v(7)
+                                                                      pin: snapshot_busy_syn_4.ib
+LUT2                x018y087z7          0.269    r     7.085       1  pin: snapshot_busy_syn_4.ofb
+net (fo=1)                              1.688          8.773          net: snapshot_busy_dup_1,  analysis/dual_fifo_eval.v(29)
+                                                                      pin: snapshot_busy_syn_2.doq[0]
+PAD                 x000y113            3.260    r    12.033       2  pin: snapshot_busy_syn_2.opad
+net (fo=1)                              0.000         12.033          net: snapshot_busy,  analysis/dual_fifo_eval.v(29)
+                                                                      pin: snapshot_busy
+--------------------------------------------------------------------  ---------------
+Arrival                                               12.033               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+capture edge                           10.000    r    10.000               
+--------------------------------------------------------------------  ---------------
+output                                 -2.000          8.000               
+clock uncertainty                      -0.260          7.740               
+clock pessimism                         0.000          7.740               
+--------------------------------------------------------------------  ---------------
+Required                                               7.740               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -4.293               
+
+Slack               : -4.229ns
+Begin Point         : dut/u_monitor/u_reset/release_pipe_reg[0]_syn_2.clk (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : snapshot_ready (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { monitor_clk rising@10.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 8.588ns (cell 5.831ns (67%), net 2.757ns (33%))
+Clock Skew          : 5.381ns
+Logic Level         : 2 ( PAD=1  LUT2=1 )
+Max Fanout          : 300
+Clock Uncertainty   : 0.260ns (sdc uncertainty: 0.200ns, default uncertainty: 0.060ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkin
+SCLK                x042y059z0          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkout
+net (fo=268)                            0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/u_reset/release_pipe_reg[0]_syn_2.clk
+launch edge                             0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+clk2q               x038y076z6          0.211    r     5.592          pin: dut/u_monitor/u_reset/release_pipe_reg[0]_syn_2.oqb
+net (fo=300)                            1.224          6.816          net: dut/u_monitor/u_reset/release_pipe[1],  rtl/reset_sync.v(7)
+                                                                      pin: snapshot_busy_syn_4.ib
+LUT2                x018y087z7          0.360    f     7.176       1  pin: snapshot_busy_syn_4.ofa
+net (fo=1)                              1.533          8.709          net: snapshot_ready_dup_1,  analysis/dual_fifo_eval.v(29)
+                                                                      pin: snapshot_ready_syn_2.doq[0]
+PAD                 x000y110            3.260    r    11.969       2  pin: snapshot_ready_syn_2.opad
+net (fo=1)                              0.000         11.969          net: snapshot_ready,  analysis/dual_fifo_eval.v(29)
+                                                                      pin: snapshot_ready
+--------------------------------------------------------------------  ---------------
+Arrival                                               11.969               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+capture edge                           10.000    r    10.000               
+--------------------------------------------------------------------  ---------------
+output                                 -2.000          8.000               
+clock uncertainty                      -0.260          7.740               
+clock pessimism                         0.000          7.740               
+--------------------------------------------------------------------  ---------------
+Required                                               7.740               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -4.229               
+
+Slack               : -2.896ns
+Begin Point         : dut/u_monitor/snapshot_valid_reg_syn_3.clk (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : snapshot_valid (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { monitor_clk rising@10.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 7.255ns (cell 5.477ns (75%), net 1.778ns (25%))
+Clock Skew          : 5.381ns
+Logic Level         : 1 ( PAD=1 )
+Max Fanout          : 1
+Clock Uncertainty   : 0.260ns (sdc uncertainty: 0.200ns, default uncertainty: 0.060ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/snapshot_valid_reg_syn_3.clk
+launch edge                             0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+clk2q               x020y084z7          0.217    r     5.598          pin: dut/u_monitor/snapshot_valid_reg_syn_3.oqa
+net (fo=1)                              1.778          7.376          net: snapshot_valid_dup_1,  analysis/dual_fifo_eval.v(29)
+                                                                      pin: snapshot_valid_syn_2.doq[0]
+PAD                 x000y110            3.260    r    10.636       1  pin: snapshot_valid_syn_2.opad
+net (fo=1)                              0.000         10.636          net: snapshot_valid,  analysis/dual_fifo_eval.v(29)
+                                                                      pin: snapshot_valid
+--------------------------------------------------------------------  ---------------
+Arrival                                               10.636               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+capture edge                           10.000    r    10.000               
+--------------------------------------------------------------------  ---------------
+output                                 -2.000          8.000               
+clock uncertainty                      -0.260          7.740               
+clock pessimism                         0.000          7.740               
+--------------------------------------------------------------------  ---------------
+Required                                               7.740               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -2.896               
+
+Slack               : 0.924ns
+Begin Point         : dut/u_monitor/state_reg[3]_syn_2.clk (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/a_read_status_reg[94]_syn_2.cea (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { monitor_clk rising@10.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 8.541ns (cell 0.217ns (2%), net 8.324ns (98%))
+Clock Skew          : 0.087ns
+Logic Level         : 0
+Max Fanout          : 462
+Clock Uncertainty   : 0.385ns (sdc uncertainty: 0.200ns, default uncertainty: 0.185ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/state_reg[3]_syn_2.clk
+launch edge                             0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+clk2q               x020y082z2          0.217    r     5.598          pin: dut/u_monitor/state_reg[3]_syn_2.oqa
+net (fo=462)                            8.324         13.922          net: dut/u_monitor/state_reg_syn_1[3],  rtl/fifo_monitor.v(61)
+                                                                      pin: dut/u_monitor/a_read_status_reg[94]_syn_2.cea
+reg                 x031y069z2          0.000    f    13.922               
+--------------------------------------------------------------------  ---------------
+Arrival                                               13.922               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.959          0.959          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.252          3.211          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.330          3.541          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.648          4.189          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkin
+SCLK                x042y059z0          0.000          4.189          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkout
+net (fo=268)                            0.859          5.048          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/a_read_status_reg[94]_syn_2.clk
+capture edge                           10.000    r    15.048               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.063         14.985               
+clock uncertainty                      -0.385         14.600               
+clock pessimism                         0.246         14.846               
+--------------------------------------------------------------------  ---------------
+Required                                              14.846               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.924               
+
+Slack               : 0.924ns
+Begin Point         : dut/u_monitor/state_reg[3]_syn_2.clk (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/a_read_status_reg[94]_syn_2.ceb (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { monitor_clk rising@10.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 8.541ns (cell 0.217ns (2%), net 8.324ns (98%))
+Clock Skew          : 0.087ns
+Logic Level         : 0
+Max Fanout          : 462
+Clock Uncertainty   : 0.385ns (sdc uncertainty: 0.200ns, default uncertainty: 0.185ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/state_reg[3]_syn_2.clk
+launch edge                             0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+clk2q               x020y082z2          0.217    r     5.598          pin: dut/u_monitor/state_reg[3]_syn_2.oqa
+net (fo=462)                            8.324         13.922          net: dut/u_monitor/state_reg_syn_1[3],  rtl/fifo_monitor.v(61)
+                                                                      pin: dut/u_monitor/a_read_status_reg[94]_syn_2.ceb
+reg                 x031y069z2          0.000    f    13.922               
+--------------------------------------------------------------------  ---------------
+Arrival                                               13.922               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.959          0.959          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.252          3.211          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.330          3.541          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.648          4.189          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkin
+SCLK                x042y059z0          0.000          4.189          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkout
+net (fo=268)                            0.859          5.048          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/a_read_status_reg[94]_syn_2.clk
+capture edge                           10.000    r    15.048               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.063         14.985               
+clock uncertainty                      -0.385         14.600               
+clock pessimism                         0.246         14.846               
+--------------------------------------------------------------------  ---------------
+Required                                              14.846               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.924               
+
+Slack               : 0.924ns
+Begin Point         : dut/u_monitor/state_reg[3]_syn_2.clk (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/a_write_status_reg[10]_syn_2.cea (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { monitor_clk rising@10.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 8.541ns (cell 0.217ns (2%), net 8.324ns (98%))
+Clock Skew          : 0.087ns
+Logic Level         : 0
+Max Fanout          : 462
+Clock Uncertainty   : 0.385ns (sdc uncertainty: 0.200ns, default uncertainty: 0.185ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/state_reg[3]_syn_2.clk
+launch edge                             0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+clk2q               x020y082z2          0.217    r     5.598          pin: dut/u_monitor/state_reg[3]_syn_2.oqa
+net (fo=462)                            8.324         13.922          net: dut/u_monitor/state_reg_syn_1[3],  rtl/fifo_monitor.v(61)
+                                                                      pin: dut/u_monitor/a_write_status_reg[10]_syn_2.cea
+reg                 x031y069z1          0.000    f    13.922               
+--------------------------------------------------------------------  ---------------
+Arrival                                               13.922               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.959          0.959          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.252          3.211          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.330          3.541          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.648          4.189          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkin
+SCLK                x042y059z0          0.000          4.189          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkout
+net (fo=268)                            0.859          5.048          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/a_write_status_reg[10]_syn_2.clk
+capture edge                           10.000    r    15.048               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.063         14.985               
+clock uncertainty                      -0.385         14.600               
+clock pessimism                         0.246         14.846               
+--------------------------------------------------------------------  ---------------
+Required                                              14.846               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.924               
+
+Slack               : 0.924ns
+Begin Point         : dut/u_monitor/state_reg[3]_syn_2.clk (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/a_write_status_reg[10]_syn_2.ceb (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { monitor_clk rising@10.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 8.541ns (cell 0.217ns (2%), net 8.324ns (98%))
+Clock Skew          : 0.087ns
+Logic Level         : 0
+Max Fanout          : 462
+Clock Uncertainty   : 0.385ns (sdc uncertainty: 0.200ns, default uncertainty: 0.185ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/state_reg[3]_syn_2.clk
+launch edge                             0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+clk2q               x020y082z2          0.217    r     5.598          pin: dut/u_monitor/state_reg[3]_syn_2.oqa
+net (fo=462)                            8.324         13.922          net: dut/u_monitor/state_reg_syn_1[3],  rtl/fifo_monitor.v(61)
+                                                                      pin: dut/u_monitor/a_write_status_reg[10]_syn_2.ceb
+reg                 x031y069z1          0.000    f    13.922               
+--------------------------------------------------------------------  ---------------
+Arrival                                               13.922               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.959          0.959          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.252          3.211          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.330          3.541          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.648          4.189          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkin
+SCLK                x042y059z0          0.000          4.189          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkout
+net (fo=268)                            0.859          5.048          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/a_write_status_reg[10]_syn_2.clk
+capture edge                           10.000    r    15.048               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.063         14.985               
+clock uncertainty                      -0.385         14.600               
+clock pessimism                         0.246         14.846               
+--------------------------------------------------------------------  ---------------
+Required                                              14.846               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.924               
+
+Slack               : 1.119ns
+Begin Point         : dut/u_monitor/state_reg[3]_syn_2.clk (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/a_write_status_reg[1]_syn_2.cea (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { monitor_clk rising@10.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 8.346ns (cell 0.217ns (2%), net 8.129ns (98%))
+Clock Skew          : 0.087ns
+Logic Level         : 0
+Max Fanout          : 462
+Clock Uncertainty   : 0.385ns (sdc uncertainty: 0.200ns, default uncertainty: 0.185ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/state_reg[3]_syn_2.clk
+launch edge                             0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+clk2q               x020y082z2          0.217    r     5.598          pin: dut/u_monitor/state_reg[3]_syn_2.oqa
+net (fo=462)                            8.129         13.727          net: dut/u_monitor/state_reg_syn_1[3],  rtl/fifo_monitor.v(61)
+                                                                      pin: dut/u_monitor/a_write_status_reg[1]_syn_2.cea
+reg                 x032y066z7          0.000    f    13.727               
+--------------------------------------------------------------------  ---------------
+Arrival                                               13.727               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.959          0.959          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.252          3.211          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.330          3.541          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.648          4.189          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkin
+SCLK                x042y059z0          0.000          4.189          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkout
+net (fo=268)                            0.859          5.048          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/a_write_status_reg[1]_syn_2.clk
+capture edge                           10.000    r    15.048               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.063         14.985               
+clock uncertainty                      -0.385         14.600               
+clock pessimism                         0.246         14.846               
+--------------------------------------------------------------------  ---------------
+Required                                              14.846               
+--------------------------------------------------------------------  ---------------
+Slack                                                  1.119               
+
+Slack               : 1.329ns
+Begin Point         : dut/u_monitor/state_reg[3]_syn_2.clk (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/a_read_status_reg[64]_syn_2.cea (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { monitor_clk rising@10.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 8.136ns (cell 0.217ns (2%), net 7.919ns (98%))
+Clock Skew          : 0.087ns
+Logic Level         : 0
+Max Fanout          : 462
+Clock Uncertainty   : 0.385ns (sdc uncertainty: 0.200ns, default uncertainty: 0.185ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/state_reg[3]_syn_2.clk
+launch edge                             0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+clk2q               x020y082z2          0.217    r     5.598          pin: dut/u_monitor/state_reg[3]_syn_2.oqa
+net (fo=462)                            7.919         13.517          net: dut/u_monitor/state_reg_syn_1[3],  rtl/fifo_monitor.v(61)
+                                                                      pin: dut/u_monitor/a_read_status_reg[64]_syn_2.cea
+reg                 x026y068z4          0.000    f    13.517               
+--------------------------------------------------------------------  ---------------
+Arrival                                               13.517               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.959          0.959          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.252          3.211          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.330          3.541          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.648          4.189          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkin
+SCLK                x042y059z0          0.000          4.189          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkout
+net (fo=268)                            0.859          5.048          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/a_read_status_reg[64]_syn_2.clk
+capture edge                           10.000    r    15.048               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.063         14.985               
+clock uncertainty                      -0.385         14.600               
+clock pessimism                         0.246         14.846               
+--------------------------------------------------------------------  ---------------
+Required                                              14.846               
+--------------------------------------------------------------------  ---------------
+Slack                                                  1.329               
+
+Slack               : 1.329ns
+Begin Point         : dut/u_monitor/state_reg[3]_syn_2.clk (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/a_read_status_reg[64]_syn_2.ceb (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 10.000ns { monitor_clk rising@10.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 8.136ns (cell 0.217ns (2%), net 7.919ns (98%))
+Clock Skew          : 0.087ns
+Logic Level         : 0
+Max Fanout          : 462
+Clock Uncertainty   : 0.385ns (sdc uncertainty: 0.200ns, default uncertainty: 0.185ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/state_reg[3]_syn_2.clk
+launch edge                             0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+clk2q               x020y082z2          0.217    r     5.598          pin: dut/u_monitor/state_reg[3]_syn_2.oqa
+net (fo=462)                            7.919         13.517          net: dut/u_monitor/state_reg_syn_1[3],  rtl/fifo_monitor.v(61)
+                                                                      pin: dut/u_monitor/a_read_status_reg[64]_syn_2.ceb
+reg                 x026y068z4          0.000    f    13.517               
+--------------------------------------------------------------------  ---------------
+Arrival                                               13.517               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.959          0.959          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.252          3.211          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.330          3.541          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.648          4.189          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkin
+SCLK                x042y059z0          0.000          4.189          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1.clkout
+net (fo=268)                            0.859          5.048          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk1_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/a_read_status_reg[64]_syn_2.clk
+capture edge                           10.000    r    15.048               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.063         14.985               
+clock uncertainty                      -0.385         14.600               
+clock pessimism                         0.246         14.846               
+--------------------------------------------------------------------  ---------------
+Required                                              14.846               
+--------------------------------------------------------------------  ---------------
+Slack                                                  1.329               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+Slack               : -2.021ns
+Begin Point         : snapshot_req (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/idle_cycles_reg[29]_syn_2.ia (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { monitor_clk rising@0.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 3.647ns (cell 1.869ns (51%), net 1.778ns (49%))
+Clock Skew          : 5.381ns
+Logic Level         : 3 ( PAD=1  LUT3=1  LUT2=1 )
+Max Fanout          : 19
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: snapshot_req
+net (fo=1)                              0.000          0.500          net: snapshot_req,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: snapshot_req_syn_2.ipad
+PAD                 x000y110            0.959    r     1.459       1  pin: snapshot_req_syn_2.di
+net (fo=1)                              1.551          3.010          net: snapshot_req_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: dut/u_monitor/mux10_syn_73.ie
+LUT3                x018y087z0          0.100    f     3.110       2  pin: dut/u_monitor/mux10_syn_73.ofb
+net (fo=19)                             0.227          3.337          net: dut/u_monitor/idle_cycles_b1_n_syn_2,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[29]_syn_2.ia
+LUT2 (reg)          x020y087z3          0.310    f     3.647       3  net: dut/u_monitor/idle_cycles[24],  rtl/fifo_monitor.v(27)
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.647               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[29]_syn_2.clk
+capture edge                            0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          5.468               
+clock uncertainty                       0.200          5.668               
+clock pessimism                         0.000          5.668               
+--------------------------------------------------------------------  ---------------
+Required                                               5.668               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -2.021               
+
+Slack               : -2.020ns
+Begin Point         : snapshot_req (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/idle_cycles_reg[18]_syn_2.ia (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { monitor_clk rising@0.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 3.648ns (cell 1.869ns (51%), net 1.779ns (49%))
+Clock Skew          : 5.381ns
+Logic Level         : 3 ( PAD=1  LUT3=1  LUT2=1 )
+Max Fanout          : 19
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: snapshot_req
+net (fo=1)                              0.000          0.500          net: snapshot_req,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: snapshot_req_syn_2.ipad
+PAD                 x000y110            0.959    r     1.459       1  pin: snapshot_req_syn_2.di
+net (fo=1)                              1.551          3.010          net: snapshot_req_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: dut/u_monitor/mux10_syn_73.ie
+LUT3                x018y087z0          0.100    f     3.110       2  pin: dut/u_monitor/mux10_syn_73.ofb
+net (fo=19)                             0.228          3.338          net: dut/u_monitor/idle_cycles_b1_n_syn_2,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[18]_syn_2.ia
+LUT2 (reg)          x018y086z1          0.310    f     3.648       3  net: dut/u_monitor/idle_cycles[17],  rtl/fifo_monitor.v(27)
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.648               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[18]_syn_2.clk
+capture edge                            0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          5.468               
+clock uncertainty                       0.200          5.668               
+clock pessimism                         0.000          5.668               
+--------------------------------------------------------------------  ---------------
+Required                                               5.668               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -2.020               
+
+Slack               : -2.020ns
+Begin Point         : snapshot_req (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/idle_cycles_reg[16]_syn_2.ia (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { monitor_clk rising@0.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 3.648ns (cell 1.869ns (51%), net 1.779ns (49%))
+Clock Skew          : 5.381ns
+Logic Level         : 3 ( PAD=1  LUT3=1  LUT2=1 )
+Max Fanout          : 19
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: snapshot_req
+net (fo=1)                              0.000          0.500          net: snapshot_req,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: snapshot_req_syn_2.ipad
+PAD                 x000y110            0.959    r     1.459       1  pin: snapshot_req_syn_2.di
+net (fo=1)                              1.551          3.010          net: snapshot_req_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: dut/u_monitor/mux10_syn_73.ie
+LUT3                x018y087z0          0.100    f     3.110       2  pin: dut/u_monitor/mux10_syn_73.ofb
+net (fo=19)                             0.228          3.338          net: dut/u_monitor/idle_cycles_b1_n_syn_2,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[16]_syn_2.ia
+LUT2 (reg)          x018y086z0          0.310    f     3.648       3  net: dut/u_monitor/idle_cycles[21],  rtl/fifo_monitor.v(27)
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.648               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[16]_syn_2.clk
+capture edge                            0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          5.468               
+clock uncertainty                       0.200          5.668               
+clock pessimism                         0.000          5.668               
+--------------------------------------------------------------------  ---------------
+Required                                               5.668               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -2.020               
+
+Slack               : -2.013ns
+Begin Point         : snapshot_req (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/idle_cycles_reg[9]_syn_2.ia (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { monitor_clk rising@0.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 3.655ns (cell 1.869ns (51%), net 1.786ns (49%))
+Clock Skew          : 5.381ns
+Logic Level         : 3 ( PAD=1  LUT3=1  LUT2=1 )
+Max Fanout          : 19
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: snapshot_req
+net (fo=1)                              0.000          0.500          net: snapshot_req,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: snapshot_req_syn_2.ipad
+PAD                 x000y110            0.959    r     1.459       1  pin: snapshot_req_syn_2.di
+net (fo=1)                              1.551          3.010          net: snapshot_req_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: dut/u_monitor/mux10_syn_73.ie
+LUT3                x018y087z0          0.100    f     3.110       2  pin: dut/u_monitor/mux10_syn_73.ofb
+net (fo=19)                             0.235          3.345          net: dut/u_monitor/idle_cycles_b1_n_syn_2,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[9]_syn_2.ia
+LUT2 (reg)          x018y085z1          0.310    f     3.655       3  net: dut/u_monitor/idle_cycles[14],  rtl/fifo_monitor.v(27)
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.655               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[9]_syn_2.clk
+capture edge                            0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          5.468               
+clock uncertainty                       0.200          5.668               
+clock pessimism                         0.000          5.668               
+--------------------------------------------------------------------  ---------------
+Required                                               5.668               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -2.013               
+
+Slack               : -2.013ns
+Begin Point         : snapshot_req (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/idle_cycles_reg[11]_syn_2.ia (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { monitor_clk rising@0.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 3.655ns (cell 1.869ns (51%), net 1.786ns (49%))
+Clock Skew          : 5.381ns
+Logic Level         : 3 ( PAD=1  LUT3=1  LUT2=1 )
+Max Fanout          : 19
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: snapshot_req
+net (fo=1)                              0.000          0.500          net: snapshot_req,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: snapshot_req_syn_2.ipad
+PAD                 x000y110            0.959    r     1.459       1  pin: snapshot_req_syn_2.di
+net (fo=1)                              1.551          3.010          net: snapshot_req_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: dut/u_monitor/mux10_syn_73.ie
+LUT3                x018y087z0          0.100    f     3.110       2  pin: dut/u_monitor/mux10_syn_73.ofb
+net (fo=19)                             0.235          3.345          net: dut/u_monitor/idle_cycles_b1_n_syn_2,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[11]_syn_2.ia
+LUT2 (reg)          x018y085z2          0.310    f     3.655       3  net: dut/u_monitor/idle_cycles[8],  rtl/fifo_monitor.v(27)
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.655               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[11]_syn_2.clk
+capture edge                            0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          5.468               
+clock uncertainty                       0.200          5.668               
+clock pessimism                         0.000          5.668               
+--------------------------------------------------------------------  ---------------
+Required                                               5.668               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -2.013               
+
+Slack               : -2.009ns
+Begin Point         : snapshot_req (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/idle_cycles_reg[29]_syn_2.ia (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { monitor_clk rising@0.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 3.659ns (cell 1.881ns (51%), net 1.778ns (49%))
+Clock Skew          : 5.381ns
+Logic Level         : 3 ( PAD=1  LUT3=1  LUT2=1 )
+Max Fanout          : 19
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: snapshot_req
+net (fo=1)                              0.000          0.500          net: snapshot_req,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: snapshot_req_syn_2.ipad
+PAD                 x000y110            0.959    r     1.459       1  pin: snapshot_req_syn_2.di
+net (fo=1)                              1.551          3.010          net: snapshot_req_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: dut/u_monitor/mux10_syn_73.ie
+LUT3                x018y087z0          0.100    f     3.110       2  pin: dut/u_monitor/mux10_syn_73.ofb
+net (fo=19)                             0.227          3.337          net: dut/u_monitor/idle_cycles_b1_n_syn_2,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[29]_syn_2.ia
+LUT2 (reg)          x020y087z3          0.322    r     3.659       3  net: dut/u_monitor/idle_cycles[29],  rtl/fifo_monitor.v(27)
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.659               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[29]_syn_2.clk
+capture edge                            0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          5.468               
+clock uncertainty                       0.200          5.668               
+clock pessimism                         0.000          5.668               
+--------------------------------------------------------------------  ---------------
+Required                                               5.668               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -2.009               
+
+Slack               : -2.008ns
+Begin Point         : snapshot_req (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/idle_cycles_reg[18]_syn_2.ia (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { monitor_clk rising@0.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 3.660ns (cell 1.881ns (51%), net 1.779ns (49%))
+Clock Skew          : 5.381ns
+Logic Level         : 3 ( PAD=1  LUT3=1  LUT2=1 )
+Max Fanout          : 19
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: snapshot_req
+net (fo=1)                              0.000          0.500          net: snapshot_req,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: snapshot_req_syn_2.ipad
+PAD                 x000y110            0.959    r     1.459       1  pin: snapshot_req_syn_2.di
+net (fo=1)                              1.551          3.010          net: snapshot_req_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: dut/u_monitor/mux10_syn_73.ie
+LUT3                x018y087z0          0.100    f     3.110       2  pin: dut/u_monitor/mux10_syn_73.ofb
+net (fo=19)                             0.228          3.338          net: dut/u_monitor/idle_cycles_b1_n_syn_2,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[18]_syn_2.ia
+LUT2 (reg)          x018y086z1          0.322    r     3.660       3  net: dut/u_monitor/idle_cycles[18],  rtl/fifo_monitor.v(27)
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.660               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[18]_syn_2.clk
+capture edge                            0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          5.468               
+clock uncertainty                       0.200          5.668               
+clock pessimism                         0.000          5.668               
+--------------------------------------------------------------------  ---------------
+Required                                               5.668               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -2.008               
+
+Slack               : -2.008ns
+Begin Point         : snapshot_req (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/idle_cycles_reg[16]_syn_2.ia (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { monitor_clk rising@0.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 3.660ns (cell 1.881ns (51%), net 1.779ns (49%))
+Clock Skew          : 5.381ns
+Logic Level         : 3 ( PAD=1  LUT3=1  LUT2=1 )
+Max Fanout          : 19
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: snapshot_req
+net (fo=1)                              0.000          0.500          net: snapshot_req,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: snapshot_req_syn_2.ipad
+PAD                 x000y110            0.959    r     1.459       1  pin: snapshot_req_syn_2.di
+net (fo=1)                              1.551          3.010          net: snapshot_req_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: dut/u_monitor/mux10_syn_73.ie
+LUT3                x018y087z0          0.100    f     3.110       2  pin: dut/u_monitor/mux10_syn_73.ofb
+net (fo=19)                             0.228          3.338          net: dut/u_monitor/idle_cycles_b1_n_syn_2,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[16]_syn_2.ia
+LUT2 (reg)          x018y086z0          0.322    r     3.660       3  net: dut/u_monitor/idle_cycles[16],  rtl/fifo_monitor.v(27)
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.660               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[16]_syn_2.clk
+capture edge                            0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          5.468               
+clock uncertainty                       0.200          5.668               
+clock pessimism                         0.000          5.668               
+--------------------------------------------------------------------  ---------------
+Required                                               5.668               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -2.008               
+
+Slack               : -2.001ns
+Begin Point         : snapshot_req (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/idle_cycles_reg[9]_syn_2.ia (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { monitor_clk rising@0.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 3.667ns (cell 1.881ns (51%), net 1.786ns (49%))
+Clock Skew          : 5.381ns
+Logic Level         : 3 ( PAD=1  LUT3=1  LUT2=1 )
+Max Fanout          : 19
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: snapshot_req
+net (fo=1)                              0.000          0.500          net: snapshot_req,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: snapshot_req_syn_2.ipad
+PAD                 x000y110            0.959    r     1.459       1  pin: snapshot_req_syn_2.di
+net (fo=1)                              1.551          3.010          net: snapshot_req_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: dut/u_monitor/mux10_syn_73.ie
+LUT3                x018y087z0          0.100    f     3.110       2  pin: dut/u_monitor/mux10_syn_73.ofb
+net (fo=19)                             0.235          3.345          net: dut/u_monitor/idle_cycles_b1_n_syn_2,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[9]_syn_2.ia
+LUT2 (reg)          x018y085z1          0.322    r     3.667       3  net: dut/u_monitor/idle_cycles[9],  rtl/fifo_monitor.v(27)
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.667               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[9]_syn_2.clk
+capture edge                            0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          5.468               
+clock uncertainty                       0.200          5.668               
+clock pessimism                         0.000          5.668               
+--------------------------------------------------------------------  ---------------
+Required                                               5.668               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -2.001               
+
+Slack               : -2.001ns
+Begin Point         : snapshot_req (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+End Point           : dut/u_monitor/idle_cycles_reg[11]_syn_2.ia (rising edge triggered by clock monitor_clk  { rise@0.000000ns  fall@5.000000ns  period=10.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { monitor_clk rising@0.000ns - monitor_clk rising@0.000ns }
+Data Path Delay     : 3.667ns (cell 1.881ns (51%), net 1.786ns (49%))
+Clock Skew          : 5.381ns
+Logic Level         : 3 ( PAD=1  LUT3=1  LUT2=1 )
+Max Fanout          : 19
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: snapshot_req
+net (fo=1)                              0.000          0.500          net: snapshot_req,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: snapshot_req_syn_2.ipad
+PAD                 x000y110            0.959    r     1.459       1  pin: snapshot_req_syn_2.di
+net (fo=1)                              1.551          3.010          net: snapshot_req_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: dut/u_monitor/mux10_syn_73.ie
+LUT3                x018y087z0          0.100    f     3.110       2  pin: dut/u_monitor/mux10_syn_73.ofb
+net (fo=19)                             0.235          3.345          net: dut/u_monitor/idle_cycles_b1_n_syn_2,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[11]_syn_2.ia
+LUT2 (reg)          x018y085z2          0.322    r     3.667       3  net: dut/u_monitor/idle_cycles[11],  rtl/fifo_monitor.v(27)
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.667               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: monitor_clk
+hierarchy                               0.000          0.000          pin: monitor_clk_syn_2.ipad
+PAD                 x079y107            0.961          0.961          pin: monitor_clk_syn_2.di
+net (fo=1)                              2.478          3.439          net: monitor_clk_dup_1,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z16         0.348          3.787          pin: monitor_clk_dup_1_created_gclkinst.clkout
+net (fo=2)                              0.683          4.470          net: monitor_clk_syn_3,  analysis/dual_fifo_eval.v(28)
+                                                                      pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkin
+SCLK                x042y099z2          0.000          4.470          pin: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3.clkout
+net (fo=32)                             0.911          5.381          net: monitor_clk_dup_1_created_gclkinst_auto_created_sclk_s_2_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/u_monitor/idle_cycles_reg[11]_syn_2.clk
+capture edge                            0.000    r     5.381               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          5.468               
+clock uncertainty                       0.200          5.668               
+clock pessimism                         0.000          5.668               
+--------------------------------------------------------------------  ---------------
+Required                                               5.668               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -2.001               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

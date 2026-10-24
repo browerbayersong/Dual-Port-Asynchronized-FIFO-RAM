@@ -1,0 +1,70 @@
+standard
+***Report Model: dual_fifo_eval Device: PH1A100SFG676***
+
+IO Statistics
+#IO                       231
+  #input                   82
+  #output                 149
+  #inout                    0
+
+Gate Statistics
+#Basic gates             2149
+  #and                    396
+  #nand                     0
+  #or                       2
+  #nor                      0
+  #xor                     68
+  #xnor                     0
+  #buf                      0
+  #not                     43
+  #bufif1                   0
+  #MX21                     0
+  #FADD                     0
+  #DFF                   1640
+  #LATCH                    0
+#MACRO_ADD                 26
+  #1-bit                    4
+  #9-bit                    8
+  #32-bit                  14
+#MACRO_EQ                   6
+  #4-bit                    1
+  #9-bit                    4
+  #32-bit                   1
+#MACRO_MUX                 81
+  #16to1                    5
+  #2to1                    44
+  #32to1                   32
+
+Report Hierarchy Area:
++-----------------------------------------------------------------+
+|Instance               |Module           |gates  |seq    |macros |
++-----------------------------------------------------------------+
+|top                    |dual_fifo_eval   |509    |1640   |32     |
+|  dut                  |dual_async_fifo  |509    |1640   |32     |
+|    fifo_a             |async_fifo       |247    |342    |14     |
+|      u_r2w            |gray_sync        |0      |27     |0      |
+|      u_ram            |fifo_ram         |0      |33     |0      |
+|      u_rd_reset       |reset_sync       |0      |2      |0      |
+|      u_w2r            |gray_sync        |0      |27     |0      |
+|      u_wr_reset       |reset_sync       |0      |2      |0      |
+|    fifo_b             |async_fifo       |247    |342    |14     |
+|      u_r2w            |gray_sync        |0      |27     |0      |
+|      u_ram            |fifo_ram         |0      |33     |0      |
+|      u_rd_reset       |reset_sync       |0      |2      |0      |
+|      u_w2r            |gray_sync        |0      |27     |0      |
+|      u_wr_reset       |reset_sync       |0      |2      |0      |
+|    u_monitor          |fifo_monitor     |15     |956    |4      |
+|      u_a_read         |snapshot_mailbox |1      |146    |0      |
+|        u_ack_sync     |gray_sync        |0      |3      |0      |
+|        u_request_sync |gray_sync        |0      |3      |0      |
+|      u_a_write        |snapshot_mailbox |1      |82     |0      |
+|        u_ack_sync     |gray_sync        |0      |3      |0      |
+|        u_request_sync |gray_sync        |0      |3      |0      |
+|      u_b_read         |snapshot_mailbox |1      |146    |0      |
+|        u_ack_sync     |gray_sync        |0      |3      |0      |
+|        u_request_sync |gray_sync        |0      |3      |0      |
+|      u_b_write        |snapshot_mailbox |1      |82     |0      |
+|        u_ack_sync     |gray_sync        |0      |3      |0      |
+|        u_request_sync |gray_sync        |0      |3      |0      |
+|      u_reset          |reset_sync       |0      |2      |0      |
++-----------------------------------------------------------------+

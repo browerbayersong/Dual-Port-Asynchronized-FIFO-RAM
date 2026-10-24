@@ -1,0 +1,14 @@
+{
+  "source": "passing ModelSim 10.3c dual_fifo_tb",
+  "sync_stages": 2,
+  "auto_refresh_cycles": 0,
+  "seed": 1,
+  "ops_per_channel": 5000,
+  "vcd_sha256": "a10549d673b22690ed67158ec93ea654395a969a59a16d4d66a428ab1e411eaf",
+  "event_times_ns": {
+    "first_full": 6390.0,
+    "first_full_release": 11690.0,
+    "selected_stall": 76417.0,
+    "selected_request": 1110.0
+  }
+}

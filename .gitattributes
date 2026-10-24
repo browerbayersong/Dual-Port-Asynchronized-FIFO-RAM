@@ -8,9 +8,20 @@
 *.py text eol=lf
 *.cpp text eol=lf
 *.json text eol=lf
+*.sdc text eol=lf
+*.tcl text eol=lf
+*.txt text eol=lf
+*.area -whitespace
+*.timing -whitespace
+*.rpt -whitespace
+*.status -whitespace
+*.docx binary
+*.pdf binary
+*.png binary
 # Native coverage records include control characters; preserve the exact tool database bytes.
 reports/native_coverage/*.dat binary
 # Preserve simulator output formatting without treating its trailing spaces as code errors.
-*.log -whitespace
+*.log text eol=lf -whitespace
+reports/implementation/power_attempt_settings.txt -whitespace
 # Preserve the trailing blank line emitted by Yosys stat.
 reports/synthesis/*_stat.json -whitespace

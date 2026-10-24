@@ -1,0 +1,7 @@
+dual_s3_seed1_a1000_bw2500_br500_c32_h0_auto32_n5000
+# CUSTOM_COVERAGE: a_occupancy=10/10 b_occupancy=10/10 dual_combinations=4/4 snapshots=950 busy_ignored=0 clock_pause=0 reset_cancel=0 auto_requests=220
+# CHANNEL_A: writes=3487 reads=3474 reset_discarded=13 wrap_w=6 wrap_r=6
+# CHANNEL_B: writes=3975 reads=3954 reset_discarded=21 wrap_w=7 wrap_r=7
+# RESULT: PASS checks=982365 snapshots=950 ops_per_channel=5000
+Log: D:\fifo_build\reproduce_hgsbg6pa\reports\dual\logs\dual_s3_seed1_a1000_bw2500_br500_c32_h0_auto32_n5000.log
+GUI: do {D:/fifo_build/reproduce_hgsbg6pa/build/dual_s3_seed1_a1000_bw2500_br500_c32_h0_auto32_n5000/run_gui.do}

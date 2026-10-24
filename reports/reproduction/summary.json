@@ -1,0 +1,31 @@
+{
+  "kind": "automated clean-directory reproduction on the same computer",
+  "human_independent_reproduction": false,
+  "clean_directory": "D:\\fifo_build\\reproduce_hgsbg6pa",
+  "single_configuration": "PASS",
+  "full_regression": "PASS 10/10",
+  "copied_verification_source_sha256_lf": {
+    "rtl/async_fifo.v": "e025f54838e568febd786792b73a22b2e423d55cff36cb9fb49156a817081012",
+    "rtl/dual_async_fifo.v": "c940202153b905314d70c02d1dde0cdd941b85eea43e0736ddf2446ee8a9c246",
+    "rtl/fifo_monitor.v": "e06a49b2f9da92c6f6feddc6ddfdae0662070bbfbc85658e4d574e560229c3d9",
+    "rtl/fifo_ram.v": "65920c9c03f6627027c4143621b0c98afc517547fcd6d1b25e660038018973e3",
+    "rtl/gray_sync.v": "1955c6a6c7f4a8cbd358d3f96f3be511c4579600ac0d5d327946271192a2c291",
+    "rtl/reset_sync.v": "8c3cc852ba0d247853f3af221ce1f7906e56b49ea65008b436ebd2dbb74e9821",
+    "rtl/snapshot_mailbox.v": "05e07e15264c03b8b5922fc4e43c49a0525839f035269ccd9bef0a3b5199cec0",
+    "tb/dual_fifo_tb.sv": "012205643e653505e77c90c6cca9584210b508b53a6ae5abc4173688cf1e0f72",
+    "tb/fifo_channel_checker.sv": "641b83e65636b44ed880c4d07eab7a8ee94bb549f9622ff3cbd20796f3c570e9",
+    "tb/fifo_performance_tb.sv": "19119645639979fe6e4a5caa4a8f8ead3330c4f9b7e882de6286840d90ef1d64",
+    "tb/native_coverage_top.sv": "feec3fa885f5cebde37ba67b0ff81c58ff7782a3a39277cc0d76361d845f7d56",
+    "tb/single_fifo_tb.sv": "d80d84c0e8bf3836d3f524f2cafb0bb2863efd77ffd5d6ea59f7408e9c6c8053",
+    "tb/snapshot_source_checker.sv": "c6ba7a6ba4db0d0e754d1eed0a51136cbc558945c5221a61a6412e62171b6710",
+    "sim/dual_rtl.f": "8c3bfa6bd226fe8c901db6dca549c471d6a8dec32af3cef8ba58aa066facb7ca",
+    "sim/dual_tb.f": "fbaf6509de6ca300f016102ce29a00bf27f307b166e72ef67a62fa81b15bccf9",
+    "sim/performance_tb.f": "337cc192646cc01317e6c79c84cb5556be0c4a1b3aa1c9a425f2a2fa72d85474",
+    "sim/regress_dual.ps1": "80ddffb656f1db22c44ffb27636aef029b06a1291da33058cbe547b3fbe3898c",
+    "sim/regress_single.ps1": "03a4efd89c5b95655d87cfd0172b253c048ac5270c3a00d5e590376e92c7d41c",
+    "sim/rtl.f": "73cc507b85b6bc960026efb00285e25d5fb236808bcac172c1d33fee748b4031",
+    "sim/run_dual.ps1": "96fa4dbcc0931a0324467e81df25911f0b51a84031cbb9998cd3d3f47265b21e",
+    "sim/run_single.ps1": "1e7d6238325d9db2833fc2c42c9e815c859a2770a1ee389eaa5de47784c07cbc",
+    "sim/single_tb.f": "9ddd146ee772678dd87d778db92721804a694695d08eb457c28d310cb2a5903d"
+  }
+}

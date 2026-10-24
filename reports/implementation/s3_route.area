@@ -1,0 +1,349 @@
+standard
+***Report Model: dual_fifo_eval Device: PH1A100SFG676***
+
+Design Statistics
+#IO                       231   out of    316   73.10%
+  #input                   82
+  #output                 149
+  #inout                    0
+#lut6                    1040   out of  71040    1.46%
+#reg                     1576
+  #slice reg             1576   out of 142080    1.11%
+  #pad reg                  0
+
+Utilization Statistics
+#mslice                   338   out of  27200    1.24%
+  #mreg                   343
+  #mle                    261
+#lslice                  1146   out of  43840    2.61%
+  #lreg                  1233
+  #lle                    779
+#plb                      305   out of   8880    3.43%
+#slice                   1484   out of  71040    2.09%
+  #used ram                 0
+    #dram lut               0
+    #shifter lut            0
+  #used logic            1484
+    #with luts            578
+    #with adder           462
+    #reg only             444
+#feedthrough              339
+#f7mux                      0   out of  35520    0.00%
+#f8mux                      0   out of  17760    0.00%
+#eram                       2   out of    280    0.71%
+  #eram20k                  2
+  #fifo20k                  0
+#dsp                        0   out of    212    0.00%
+#pcie                       0   out of      1    0.00%
+#serdes dual                0   out of      4    0.00%
+#pad                      231   out of    316   73.10%
+#pll                        0   out of     12    0.00%
+#gclk                       5   out of     32   15.62%
+#lclk                       0   out of     32    0.00%
+#sclk                      11   out of     96   11.46%
+#mlclk                      0   out of     12    0.00%
+#ioclk                      0   out of     22    0.00%
+
+
+Detailed IO Report
+
+        Name          Direction    Location    IOStandard    IOType    DriveStrength    PullType    PackReg  
+      a_rd_clk          INPUT        A20        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      a_rd_en           INPUT        B20        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     a_rd_ready         INPUT        C18        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      a_wr_clk          INPUT         C2        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[31]        INPUT        C21        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[30]        INPUT        C22        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[29]        INPUT        C23        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[28]        INPUT        C24        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[27]        INPUT        C26        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[26]        INPUT         C3        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[25]        INPUT         C4        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[24]        INPUT         D1        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[23]        INPUT        D16        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[22]        INPUT        D18        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[21]        INPUT        D19        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[20]        INPUT        D20        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[19]        INPUT        D21        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[18]        INPUT        D23        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[17]        INPUT        D24        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[16]        INPUT        D25        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[15]        INPUT        D26        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[14]        INPUT         D3        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[13]        INPUT         D4        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[12]        INPUT         D5        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[11]        INPUT         D6        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_wr_data[10]        INPUT         E1        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    a_wr_data[9]        INPUT        E16        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    a_wr_data[8]        INPUT        E17        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    a_wr_data[7]        INPUT        E18        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    a_wr_data[6]        INPUT         E2        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    a_wr_data[5]        INPUT        E20        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    a_wr_data[4]        INPUT        E21        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    a_wr_data[3]        INPUT        E22        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    a_wr_data[2]        INPUT        E23        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    a_wr_data[1]        INPUT        E25        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    a_wr_data[0]        INPUT        E26        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      a_wr_en           INPUT         E3        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      b_rd_clk          INPUT         F5        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      b_rd_en           INPUT        H26        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+     b_rd_ready         INPUT        J16        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      b_wr_clk          INPUT        J19        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[31]        INPUT        J20        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[30]        INPUT        J21        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[29]        INPUT        J23        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[28]        INPUT        J24        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[27]        INPUT        J25        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[26]        INPUT        J26        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[25]        INPUT         J3        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[24]        INPUT         J4        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[23]        INPUT         J5        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[22]        INPUT         J6        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[21]        INPUT         J8        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[20]        INPUT         K1        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[19]        INPUT        K15        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[18]        INPUT        K16        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[17]        INPUT        K17        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[16]        INPUT        K18        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[15]        INPUT         K2        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[14]        INPUT        K20        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[13]        INPUT        K21        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[12]        INPUT        K22        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[11]        INPUT        K23        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   b_wr_data[10]        INPUT        K25        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    b_wr_data[9]        INPUT        K26        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    b_wr_data[8]        INPUT         K3        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    b_wr_data[7]        INPUT         K5        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    b_wr_data[6]        INPUT         K6        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    b_wr_data[5]        INPUT         K7        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    b_wr_data[4]        INPUT         K8        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    b_wr_data[3]        INPUT        L14        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    b_wr_data[2]        INPUT        L15        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    b_wr_data[1]        INPUT        L17        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    b_wr_data[0]        INPUT        L18        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+      b_wr_en           INPUT        L19        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    monitor_clk         INPUT         L8        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+       rst_n            INPUT         M1        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+    snapshot_req        INPUT        M16        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+  status_select[4]      INPUT        P16        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+  status_select[3]      INPUT        P18        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+  status_select[2]      INPUT        P19        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+  status_select[1]      INPUT        P20        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+  status_select[0]      INPUT        P21        LVCMOS33      HRIO          N/A          PULLUP      NONE    
+   a_almost_empty      OUTPUT        A17        LVCMOS33      HRIO           8            NONE       NONE    
+   a_almost_full       OUTPUT        A18        LVCMOS33      HRIO           8            NONE       NONE    
+      a_empty          OUTPUT        A19        LVCMOS33      HRIO           8            NONE       NONE    
+       a_full          OUTPUT         A2        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[31]       OUTPUT        A22        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[30]       OUTPUT        A23        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[29]       OUTPUT        A24        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[28]       OUTPUT        A25        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[27]       OUTPUT         A3        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[26]       OUTPUT         A4        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[25]       OUTPUT         A5        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[24]       OUTPUT        AA17       LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[23]       OUTPUT        AA22       LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[22]       OUTPUT        AA23       LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[21]       OUTPUT        AA24       LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[20]       OUTPUT        AA25       LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[19]       OUTPUT        AB16       LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[18]       OUTPUT        AB17       LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[17]       OUTPUT        AB24       LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[16]       OUTPUT        AB25       LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[15]       OUTPUT        AB26       LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[14]       OUTPUT        AB7        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[13]       OUTPUT        AC16       LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[12]       OUTPUT        AC17       LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[11]       OUTPUT        AC18       LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_data[10]       OUTPUT        AC24       LVCMOS33      HRIO           8            NONE       NONE    
+    a_rd_data[9]       OUTPUT        AC26       LVCMOS33      HRIO           8            NONE       NONE    
+    a_rd_data[8]       OUTPUT        AD17       LVCMOS33      HRIO           8            NONE       NONE    
+    a_rd_data[7]       OUTPUT        AD18       LVCMOS33      HRIO           8            NONE       NONE    
+    a_rd_data[6]       OUTPUT        AE17       LVCMOS33      HRIO           8            NONE       NONE    
+    a_rd_data[5]       OUTPUT        AE18       LVCMOS33      HRIO           8            NONE       NONE    
+    a_rd_data[4]       OUTPUT        AF17       LVCMOS33      HRIO           8            NONE       NONE    
+    a_rd_data[3]       OUTPUT        AF18       LVCMOS33      HRIO           8            NONE       NONE    
+    a_rd_data[2]       OUTPUT         B1        LVCMOS33      HRIO           8            NONE       NONE    
+    a_rd_data[1]       OUTPUT        B17        LVCMOS33      HRIO           8            NONE       NONE    
+    a_rd_data[0]       OUTPUT        B19        LVCMOS33      HRIO           8            NONE       NONE    
+  a_rd_data_valid      OUTPUT         B2        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_level[8]       OUTPUT        B21        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_level[7]       OUTPUT        B22        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_level[6]       OUTPUT        B24        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_level[5]       OUTPUT        B25        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_level[4]       OUTPUT        B26        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_level[3]       OUTPUT         B4        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_level[2]       OUTPUT         B5        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_level[1]       OUTPUT         C1        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_level[0]       OUTPUT        C17        LVCMOS33      HRIO           8            NONE       NONE    
+   a_rd_rst_done       OUTPUT        C19        LVCMOS33      HRIO           8            NONE       NONE    
+   a_wr_level[8]       OUTPUT         E5        LVCMOS33      HRIO           8            NONE       NONE    
+   a_wr_level[7]       OUTPUT         E6        LVCMOS33      HRIO           8            NONE       NONE    
+   a_wr_level[6]       OUTPUT        F15        LVCMOS33      HRIO           8            NONE       NONE    
+   a_wr_level[5]       OUTPUT        F17        LVCMOS33      HRIO           8            NONE       NONE    
+   a_wr_level[4]       OUTPUT        F18        LVCMOS33      HRIO           8            NONE       NONE    
+   a_wr_level[3]       OUTPUT        F19        LVCMOS33      HRIO           8            NONE       NONE    
+   a_wr_level[2]       OUTPUT         F2        LVCMOS33      HRIO           8            NONE       NONE    
+   a_wr_level[1]       OUTPUT        F20        LVCMOS33      HRIO           8            NONE       NONE    
+   a_wr_level[0]       OUTPUT        F22        LVCMOS33      HRIO           8            NONE       NONE    
+   a_wr_rst_done       OUTPUT        F23        LVCMOS33      HRIO           8            NONE       NONE    
+   b_almost_empty      OUTPUT        F24        LVCMOS33      HRIO           8            NONE       NONE    
+   b_almost_full       OUTPUT        F25        LVCMOS33      HRIO           8            NONE       NONE    
+      b_empty          OUTPUT         F3        LVCMOS33      HRIO           8            NONE       NONE    
+       b_full          OUTPUT         F4        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[31]       OUTPUT         F7        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[30]       OUTPUT         F8        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[29]       OUTPUT         G1        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[28]       OUTPUT        G15        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[27]       OUTPUT        G16        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[26]       OUTPUT        G17        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[25]       OUTPUT        G19        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[24]       OUTPUT         G2        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[23]       OUTPUT        G20        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[22]       OUTPUT        G21        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[21]       OUTPUT        G22        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[20]       OUTPUT        G24        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[19]       OUTPUT        G25        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[18]       OUTPUT        G26        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[17]       OUTPUT         G4        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[16]       OUTPUT         G5        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[15]       OUTPUT         G6        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[14]       OUTPUT         G7        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[13]       OUTPUT         G8        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[12]       OUTPUT         G9        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[11]       OUTPUT         H1        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_data[10]       OUTPUT        H13        LVCMOS33      HRIO           8            NONE       NONE    
+    b_rd_data[9]       OUTPUT        H14        LVCMOS33      HRIO           8            NONE       NONE    
+    b_rd_data[8]       OUTPUT        H15        LVCMOS33      HRIO           8            NONE       NONE    
+    b_rd_data[7]       OUTPUT        H16        LVCMOS33      HRIO           8            NONE       NONE    
+    b_rd_data[6]       OUTPUT        H17        LVCMOS33      HRIO           8            NONE       NONE    
+    b_rd_data[5]       OUTPUT        H18        LVCMOS33      HRIO           8            NONE       NONE    
+    b_rd_data[4]       OUTPUT        H19        LVCMOS33      HRIO           8            NONE       NONE    
+    b_rd_data[3]       OUTPUT         H2        LVCMOS33      HRIO           8            NONE       NONE    
+    b_rd_data[2]       OUTPUT        H21        LVCMOS33      HRIO           8            NONE       NONE    
+    b_rd_data[1]       OUTPUT        H22        LVCMOS33      HRIO           8            NONE       NONE    
+    b_rd_data[0]       OUTPUT        H23        LVCMOS33      HRIO           8            NONE       NONE    
+  b_rd_data_valid      OUTPUT        H24        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_level[8]       OUTPUT         H3        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_level[7]       OUTPUT         H4        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_level[6]       OUTPUT         H6        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_level[5]       OUTPUT         H7        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_level[4]       OUTPUT         H8        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_level[3]       OUTPUT         H9        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_level[2]       OUTPUT         J1        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_level[1]       OUTPUT        J14        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_level[0]       OUTPUT        J15        LVCMOS33      HRIO           8            NONE       NONE    
+   b_rd_rst_done       OUTPUT        J18        LVCMOS33      HRIO           8            NONE       NONE    
+   b_wr_level[8]       OUTPUT         L2        LVCMOS33      HRIO           8            NONE       NONE    
+   b_wr_level[7]       OUTPUT        L20        LVCMOS33      HRIO           8            NONE       NONE    
+   b_wr_level[6]       OUTPUT        L22        LVCMOS33      HRIO           8            NONE       NONE    
+   b_wr_level[5]       OUTPUT        L23        LVCMOS33      HRIO           8            NONE       NONE    
+   b_wr_level[4]       OUTPUT        L24        LVCMOS33      HRIO           8            NONE       NONE    
+   b_wr_level[3]       OUTPUT        L25        LVCMOS33      HRIO           8            NONE       NONE    
+   b_wr_level[2]       OUTPUT         L3        LVCMOS33      HRIO           8            NONE       NONE    
+   b_wr_level[1]       OUTPUT         L4        LVCMOS33      HRIO           8            NONE       NONE    
+   b_wr_level[0]       OUTPUT         L5        LVCMOS33      HRIO           8            NONE       NONE    
+   b_wr_rst_done       OUTPUT         L7        LVCMOS33      HRIO           8            NONE       NONE    
+   snapshot_busy       OUTPUT        M14        LVCMOS33      HRIO           8            NONE       NONE    
+   snapshot_ready      OUTPUT        M15        LVCMOS33      HRIO           8            NONE       NONE    
+   snapshot_valid      OUTPUT        M17        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[31]      OUTPUT        M19        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[30]      OUTPUT         M2        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[29]      OUTPUT        M20        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[28]      OUTPUT        M21        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[27]      OUTPUT        M22        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[26]      OUTPUT        M24        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[25]      OUTPUT        M25        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[24]      OUTPUT        M26        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[23]      OUTPUT         M4        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[22]      OUTPUT         M5        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[21]      OUTPUT         M6        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[20]      OUTPUT         M7        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[19]      OUTPUT         N1        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[18]      OUTPUT        N14        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[17]      OUTPUT        N16        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[16]      OUTPUT        N17        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[15]      OUTPUT        N18        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[14]      OUTPUT        N19        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[13]      OUTPUT         N2        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[12]      OUTPUT        N21        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[11]      OUTPUT        N22        LVCMOS33      HRIO           8            NONE       NONE    
+  status_data[10]      OUTPUT        N23        LVCMOS33      HRIO           8            NONE       NONE    
+   status_data[9]      OUTPUT        N24        LVCMOS33      HRIO           8            NONE       NONE    
+   status_data[8]      OUTPUT        N26        LVCMOS33      HRIO           8            NONE       NONE    
+   status_data[7]      OUTPUT         N3        LVCMOS33      HRIO           8            NONE       NONE    
+   status_data[6]      OUTPUT         N4        LVCMOS33      HRIO           8            NONE       NONE    
+   status_data[5]      OUTPUT         N6        LVCMOS33      HRIO           8            NONE       NONE    
+   status_data[4]      OUTPUT         N7        LVCMOS33      HRIO           8            NONE       NONE    
+   status_data[3]      OUTPUT         N8        LVCMOS33      HRIO           8            NONE       NONE    
+   status_data[2]      OUTPUT         P1        LVCMOS33      HRIO           8            NONE       NONE    
+   status_data[1]      OUTPUT        P14        LVCMOS33      HRIO           8            NONE       NONE    
+   status_data[0]      OUTPUT        P15        LVCMOS33      HRIO           8            NONE       NONE    
+
+Report Clock Domain Luts:
+
+------------------------------------------------------------------------------------------------------------------
+  Index   |  Name         |  Frequency   |  LUT As Logic   |  LUT As Shifter   |  LUT As Dram   |  BRAM   |  DSP
+------------------------------------------------------------------------------------------------------------------
+  #1      |  a_rd_clk     |  83MHz       |  209            |  0                |  0             |  1      |  0
+  #2      |  a_wr_clk     |  50MHz       |  123            |  0                |  0             |  1      |  0
+  #3      |  b_rd_clk     |  100MHz      |  217            |  0                |  0             |  1      |  0
+  #4      |  b_wr_clk     |  28MHz       |  122            |  0                |  0             |  1      |  0
+  #5      |  monitor_clk  |  100MHz      |  112            |  0                |  0             |  0      |  0
+------------------------------------------------------------------------------------------------------------------
+
+Clock Resource Statistics
+Index     ClockNet             Type            DriverType         Driver                  ClockFanout        GclkLocation
+#1        monitor_clk_dup_1    InferredGclk    io                 monitor_clk_syn_2.di    300                x42y79z16
+#2        b_rd_clk_dup_1       InferredGclk    io                 b_rd_clk_syn_2.di       254                x42y79z17
+#3        a_rd_clk_dup_1       InferredGclk    io                 a_rd_clk_syn_2.di       251                x42y79z18
+#4        a_wr_clk_dup_1       InferredGclk    io                 a_wr_clk_syn_2.di       148                x42y79z20
+#5        b_wr_clk_dup_1       InferredGclk    io                 b_wr_clk_syn_2.di       145                x42y79z19
+
+Report Hierarchy Area:
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Instance               |Module           |logic lut |ripple  |seq     |eram    |dsp     |dram lut |shifter lut |f7mux   |f8mux   |pll     |serdes   |pcie    |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|top                    |dual_fifo_eval   |578       |462     |1576    |2       |0       |0        |0           |0       |0       |0       |0        |0       |
+|  dut                  |dual_async_fifo  |350       |462     |1576    |2       |0       |0        |0           |0       |0       |0       |0        |0       |
+|    fifo_a             |async_fifo       |105       |199     |310     |1       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_ram            |fifo_ram         |0         |0       |1       |1       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_w2r            |gray_sync        |3         |0       |27      |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_rd_reset       |reset_sync       |0         |0       |2       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_r2w            |gray_sync        |3         |0       |24      |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_wr_reset       |reset_sync       |0         |0       |2       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|    fifo_b             |async_fifo       |105       |199     |313     |1       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_rd_reset       |reset_sync       |0         |0       |2       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_wr_reset       |reset_sync       |0         |0       |2       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_w2r            |gray_sync        |4         |0       |27      |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_ram            |fifo_ram         |1         |0       |1       |1       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_r2w            |gray_sync        |3         |0       |23      |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|    u_monitor          |fifo_monitor     |140       |64      |953     |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_a_read         |snapshot_mailbox |15        |0       |144     |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_request_sync |gray_sync        |0         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_ack_sync     |gray_sync        |0         |0       |1       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_b_read         |snapshot_mailbox |24        |0       |145     |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_request_sync |gray_sync        |0         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_ack_sync     |gray_sync        |1         |0       |5       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_reset          |reset_sync       |0         |0       |2       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_a_write        |snapshot_mailbox |11        |0       |81      |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_request_sync |gray_sync        |1         |0       |4       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_ack_sync     |gray_sync        |0         |0       |2       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_b_write        |snapshot_mailbox |15        |0       |83      |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_request_sync |gray_sync        |1         |0       |4       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_ack_sync     |gray_sync        |1         |0       |4       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+DataNet Average Fanout:
+
+   Index     Fanout     Nets  
+    #1          1       2590  
+    #2          2       155   
+    #3          3        33   
+    #4          4       397   
+    #5        5-10       53   
+    #6        11-50      3    
+    #7       51-100      2    
+    #8       101-500     2    
+  Average     1.71            

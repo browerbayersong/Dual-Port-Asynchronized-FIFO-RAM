@@ -1,0 +1,86 @@
+standard
+***Report Model: dual_fifo_eval Device: PH1A100SFG676***
+
+Design Statistics
+#IO                       231   out of    316   73.10%
+  #input                   82
+  #output                 149
+  #inout                    0
+#lut                     1100
+  #lut1                    13
+  #lut2                    87
+  #lut3                    62
+  #lut4                    75
+  #lut5                    70
+  #lut6                   793
+#reg                     1576
+  #slice reg             1576   out of 142080    1.11%
+  #pad reg                  0
+
+Utilization Statistics
+#mslice                     0   out of  27200    0.00%
+  #mreg                     0
+  #mle                      0
+#lslice                   484   out of  43840    1.10%
+  #lreg                     0
+  #lle                    484
+#plb                        0   out of   8880    0.00%
+#slice*                  1220   out of  71040    1.72%
+  #used ram                 0
+    #dram lut               0
+    #shifter lut            0
+  #used logic            1220
+    #with luts*           525
+    #with adder           462
+    #reg only*            233
+#f7mux                      0   out of  35520    0.00%
+#f8mux                      0   out of  17760    0.00%
+#eram                       2   out of    280    0.71%
+  #eram20k                  2
+  #fifo20k                  0
+#dsp                        0   out of    212    0.00%
+#pcie                       0   out of      1    0.00%
+#serdes dual                0   out of      4    0.00%
+#pad                      231   out of    316   73.10%
+#pll                        0   out of     12    0.00%
+#gclk                       0   out of     32    0.00%
+#lclk                       0   out of     32    0.00%
+#sclk                       0   out of     96    0.00%
+#mlclk                      0   out of     12    0.00%
+#ioclk                      0   out of     22    0.00%
+
+* Note! The LUT and Slice count after Optimize-Gate is not the final value, Run Optimize-place for a more realistic count.
+
+Report Hierarchy Area:
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Instance               |Module           |logic lut |ripple  |seq     |eram    |dsp     |dram lut |shifter lut |f7mux   |f8mux   |pll     |serdes   |pcie    |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|top                    |dual_fifo_eval   |525       |462     |1576    |2       |0       |0        |0           |0       |0       |0       |0        |0       |
+|  dut                  |dual_async_fifo  |245       |462     |1576    |2       |0       |0        |0           |0       |0       |0       |0        |0       |
+|    fifo_a             |async_fifo       |104       |199     |310     |1       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_r2w            |gray_sync        |0         |0       |27      |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_ram            |fifo_ram         |0         |0       |1       |1       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_rd_reset       |reset_sync       |0         |0       |2       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_w2r            |gray_sync        |0         |0       |27      |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_wr_reset       |reset_sync       |0         |0       |2       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|    fifo_b             |async_fifo       |108       |199     |310     |1       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_r2w            |gray_sync        |0         |0       |27      |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_ram            |fifo_ram         |0         |0       |1       |1       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_rd_reset       |reset_sync       |0         |0       |2       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_w2r            |gray_sync        |0         |0       |27      |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_wr_reset       |reset_sync       |0         |0       |2       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|    u_monitor          |fifo_monitor     |33        |64      |956     |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_a_read         |snapshot_mailbox |1         |0       |146     |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_ack_sync     |gray_sync        |0         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_request_sync |gray_sync        |0         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_a_write        |snapshot_mailbox |1         |0       |82      |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_ack_sync     |gray_sync        |0         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_request_sync |gray_sync        |0         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_b_read         |snapshot_mailbox |1         |0       |146     |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_ack_sync     |gray_sync        |0         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_request_sync |gray_sync        |0         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_b_write        |snapshot_mailbox |1         |0       |82      |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_ack_sync     |gray_sync        |0         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|        u_request_sync |gray_sync        |0         |0       |3       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
+|      u_reset          |reset_sync       |0         |0       |2       |0       |0       |0        |0           |0       |0       |0       |0        |0       |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+

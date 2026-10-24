@@ -1,0 +1,24 @@
+##### Power Report #####
+
+----- Power Report Settings -----
+process: Maximum
+Environment:
+    Amb. Temp	25 ℃
+    Air Flow	25 LFM
+    Junc. Temp	85 ℃
+    Thermal R	0 ℃/W
+Power Supply (V):
+    phyvcca	0.85
+    phyvcct	1.2
+    vccaux	1.8
+    vccd	0.9
+    vcco1.2v	1.2
+    vcco1.35v	1.35
+    vcco1.5v	1.5
+    vcco1.8v	1.8
+    vcco2.5v	2.5
+    vcco3.3v	3.3
+SAIF File Path: 
+Default Toggle Rate: 12.5%
+Output power report path: fifo_ppa.pwr
+

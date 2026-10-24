@@ -1,0 +1,1071 @@
+Created by          : Tang Dynasty v6.2.168116
+                    : Copyright (c) 2012-2025 Anlogic Inc.
+Generated           : Sat Oct 24 19:46:53 2026
+
+Top Model           : dual_fifo_eval
+Device              : PH1A100SFG676
+Speed               : 2
+STA coverage        : 100.00%
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     a_wr_clk -> a_wr_clk
+Type           :     Self
+From Clock     :     a_wr_clk
+To Clock       :     a_wr_clk
+Min Period     :     16.877ns
+Fmax           :     59.252MHz
+
+Statistics:
+Max            : SWNS      3.123ns, STNS      0.000ns,         0 Viol Endpoints,        10 Total Endpoints,        10 Paths Analyzed
+Min            : HWNS     -2.650ns, HTNS     -9.503ns,        10 Viol Endpoints,        10 Total Endpoints,        10 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 3.123ns
+Begin Point         : dut/fifo_a/sub0_syn_57.clk (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : a_wr_level[8] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { a_wr_clk rising@20.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 11.904ns (cell 7.471ns (62%), net 4.433ns (38%))
+Clock Skew          : 4.713ns
+Logic Level         : 1 ( PAD=1 )
+Max Fanout          : 2
+Clock Uncertainty   : 0.260ns (sdc uncertainty: 0.200ns, default uncertainty: 0.060ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/sub0_syn_57.clk
+launch edge                             0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+clk2q               x014y074z4          0.211    r     4.924          pin: dut/fifo_a/sub0_syn_57.oqb
+net (fo=2)                              4.433          9.357          net: a_wr_level[8]_dup_1,  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[8]_syn_2.doq[0]
+PAD                 x079y097            3.260    r    12.617       1  pin: a_wr_level[8]_syn_2.opad
+net (fo=1)                              0.000         12.617          net: a_wr_level[8],  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[8]
+--------------------------------------------------------------------  ---------------
+Arrival                                               12.617               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+output                                 -4.000         16.000               
+clock uncertainty                      -0.260         15.740               
+clock pessimism                         0.000         15.740               
+--------------------------------------------------------------------  ---------------
+Required                                              15.740               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.123               
+
+Slack               : 3.241ns
+Begin Point         : dut/fifo_a/sub0_syn_56.clk (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : a_wr_level[7] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { a_wr_clk rising@20.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 11.786ns (cell 7.471ns (63%), net 4.315ns (37%))
+Clock Skew          : 4.713ns
+Logic Level         : 1 ( PAD=1 )
+Max Fanout          : 2
+Clock Uncertainty   : 0.260ns (sdc uncertainty: 0.200ns, default uncertainty: 0.060ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/sub0_syn_56.clk
+launch edge                             0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+clk2q               x014y074z3          0.211    r     4.924          pin: dut/fifo_a/sub0_syn_56.oqb
+net (fo=2)                              4.315          9.239          net: a_wr_level[7]_dup_1,  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[7]_syn_2.doq[0]
+PAD                 x079y116            3.260    r    12.499       1  pin: a_wr_level[7]_syn_2.opad
+net (fo=1)                              0.000         12.499          net: a_wr_level[7],  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[7]
+--------------------------------------------------------------------  ---------------
+Arrival                                               12.499               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+output                                 -4.000         16.000               
+clock uncertainty                      -0.260         15.740               
+clock pessimism                         0.000         15.740               
+--------------------------------------------------------------------  ---------------
+Required                                              15.740               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.241               
+
+Slack               : 3.689ns
+Begin Point         : dut/fifo_a/sub0_syn_54.clk (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : a_wr_level[5] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { a_wr_clk rising@20.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 11.338ns (cell 7.471ns (65%), net 3.867ns (35%))
+Clock Skew          : 4.713ns
+Logic Level         : 1 ( PAD=1 )
+Max Fanout          : 2
+Clock Uncertainty   : 0.260ns (sdc uncertainty: 0.200ns, default uncertainty: 0.060ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/sub0_syn_54.clk
+launch edge                             0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+clk2q               x014y074z1          0.211    r     4.924          pin: dut/fifo_a/sub0_syn_54.oqb
+net (fo=2)                              3.867          8.791          net: a_wr_level[5]_dup_1,  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[5]_syn_2.doq[0]
+PAD                 x000y156            3.260    r    12.051       1  pin: a_wr_level[5]_syn_2.opad
+net (fo=1)                              0.000         12.051          net: a_wr_level[5],  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[5]
+--------------------------------------------------------------------  ---------------
+Arrival                                               12.051               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+output                                 -4.000         16.000               
+clock uncertainty                      -0.260         15.740               
+clock pessimism                         0.000         15.740               
+--------------------------------------------------------------------  ---------------
+Required                                              15.740               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.689               
+
+Slack               : 3.950ns
+Begin Point         : dut/fifo_a/full_reg_syn_3.clk (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : a_full (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { a_wr_clk rising@20.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 11.077ns (cell 7.477ns (67%), net 3.600ns (33%))
+Clock Skew          : 4.713ns
+Logic Level         : 1 ( PAD=1 )
+Max Fanout          : 4
+Clock Uncertainty   : 0.260ns (sdc uncertainty: 0.200ns, default uncertainty: 0.060ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/full_reg_syn_3.clk
+launch edge                             0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+clk2q               x015y074z2          0.217    r     4.930          pin: dut/fifo_a/full_reg_syn_3.oqa
+net (fo=4)                              3.600          8.530          net: a_full_dup_1,  analysis/dual_fifo_eval.v(18)
+                                                                      pin: a_full_syn_2.doq[0]
+PAD                 x079y087            3.260    r    11.790       1  pin: a_full_syn_2.opad
+net (fo=1)                              0.000         11.790          net: a_full,  analysis/dual_fifo_eval.v(18)
+                                                                      pin: a_full
+--------------------------------------------------------------------  ---------------
+Arrival                                               11.790               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+output                                 -4.000         16.000               
+clock uncertainty                      -0.260         15.740               
+clock pessimism                         0.000         15.740               
+--------------------------------------------------------------------  ---------------
+Required                                              15.740               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.950               
+
+Slack               : 3.953ns
+Begin Point         : dut/fifo_a/sub0_syn_52.clk (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : a_wr_level[3] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { a_wr_clk rising@20.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 11.074ns (cell 7.471ns (67%), net 3.603ns (33%))
+Clock Skew          : 4.713ns
+Logic Level         : 1 ( PAD=1 )
+Max Fanout          : 2
+Clock Uncertainty   : 0.260ns (sdc uncertainty: 0.200ns, default uncertainty: 0.060ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/sub0_syn_52.clk
+launch edge                             0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+clk2q               x014y073z7          0.211    r     4.924          pin: dut/fifo_a/sub0_syn_52.oqb
+net (fo=2)                              3.603          8.527          net: a_wr_level[3]_dup_1,  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[3]_syn_2.doq[0]
+PAD                 x000y153            3.260    r    11.787       1  pin: a_wr_level[3]_syn_2.opad
+net (fo=1)                              0.000         11.787          net: a_wr_level[3],  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[3]
+--------------------------------------------------------------------  ---------------
+Arrival                                               11.787               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+output                                 -4.000         16.000               
+clock uncertainty                      -0.260         15.740               
+clock pessimism                         0.000         15.740               
+--------------------------------------------------------------------  ---------------
+Required                                              15.740               
+--------------------------------------------------------------------  ---------------
+Slack                                                  3.953               
+
+Slack               : 4.063ns
+Begin Point         : dut/fifo_a/sub0_syn_50.clk (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : a_wr_level[1] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { a_wr_clk rising@20.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 10.964ns (cell 7.471ns (68%), net 3.493ns (32%))
+Clock Skew          : 4.713ns
+Logic Level         : 1 ( PAD=1 )
+Max Fanout          : 2
+Clock Uncertainty   : 0.260ns (sdc uncertainty: 0.200ns, default uncertainty: 0.060ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/sub0_syn_50.clk
+launch edge                             0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+clk2q               x014y073z5          0.211    r     4.924          pin: dut/fifo_a/sub0_syn_50.oqb
+net (fo=2)                              3.493          8.417          net: a_wr_level[1]_dup_1,  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[1]_syn_2.doq[0]
+PAD                 x000y150            3.260    r    11.677       1  pin: a_wr_level[1]_syn_2.opad
+net (fo=1)                              0.000         11.677          net: a_wr_level[1],  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[1]
+--------------------------------------------------------------------  ---------------
+Arrival                                               11.677               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+output                                 -4.000         16.000               
+clock uncertainty                      -0.260         15.740               
+clock pessimism                         0.000         15.740               
+--------------------------------------------------------------------  ---------------
+Required                                              15.740               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.063               
+
+Slack               : 4.084ns
+Begin Point         : dut/fifo_a/sub0_syn_53.clk (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : a_wr_level[4] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { a_wr_clk rising@20.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 10.943ns (cell 7.471ns (68%), net 3.472ns (32%))
+Clock Skew          : 4.713ns
+Logic Level         : 1 ( PAD=1 )
+Max Fanout          : 2
+Clock Uncertainty   : 0.260ns (sdc uncertainty: 0.200ns, default uncertainty: 0.060ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/sub0_syn_53.clk
+launch edge                             0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+clk2q               x014y074z0          0.211    r     4.924          pin: dut/fifo_a/sub0_syn_53.oqb
+net (fo=2)                              3.472          8.396          net: a_wr_level[4]_dup_1,  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[4]_syn_2.doq[0]
+PAD                 x000y153            3.260    r    11.656       1  pin: a_wr_level[4]_syn_2.opad
+net (fo=1)                              0.000         11.656          net: a_wr_level[4],  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[4]
+--------------------------------------------------------------------  ---------------
+Arrival                                               11.656               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+output                                 -4.000         16.000               
+clock uncertainty                      -0.260         15.740               
+clock pessimism                         0.000         15.740               
+--------------------------------------------------------------------  ---------------
+Required                                              15.740               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.084               
+
+Slack               : 4.270ns
+Begin Point         : dut/fifo_a/sub0_syn_55.clk (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : a_wr_level[6] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { a_wr_clk rising@20.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 10.757ns (cell 7.471ns (69%), net 3.286ns (31%))
+Clock Skew          : 4.713ns
+Logic Level         : 1 ( PAD=1 )
+Max Fanout          : 2
+Clock Uncertainty   : 0.260ns (sdc uncertainty: 0.200ns, default uncertainty: 0.060ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/sub0_syn_55.clk
+launch edge                             0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+clk2q               x014y074z2          0.211    r     4.924          pin: dut/fifo_a/sub0_syn_55.oqb
+net (fo=2)                              3.286          8.210          net: a_wr_level[6]_dup_1,  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[6]_syn_2.doq[0]
+PAD                 x000y153            3.260    r    11.470       1  pin: a_wr_level[6]_syn_2.opad
+net (fo=1)                              0.000         11.470          net: a_wr_level[6],  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[6]
+--------------------------------------------------------------------  ---------------
+Arrival                                               11.470               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+output                                 -4.000         16.000               
+clock uncertainty                      -0.260         15.740               
+clock pessimism                         0.000         15.740               
+--------------------------------------------------------------------  ---------------
+Required                                              15.740               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.270               
+
+Slack               : 4.276ns
+Begin Point         : dut/fifo_a/u_wr_reset/release_pipe_reg[0]_syn_2.clk (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : a_wr_rst_done (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { a_wr_clk rising@20.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 10.751ns (cell 7.471ns (69%), net 3.280ns (31%))
+Clock Skew          : 4.713ns
+Logic Level         : 1 ( PAD=1 )
+Max Fanout          : 148
+Clock Uncertainty   : 0.260ns (sdc uncertainty: 0.200ns, default uncertainty: 0.060ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/u_wr_reset/release_pipe_reg[0]_syn_2.clk
+launch edge                             0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+clk2q               x033y077z2          0.211    r     4.924          pin: dut/fifo_a/u_wr_reset/release_pipe_reg[0]_syn_2.oqb
+net (fo=148)                            3.280          8.204          net: dut/fifo_a/u_wr_reset/release_pipe[1],  rtl/reset_sync.v(7)
+                                                                      pin: a_wr_rst_done_syn_2.doq[0]
+PAD                 x000y090            3.260    r    11.464       1  pin: a_wr_rst_done_syn_2.opad
+net (fo=1)                              0.000         11.464          net: a_wr_rst_done,  analysis/dual_fifo_eval.v(20)
+                                                                      pin: a_wr_rst_done
+--------------------------------------------------------------------  ---------------
+Arrival                                               11.464               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+output                                 -4.000         16.000               
+clock uncertainty                      -0.260         15.740               
+clock pessimism                         0.000         15.740               
+--------------------------------------------------------------------  ---------------
+Required                                              15.740               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.276               
+
+Slack               : 4.338ns
+Begin Point         : dut/fifo_a/sub0_syn_51.clk (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : a_wr_level[2] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 20.000ns { a_wr_clk rising@20.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 10.689ns (cell 7.471ns (69%), net 3.218ns (31%))
+Clock Skew          : 4.713ns
+Logic Level         : 1 ( PAD=1 )
+Max Fanout          : 2
+Clock Uncertainty   : 0.260ns (sdc uncertainty: 0.200ns, default uncertainty: 0.060ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/sub0_syn_51.clk
+launch edge                             0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+clk2q               x014y073z6          0.211    r     4.924          pin: dut/fifo_a/sub0_syn_51.oqb
+net (fo=2)                              3.218          8.142          net: a_wr_level[2]_dup_1,  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[2]_syn_2.doq[0]
+PAD                 x079y084            3.260    r    11.402       1  pin: a_wr_level[2]_syn_2.opad
+net (fo=1)                              0.000         11.402          net: a_wr_level[2],  analysis/dual_fifo_eval.v(19)
+                                                                      pin: a_wr_level[2]
+--------------------------------------------------------------------  ---------------
+Arrival                                               11.402               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+capture edge                           20.000    r    20.000               
+--------------------------------------------------------------------  ---------------
+output                                 -4.000         16.000               
+clock uncertainty                      -0.260         15.740               
+clock pessimism                         0.000         15.740               
+--------------------------------------------------------------------  ---------------
+Required                                              15.740               
+--------------------------------------------------------------------  ---------------
+Slack                                                  4.338               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+Slack               : -2.650ns
+Begin Point         : a_wr_data[15] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : dut/fifo_a/u_ram/ramread0_syn_9.dia[12] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { a_wr_clk rising@0.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 2.462ns (cell 1.459ns (59%), net 1.003ns (41%))
+Clock Skew          : 4.812ns
+Logic Level         : 2 ( PAD=1  ERAM=1 )
+Max Fanout          : 1
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: a_wr_data[15]
+net (fo=1)                              0.000          0.500          net: a_wr_data[15],  analysis/dual_fifo_eval.v(15)
+                                                                      pin: a_wr_data[15]_syn_2.ipad
+PAD                 x000y084            0.959    r     1.459       1  pin: a_wr_data[15]_syn_2.di
+net (fo=1)                              1.003          2.462          net: a_wr_data[15]_dup_1,  analysis/dual_fifo_eval.v(15)
+                                                                      pin: dut/fifo_a/u_ram/ramread0_syn_9.dia[12]
+ERAM (reg)          x007y068            0.000    f     2.462       2       
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.462               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            1.010          4.812          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/u_ram/ramread0_syn_9.clka
+capture edge                            0.000    r     4.812               
+--------------------------------------------------------------------  ---------------
+hold                                    0.100          4.912               
+clock uncertainty                       0.200          5.112               
+clock pessimism                         0.000          5.112               
+--------------------------------------------------------------------  ---------------
+Required                                               5.112               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -2.650               
+
+Slack               : -1.952ns
+Begin Point         : a_wr_data[30] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : dut/fifo_a/u_ram/ramread0_syn_9.dib[8] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { a_wr_clk rising@0.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 3.160ns (cell 1.459ns (46%), net 1.701ns (54%))
+Clock Skew          : 4.812ns
+Logic Level         : 2 ( PAD=1  ERAM=1 )
+Max Fanout          : 1
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: a_wr_data[30]
+net (fo=1)                              0.000          0.500          net: a_wr_data[30],  analysis/dual_fifo_eval.v(15)
+                                                                      pin: a_wr_data[30]_syn_2.ipad
+PAD                 x000y127            0.959    r     1.459       1  pin: a_wr_data[30]_syn_2.di
+net (fo=1)                              1.701          3.160          net: a_wr_data[30]_dup_1,  analysis/dual_fifo_eval.v(15)
+                                                                      pin: dut/fifo_a/u_ram/ramread0_syn_9.dib[8]
+ERAM (reg)          x007y068            0.000    f     3.160       2       
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.160               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            1.010          4.812          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/u_ram/ramread0_syn_9.clka
+capture edge                            0.000    r     4.812               
+--------------------------------------------------------------------  ---------------
+hold                                    0.100          4.912               
+clock uncertainty                       0.200          5.112               
+clock pessimism                         0.000          5.112               
+--------------------------------------------------------------------  ---------------
+Required                                               5.112               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -1.952               
+
+Slack               : -1.611ns
+Begin Point         : a_wr_data[29] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : dut/fifo_a/u_ram/ramread0_syn_9.dib_extra[1] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { a_wr_clk rising@0.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 3.501ns (cell 1.459ns (41%), net 2.042ns (59%))
+Clock Skew          : 4.812ns
+Logic Level         : 2 ( PAD=1  ERAM=1 )
+Max Fanout          : 1
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: a_wr_data[29]
+net (fo=1)                              0.000          0.500          net: a_wr_data[29],  analysis/dual_fifo_eval.v(15)
+                                                                      pin: a_wr_data[29]_syn_2.ipad
+PAD                 x000y127            0.959    r     1.459       1  pin: a_wr_data[29]_syn_2.di
+net (fo=1)                              2.042          3.501          net: a_wr_data[29]_dup_1,  analysis/dual_fifo_eval.v(15)
+                                                                      pin: dut/fifo_a/u_ram/ramread0_syn_9.dib_extra[1]
+ERAM (reg)          x007y068            0.000    f     3.501       2       
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.501               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            1.010          4.812          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/u_ram/ramread0_syn_9.clka
+capture edge                            0.000    r     4.812               
+--------------------------------------------------------------------  ---------------
+hold                                    0.100          4.912               
+clock uncertainty                       0.200          5.112               
+clock pessimism                         0.000          5.112               
+--------------------------------------------------------------------  ---------------
+Required                                               5.112               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -1.611               
+
+Slack               : -1.364ns
+Begin Point         : a_wr_data[4] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : dut/fifo_a/u_ram/ramread0_syn_9.dia_extra[0] (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { a_wr_clk rising@0.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 3.748ns (cell 1.459ns (38%), net 2.289ns (62%))
+Clock Skew          : 4.812ns
+Logic Level         : 2 ( PAD=1  ERAM=1 )
+Max Fanout          : 1
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: a_wr_data[4]
+net (fo=1)                              0.000          0.500          net: a_wr_data[4],  analysis/dual_fifo_eval.v(15)
+                                                                      pin: a_wr_data[4]_syn_2.ipad
+PAD                 x000y130            0.959    r     1.459       1  pin: a_wr_data[4]_syn_2.di
+net (fo=1)                              2.289          3.748          net: a_wr_data[4]_dup_1,  analysis/dual_fifo_eval.v(15)
+                                                                      pin: dut/fifo_a/u_ram/ramread0_syn_9.dia_extra[0]
+ERAM (reg)          x007y068            0.000    f     3.748       2       
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.748               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            1.010          4.812          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/u_ram/ramread0_syn_9.clka
+capture edge                            0.000    r     4.812               
+--------------------------------------------------------------------  ---------------
+hold                                    0.100          4.912               
+clock uncertainty                       0.200          5.112               
+clock pessimism                         0.000          5.112               
+--------------------------------------------------------------------  ---------------
+Required                                               5.112               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -1.364               
+
+Slack               : -0.354ns
+Begin Point         : a_wr_en (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : dut/fifo_a/add0_syn_210.ceb (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { a_wr_clk rising@0.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 4.646ns (cell 1.622ns (34%), net 3.024ns (66%))
+Clock Skew          : 4.713ns
+Logic Level         : 2 ( PAD=1  LUT2=1 )
+Max Fanout          : 32
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: a_wr_en
+net (fo=1)                              0.000          0.500          net: a_wr_en,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_en_syn_2.ipad
+PAD                 x079y090            0.959    r     1.459       1  pin: a_wr_en_syn_2.di
+net (fo=2)                              2.807          4.266          net: a_wr_en_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: dut/fifo_a/mux1_syn_85.imb
+LUT2                x031y065z0          0.163    r     4.429       2  pin: dut/fifo_a/mux1_syn_85.ofb
+net (fo=32)                             0.217          4.646          net: dut/fifo_a/mux1_syn_2[31],  rtl/async_fifo.v(117)
+                                                                      pin: dut/fifo_a/add0_syn_210.ceb
+reg                 x030y065z0          0.000    f     4.646               
+--------------------------------------------------------------------  ---------------
+Arrival                                                4.646               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/add0_syn_210.clk
+capture edge                            0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          4.800               
+clock uncertainty                       0.200          5.000               
+clock pessimism                         0.000          5.000               
+--------------------------------------------------------------------  ---------------
+Required                                               5.000               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.354               
+
+Slack               : -0.354ns
+Begin Point         : a_wr_en (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : dut/fifo_a/add0_syn_211.ceb (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { a_wr_clk rising@0.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 4.646ns (cell 1.622ns (34%), net 3.024ns (66%))
+Clock Skew          : 4.713ns
+Logic Level         : 2 ( PAD=1  LUT2=1 )
+Max Fanout          : 32
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: a_wr_en
+net (fo=1)                              0.000          0.500          net: a_wr_en,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_en_syn_2.ipad
+PAD                 x079y090            0.959    r     1.459       1  pin: a_wr_en_syn_2.di
+net (fo=2)                              2.807          4.266          net: a_wr_en_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: dut/fifo_a/mux1_syn_85.imb
+LUT2                x031y065z0          0.163    r     4.429       2  pin: dut/fifo_a/mux1_syn_85.ofb
+net (fo=32)                             0.217          4.646          net: dut/fifo_a/mux1_syn_2[31],  rtl/async_fifo.v(117)
+                                                                      pin: dut/fifo_a/add0_syn_211.ceb
+reg                 x030y065z1          0.000    f     4.646               
+--------------------------------------------------------------------  ---------------
+Arrival                                                4.646               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/add0_syn_211.clk
+capture edge                            0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          4.800               
+clock uncertainty                       0.200          5.000               
+clock pessimism                         0.000          5.000               
+--------------------------------------------------------------------  ---------------
+Required                                               5.000               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.354               
+
+Slack               : -0.354ns
+Begin Point         : a_wr_en (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : dut/fifo_a/add0_syn_212.ceb (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { a_wr_clk rising@0.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 4.646ns (cell 1.622ns (34%), net 3.024ns (66%))
+Clock Skew          : 4.713ns
+Logic Level         : 2 ( PAD=1  LUT2=1 )
+Max Fanout          : 32
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: a_wr_en
+net (fo=1)                              0.000          0.500          net: a_wr_en,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_en_syn_2.ipad
+PAD                 x079y090            0.959    r     1.459       1  pin: a_wr_en_syn_2.di
+net (fo=2)                              2.807          4.266          net: a_wr_en_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: dut/fifo_a/mux1_syn_85.imb
+LUT2                x031y065z0          0.163    r     4.429       2  pin: dut/fifo_a/mux1_syn_85.ofb
+net (fo=32)                             0.217          4.646          net: dut/fifo_a/mux1_syn_2[31],  rtl/async_fifo.v(117)
+                                                                      pin: dut/fifo_a/add0_syn_212.ceb
+reg                 x030y065z2          0.000    f     4.646               
+--------------------------------------------------------------------  ---------------
+Arrival                                                4.646               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/add0_syn_212.clk
+capture edge                            0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          4.800               
+clock uncertainty                       0.200          5.000               
+clock pessimism                         0.000          5.000               
+--------------------------------------------------------------------  ---------------
+Required                                               5.000               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.354               
+
+Slack               : -0.354ns
+Begin Point         : a_wr_en (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : dut/fifo_a/add0_syn_213.ceb (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { a_wr_clk rising@0.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 4.646ns (cell 1.622ns (34%), net 3.024ns (66%))
+Clock Skew          : 4.713ns
+Logic Level         : 2 ( PAD=1  LUT2=1 )
+Max Fanout          : 32
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: a_wr_en
+net (fo=1)                              0.000          0.500          net: a_wr_en,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_en_syn_2.ipad
+PAD                 x079y090            0.959    r     1.459       1  pin: a_wr_en_syn_2.di
+net (fo=2)                              2.807          4.266          net: a_wr_en_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: dut/fifo_a/mux1_syn_85.imb
+LUT2                x031y065z0          0.163    r     4.429       2  pin: dut/fifo_a/mux1_syn_85.ofb
+net (fo=32)                             0.217          4.646          net: dut/fifo_a/mux1_syn_2[31],  rtl/async_fifo.v(117)
+                                                                      pin: dut/fifo_a/add0_syn_213.ceb
+reg                 x030y065z3          0.000    f     4.646               
+--------------------------------------------------------------------  ---------------
+Arrival                                                4.646               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/add0_syn_213.clk
+capture edge                            0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          4.800               
+clock uncertainty                       0.200          5.000               
+clock pessimism                         0.000          5.000               
+--------------------------------------------------------------------  ---------------
+Required                                               5.000               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.354               
+
+Slack               : -0.255ns
+Begin Point         : a_wr_en (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : dut/fifo_a/add0_syn_195.ceb (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { a_wr_clk rising@0.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 4.745ns (cell 1.622ns (34%), net 3.123ns (66%))
+Clock Skew          : 4.713ns
+Logic Level         : 2 ( PAD=1  LUT2=1 )
+Max Fanout          : 32
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: a_wr_en
+net (fo=1)                              0.000          0.500          net: a_wr_en,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_en_syn_2.ipad
+PAD                 x079y090            0.959    r     1.459       1  pin: a_wr_en_syn_2.di
+net (fo=2)                              2.807          4.266          net: a_wr_en_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: dut/fifo_a/mux1_syn_85.imb
+LUT2                x031y065z0          0.163    r     4.429       2  pin: dut/fifo_a/mux1_syn_85.ofb
+net (fo=32)                             0.316          4.745          net: dut/fifo_a/mux1_syn_2[31],  rtl/async_fifo.v(117)
+                                                                      pin: dut/fifo_a/add0_syn_195.ceb
+reg                 x030y063z1          0.000    f     4.745               
+--------------------------------------------------------------------  ---------------
+Arrival                                                4.745               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/add0_syn_195.clk
+capture edge                            0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          4.800               
+clock uncertainty                       0.200          5.000               
+clock pessimism                         0.000          5.000               
+--------------------------------------------------------------------  ---------------
+Required                                               5.000               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.255               
+
+Slack               : -0.255ns
+Begin Point         : a_wr_en (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : dut/fifo_a/add0_syn_196.ceb (rising edge triggered by clock a_wr_clk  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : slow
+Budget              : 0.000ns { a_wr_clk rising@0.000ns - a_wr_clk rising@0.000ns }
+Data Path Delay     : 4.745ns (cell 1.622ns (34%), net 3.123ns (66%))
+Clock Skew          : 4.713ns
+Logic Level         : 2 ( PAD=1  LUT2=1 )
+Max Fanout          : 32
+Clock Uncertainty   : 0.200ns (sdc uncertainty: 0.200ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+launch edge                             0.000    r     0.000               
+--------------------------------------------------------------------  ---------------
+input                                   0.500          0.500          pin: a_wr_en
+net (fo=1)                              0.000          0.500          net: a_wr_en,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_en_syn_2.ipad
+PAD                 x079y090            0.959    r     1.459       1  pin: a_wr_en_syn_2.di
+net (fo=2)                              2.807          4.266          net: a_wr_en_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: dut/fifo_a/mux1_syn_85.imb
+LUT2                x031y065z0          0.163    r     4.429       2  pin: dut/fifo_a/mux1_syn_85.ofb
+net (fo=32)                             0.316          4.745          net: dut/fifo_a/mux1_syn_2[31],  rtl/async_fifo.v(117)
+                                                                      pin: dut/fifo_a/add0_syn_196.ceb
+reg                 x030y063z2          0.000    f     4.745               
+--------------------------------------------------------------------  ---------------
+Arrival                                                4.745               
+
+source latency                          0.000          0.000               
+port                                    0.000          0.000          pin: a_wr_clk
+hierarchy                               0.000          0.000          pin: a_wr_clk_syn_2.ipad
+PAD                 x079y087            0.961          0.961          pin: a_wr_clk_syn_2.di
+net (fo=1)                              1.810          2.771          net: a_wr_clk_dup_1,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst.clkin[0]
+GCLK                x042y079z20         0.348          3.119          pin: a_wr_clk_dup_1_created_gclkinst.clkout
+net (fo=1)                              0.683          3.802          net: a_wr_clk_syn_3,  analysis/dual_fifo_eval.v(14)
+                                                                      pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkin
+SCLK                x042y059z3          0.000          3.802          pin: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4.clkout
+net (fo=148)                            0.911          4.713          net: a_wr_clk_dup_1_created_gclkinst_auto_created_sclk_s_1_l_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: dut/fifo_a/add0_syn_196.clk
+capture edge                            0.000    r     4.713               
+--------------------------------------------------------------------  ---------------
+hold                                    0.087          4.800               
+clock uncertainty                       0.200          5.000               
+clock pessimism                         0.000          5.000               
+--------------------------------------------------------------------  ---------------
+Required                                               5.000               
+--------------------------------------------------------------------  ---------------
+Slack                                                 -0.255               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
